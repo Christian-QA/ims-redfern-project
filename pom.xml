@@ -76,7 +76,7 @@
 							<archive>
 								<manifest>
 									<mainClass>
-										com.qa.ims.Runner
+										com.qa.main.Runner
 									</mainClass>
 								</manifest>
 							</archive>
