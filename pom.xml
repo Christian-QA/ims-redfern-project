@@ -55,7 +55,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.qa.main.Runner</mainClass>
+							<mainClass>com.qa.ims.Runner</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -76,7 +76,7 @@
 							<archive>
 								<manifest>
 									<mainClass>
-										com.qa.main.Runner
+										com.qa.ims.Runner
 									</mainClass>
 								</manifest>
 							</archive>
