@@ -25,8 +25,51 @@ public class InventoryManager {
 		String DMLCommand = Utils.getInput();
 
 		if (tableSelectCommand == "1") {
+			if (DMLCommand == "1") {
+
+			} else if (DMLCommand == "2") {
+
+			} else if (DMLCommand == "3") {
+
+			} else if (DMLCommand == "4") {
+
+			} else if (DMLCommand == "5") {
+
+			} else if (DMLCommand == "6") {
+
+			}
+		} else if (tableSelectCommand == "2") {
+			if (DMLCommand == "1") {
+
+			} else if (DMLCommand == "2") {
+
+			} else if (DMLCommand == "3") {
+
+			} else if (DMLCommand == "4") {
+
+			} else if (DMLCommand == "5") {
+
+			} else if (DMLCommand == "6") {
+
+			}
+		} else if (tableSelectCommand == "3") {
+			if (DMLCommand == "1") {
+
+			} else if (DMLCommand == "2") {
+
+			} else if (DMLCommand == "3") {
+
+			} else if (DMLCommand == "4") {
+
+			} else if (DMLCommand == "5") {
+
+			} else if (DMLCommand == "6") {
+
+			}
+		} else if (tableSelectCommand == "4") {
+
+		} else if (tableSelectCommand == "5") {
 
 		}
-
 	}
 }
