@@ -2,6 +2,11 @@ package com.qa.ims;
 
 import org.apache.log4j.Logger;
 
+import com.qa.ims.controllers.CRUDController;
+import com.qa.ims.controllers.CustomerController;
+import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
+import com.qa.ims.persistence.profiles.TableSelectCommand;
+import com.qa.ims.services.CustomerServices;
 import com.qa.ims.utils.Utils;
 
 public class InventoryManager {
@@ -24,52 +29,43 @@ public class InventoryManager {
 		System.out.println("1): Create      2): Read      3): Update      4): Delete      5): Help      6): Back");
 		String DMLCommand = Utils.getInput();
 
-		if (tableSelectCommand == "1") {
-			if (DMLCommand == "1") {
-
-			} else if (DMLCommand == "2") {
-
-			} else if (DMLCommand == "3") {
-
-			} else if (DMLCommand == "4") {
-
-			} else if (DMLCommand == "5") {
-
-			} else if (DMLCommand == "6") {
-
-			}
-		} else if (tableSelectCommand == "2") {
-			if (DMLCommand == "1") {
-
-			} else if (DMLCommand == "2") {
-
-			} else if (DMLCommand == "3") {
-
-			} else if (DMLCommand == "4") {
-
-			} else if (DMLCommand == "5") {
-
-			} else if (DMLCommand == "6") {
-
-			}
-		} else if (tableSelectCommand == "3") {
-			if (DMLCommand == "1") {
-
-			} else if (DMLCommand == "2") {
-
-			} else if (DMLCommand == "3") {
-
-			} else if (DMLCommand == "4") {
-
-			} else if (DMLCommand == "5") {
-
-			} else if (DMLCommand == "6") {
-
-			}
-		} else if (tableSelectCommand == "4") {
-
-		} else if (tableSelectCommand == "5") {
-
+		switch (tableSelectCommand) {
+		case CUSTOMER:
+			CustomerController customerController = new CustomerController(
+					new CustomerServices(new CustomerDataAccessObject(username, password)));
+			doAction(customerController, DMLCommand);
+			break;
+		case ITEM:
+			break;
+		case ORDER:
+			break;
+		case STOP:
+			break;
+		default:
+			break;
 		}
+
+	}
+
+	public void doDMLCommand(CRUDController<?> CRUDController, DMLCommand DMLCommand) {
+		switch (DMLCommand) {
+		case CREATE:
+			CRUDController.create();
+			break;
+		case READ:
+			CRUDController.readAll();
+			break;
+		case UPDATE:
+			CRUDController.update();
+			break;
+		case DELETE:
+			CRUDController.delete();
+			break;
+		case RETURN:
+			break;
+		default:
+			break;
+		
+		
 	}
 }
