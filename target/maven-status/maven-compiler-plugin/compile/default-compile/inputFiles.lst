@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\utils\Utils.java
 G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\DBConfiguration.java
 G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\DB.java
@@ -5,3 +6,14 @@ G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\Runner.java
 G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\package-info.java
 G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\utils\package-info.java
 G:\eclipse-workspace\ims-redfern-project\src\main\java\com\qa\ims\InventoryManager.java
+=======
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\DB.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\DBConfiguration.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\Runner.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\DBUser.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\utils\package-info.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\utils\Utils.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\InventoryManager.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\package-info.java
+G:\eclipse-workspace\Redfern IMS\src\main\java\com\qa\ims\DBUserDetails.java
+>>>>>>> 9f15fc52b74eaa090e418a9c9dbb2c81fbb334d8
