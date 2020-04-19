@@ -3,6 +3,10 @@ package com.qa.ims;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 
@@ -100,6 +104,23 @@ public class InventoryManager {
 			LOGGER.error(e.getMessage());
 		}
 		return stringBuilder.toString();
+	}
+
+	public void init(String jdbcConnectionUrl, String username, String password, String fileLocation) {
+		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
+				BufferedReader br = new BufferedReader(new FileReader(fileLocation));) {
+			String string;
+			while ((string = br.readLine()) != null) {
+				try (Statement statement = connection.createStatement();) {
+					statement.executeUpdate(string);
+				}
+			}
+		} catch (SQLException | IOException e) {
+			for (StackTraceElement ele : e.getStackTrace()) {
+				LOGGER.debug(ele);
+			}
+			LOGGER.error(e.getMessage());
+		}
 	}
 
 }
