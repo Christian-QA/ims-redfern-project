@@ -24,5 +24,17 @@ public class InventoryManager {
 		System.out.println("1): Create      2): Read      3): Update      4): Delete      5): Help      6): Back");
 		String DMLCommand = Utils.getInput();
 
+		if (tableSelectCommand == "1") {
+
+		} else if (tableSelectCommand == "2") {
+
+		} else if (tableSelectCommand == "3") {
+
+		} else if (tableSelectCommand == "4") {
+
+		} else if (tableSelectCommand == "5") {
+
+		}
+
 	}
 }
