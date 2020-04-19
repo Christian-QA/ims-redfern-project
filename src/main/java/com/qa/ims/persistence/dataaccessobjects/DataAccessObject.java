@@ -1,4 +1,4 @@
-package com.qa.ims.persistence.DataAccessObjects;
+package com.qa.ims.persistence.dataaccessobjects;
 
 import java.util.List;
 
