@@ -2,7 +2,7 @@ package com.qa.ims;
 
 import org.apache.log4j.Logger;
 
-import com.qa.ims.controllers.CRUDController;
+import com.qa.ims.controllers.CrudController;
 import com.qa.ims.controllers.CustomerController;
 import com.qa.ims.controllers.DMLCommands;
 import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
@@ -47,19 +47,19 @@ public class InventoryManager {
 		}
 	}
 
-	public void doDMLCommand(CRUDController<?> CRUDController, DMLCommands DMLCommand) {
+	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DMLCommands DMLCommand) {
 		switch (DMLCommand) {
 		case CREATE:
-			CRUDController.create();
+			createReadUpdateDestroyController.create();
 			break;
 		case READ:
-			CRUDController.readAll();
+			createReadUpdateDestroyController.readAll();
 			break;
 		case UPDATE:
-			CRUDController.update();
+			createReadUpdateDestroyController.update();
 			break;
 		case DELETE:
-			CRUDController.delete();
+			createReadUpdateDestroyController.delete();
 			break;
 		case RETURN:
 			break;

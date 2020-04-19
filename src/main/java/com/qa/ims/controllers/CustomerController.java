@@ -8,7 +8,7 @@ import com.qa.ims.persistence.profiles.CustomerProfile;
 import com.qa.ims.services.CRUDServices;
 import com.qa.ims.utils.Utils;
 
-public class CustomerController implements CRUDController<CustomerProfile> {
+public class CustomerController implements CrudController<CustomerProfile> {
 
 	public static final Logger LOGGER = Logger.getLogger(CustomerController.class);
 
