@@ -9,35 +9,35 @@ import com.qa.ims.utils.Utils;
  * function to apply to an entity.
  *
  */
-public enum DMLCommands {
+public enum DmlCommands {
 	CREATE("To save a new item into the database"), READ("To read an item from the database"),
 	UPDATE("To change an item already in the database"), DELETE("To remove an item from the database"),
 	RETURN("To return to domain selection");
 
-	public static final Logger LOGGER = Logger.getLogger(DMLCommands.class);
+	public static final Logger LOGGER = Logger.getLogger(DmlCommands.class);
 
 	private String description;
 
-	private DMLCommands() {
+	private DmlCommands() {
 	}
 
-	DMLCommands(String description) {
+	DmlCommands(String description) {
 		this.description = description;
 	}
 
 	/**
 	 * Describes the action
 	 */
-	public String getDMLCommandsDescription() {
+	public String getDmlCommandsDescription() {
 		return this.name() + ": " + this.description;
 	}
 
 	/**
 	 * Prints out all posible actions
 	 */
-	public static void printDMLCommands() {
-		for (DMLCommands action : DMLCommands.values()) {
-			LOGGER.info(action.getDMLCommandsDescription());
+	public static void printDmlCommands() {
+		for (DmlCommands action : DmlCommands.values()) {
+			LOGGER.info(action.getDmlCommandsDescription());
 		}
 	}
 
@@ -47,11 +47,11 @@ public enum DMLCommands {
 	 * 
 	 * @return Action type
 	 */
-	public static DMLCommands getDMLCommands() {
-		DMLCommands action;
+	public static DmlCommands getDmlCommands() {
+		DmlCommands action;
 		while (true) {
 			try {
-				action = DMLCommands.valueOf(Utils.getInput().toUpperCase());
+				action = DmlCommands.valueOf(Utils.getInput().toUpperCase());
 				break;
 			} catch (IllegalArgumentException e) {
 				LOGGER.error("Invalid selection please try again");

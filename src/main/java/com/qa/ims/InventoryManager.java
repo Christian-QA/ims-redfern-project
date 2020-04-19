@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 
 import com.qa.ims.controllers.CrudController;
 import com.qa.ims.controllers.CustomerController;
-import com.qa.ims.controllers.DMLCommands;
+import com.qa.ims.controllers.DmlCommands;
 import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
 import com.qa.ims.persistence.profiles.TableSelectCommand;
 import com.qa.ims.services.CustomerServices;
@@ -28,13 +28,13 @@ public class InventoryManager {
 
 		LOGGER.info("You have selected '" + tableSelectCommand + "'. How would you like to proceed?");
 		System.out.println("1): Create      2): Read      3): Update      4): Delete      5): Help      6): Back");
-		DMLCommands DMLCommand = DMLCommands.getDMLCommands();
+		DmlCommands dmlCommand = DmlCommands.getDmlCommands();
 
 		switch (tableSelectCommand) {
 		case CUSTOMER:
 			CustomerController customerController = new CustomerController(
 					new CustomerServices(new CustomerDataAccessObject(username, password)));
-			doDMLCommand(customerController, DMLCommand);
+			doDMLCommand(customerController, dmlCommand);
 			break;
 		case ITEM:
 			break;
@@ -47,7 +47,7 @@ public class InventoryManager {
 		}
 	}
 
-	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DMLCommands DMLCommand) {
+	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DmlCommands DMLCommand) {
 		switch (DMLCommand) {
 		case CREATE:
 			createReadUpdateDestroyController.create();
