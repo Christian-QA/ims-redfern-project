@@ -66,6 +66,8 @@ public class InventoryManager {
 		default:
 			break;
 
+		// Need to fix incorrect casing
+
 		}
 	}
 }
