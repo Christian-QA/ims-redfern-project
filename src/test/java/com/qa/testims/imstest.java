@@ -9,7 +9,7 @@ public class imstest {
 
 	@Test
 	public void initiateSystemTest() {
-		assertEquals("Hi John", testIMS.initiateSystem.username);
+		assertEquals("Hi John", testIMS.initiateSystem(username));
 
 	}
 }

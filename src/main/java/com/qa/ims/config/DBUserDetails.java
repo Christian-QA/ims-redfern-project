@@ -1,4 +1,4 @@
-package com.qa.ims;
+package com.qa.ims.config;
 
 public abstract class DBUserDetails extends DBConfiguration {
 
