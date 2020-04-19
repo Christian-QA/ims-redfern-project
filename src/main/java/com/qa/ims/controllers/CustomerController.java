@@ -57,7 +57,7 @@ public class CustomerController implements CrudController<CustomerProfile> {
 
 	@Override
 	public void delete() {
-		LOGGER.info("Please enter the id of the customer you would like to delete");
+		LOGGER.info("Please enter the id of the customer you would like to delete: ");
 		Long id = Long.valueOf(getInput());
 		customerService.delete(id);
 
