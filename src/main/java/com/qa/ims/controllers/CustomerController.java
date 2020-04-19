@@ -70,6 +70,9 @@ public class CustomerController implements CrudController<CustomerProfile> {
 		return customer;
 	}
 
+	/**
+	 * Deletes an existing customer by the id of the customer
+	 */
 	@Override
 	public void delete() {
 		LOGGER.info("Please enter the id of the customer you would like to delete: ");
