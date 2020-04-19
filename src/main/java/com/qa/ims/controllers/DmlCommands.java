@@ -36,8 +36,8 @@ public enum DmlCommands {
 	 * Prints out all posible actions
 	 */
 	public static void printDmlCommands() {
-		for (DmlCommands action : DmlCommands.values()) {
-			LOGGER.info(action.getDmlCommandsDescription());
+		for (DmlCommands dmlcommand : DmlCommands.values()) {
+			LOGGER.info(dmlcommand.getDmlCommandsDescription());
 		}
 	}
 
@@ -45,19 +45,19 @@ public enum DmlCommands {
 	 * Gets an action based on a users input. If user enters a non-specified
 	 * enumeration, it will ask for another input.
 	 * 
-	 * @return Action type
+	 * @return DmlCommand type
 	 */
 	public static DmlCommands getDmlCommands() {
-		DmlCommands action;
+		DmlCommands dmlcommand;
 		while (true) {
 			try {
-				action = DmlCommands.valueOf(Utils.getInput().toUpperCase());
+				dmlcommand = DmlCommands.valueOf(Utils.getInput().toUpperCase());
 				break;
 			} catch (IllegalArgumentException e) {
 				LOGGER.error("Invalid selection please try again");
 			}
 		}
-		return action;
+		return dmlcommand;
 	}
 
 }
