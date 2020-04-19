@@ -22,6 +22,9 @@ public class CustomerController implements CrudController<CustomerProfile> {
 		return Utils.getInput();
 	}
 
+	/**
+	 * Reads all customers to the logger
+	 */
 	@Override
 	public List<CustomerProfile> readAll() {
 		List<CustomerProfile> customers = customerService.readAll();
@@ -31,6 +34,12 @@ public class CustomerController implements CrudController<CustomerProfile> {
 		return customers;
 	}
 
+	/**
+	 * Creates a customer by taking in user input. Selecting 1 (Basic) means the
+	 * input is limited to forename and surname, the NOT NULL values of the
+	 * customers table. Selecting 2 (Advance) means the input includes age, email,
+	 * address and username, the NULL values of the customers table.
+	 */
 	@Override
 	public CustomerProfile create() {
 		LOGGER.info("Please enter forename(s): ");
