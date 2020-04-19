@@ -51,6 +51,12 @@ public class CustomerController implements CrudController<CustomerProfile> {
 		return customer;
 	}
 
+	/**
+	 * Updates an existing customer by taking in user input. Selecting 1 (Basic)
+	 * means the input is limited to forename and surname, the NOT NULL values of
+	 * the customers table. Selecting 2 (Advance) means the input includes age,
+	 * email, address and username, the NULL values of the customer table.
+	 */
 	@Override
 	public CustomerProfile update() {
 		LOGGER.info("Please enter the id of the customer you would like to update: ");
