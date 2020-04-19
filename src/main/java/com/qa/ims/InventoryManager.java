@@ -26,6 +26,14 @@ public class InventoryManager {
 
 		if (tableSelectCommand == "1") {
 
+		} else if (tableSelectCommand == "2") {
+
+		} else if (tableSelectCommand == "3") {
+
+		} else if (tableSelectCommand == "4") {
+
+		} else if (tableSelectCommand == "5") {
+
 		}
 
 	}
