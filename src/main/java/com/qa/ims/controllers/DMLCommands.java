@@ -28,16 +28,16 @@ public enum DMLCommands {
 	/**
 	 * Describes the action
 	 */
-	public String getDescription() {
+	public String getDMLCommandsDescription() {
 		return this.name() + ": " + this.description;
 	}
 
 	/**
 	 * Prints out all posible actions
 	 */
-	public static void printActions() {
+	public static void printDMLCommands() {
 		for (DMLCommands action : DMLCommands.values()) {
-			LOGGER.info(action.getDescription());
+			LOGGER.info(action.getDMLCommandsDescription());
 		}
 	}
 
@@ -47,7 +47,7 @@ public enum DMLCommands {
 	 * 
 	 * @return Action type
 	 */
-	public static DMLCommands getAction() {
+	public static DMLCommands getDMLCommands() {
 		DMLCommands action;
 		while (true) {
 			try {

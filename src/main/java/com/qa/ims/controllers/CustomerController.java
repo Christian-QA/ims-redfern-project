@@ -14,6 +14,10 @@ public class CustomerController implements CRUDController<CustomerProfile> {
 
 	private CRUDServices<CustomerProfile> customerService;
 
+	public CustomerController(CRUDServices<CustomerProfile> customerService) {
+		this.customerService = customerService;
+	}
+
 	String getInput() {
 		return Utils.getInput();
 	}
