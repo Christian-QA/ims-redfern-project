@@ -33,14 +33,26 @@ public class CustomerController implements CrudController<CustomerProfile> {
 
 	@Override
 	public CustomerProfile create() {
-		// TODO Auto-generated method stub
-		return null;
+		LOGGER.info("Please enter forename(s): ");
+		String forename = getInput();
+		LOGGER.info("Please enter surname: ");
+		String surname = getInput();
+		CustomerProfile customer = customerService.create(new CustomerProfile(forename, surname));
+		LOGGER.info("Customer created.");
+		return customer;
 	}
 
 	@Override
 	public CustomerProfile update() {
-		// TODO Auto-generated method stub
-		return null;
+		LOGGER.info("Please enter the id of the customer you would like to update: ");
+		Long id = Long.valueOf(getInput());
+		LOGGER.info("Please enter a first name");
+		String firstName = getInput();
+		LOGGER.info("Please enter a surname");
+		String surname = getInput();
+		Customer customer = customerService.update(new Customer(id, firstName, surname));
+		LOGGER.info("Customer Updated");
+		return customer;
 	}
 
 	@Override

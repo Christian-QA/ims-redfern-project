@@ -33,7 +33,7 @@ public enum DmlCommands {
 	}
 
 	/**
-	 * Prints out all posible actions
+	 * Prints out all possible actions
 	 */
 	public static void printDmlCommands() {
 		for (DmlCommands dmlcommand : DmlCommands.values()) {
