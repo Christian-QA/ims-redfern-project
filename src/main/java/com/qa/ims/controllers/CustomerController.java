@@ -38,13 +38,13 @@ public class CustomerController implements CrudController<CustomerProfile> {
 		LOGGER.info("Please enter surname: ");
 		String surname = getInput();
 		CustomerProfile customer = customerService.create(new CustomerProfile(forename, surname));
-		LOGGER.info("Customer created");
+		LOGGER.info("Customer created.");
 		return customer;
 	}
 
 	@Override
 	public CustomerProfile update() {
-		LOGGER.info("Please enter the id of the customer you would like to update");
+		LOGGER.info("Please enter the id of the customer you would like to update: ");
 		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter a first name");
 		String firstName = getInput();
@@ -57,7 +57,9 @@ public class CustomerController implements CrudController<CustomerProfile> {
 
 	@Override
 	public void delete() {
-		// TODO Auto-generated method stub
+		LOGGER.info("Please enter the id of the customer you would like to delete");
+		Long id = Long.valueOf(getInput());
+		customerService.delete(id);
 
 	}
 
