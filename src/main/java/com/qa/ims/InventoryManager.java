@@ -1,5 +1,9 @@
 package com.qa.ims;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import org.apache.log4j.Logger;
 
 import com.qa.ims.controllers.CrudController;
@@ -66,8 +70,36 @@ public class InventoryManager {
 		default:
 			break;
 
-		// Need to fix incorrect casing
-
 		}
 	}
+
+	/**
+	 * To initialise the database schema. DatabaseConnectionUrl will default to
+	 * localhost.
+	 * 
+	 * @param username
+	 * @param password
+	 */
+
+	public void init(String username, String password) {
+		init("jdbc:mysql://35.205.154.97/imsDB", username, password, "src/main/resources/imsDB-schema.sql");
+	}
+
+	public String readFile(String fileLocation) {
+		StringBuilder stringBuilder = new StringBuilder();
+		try (BufferedReader br = new BufferedReader(new FileReader(fileLocation));) {
+			String string;
+			while ((string = br.readLine()) != null) {
+				stringBuilder.append(string);
+				stringBuilder.append("\r\n");
+			}
+		} catch (IOException e) {
+			for (StackTraceElement ele : e.getStackTrace()) {
+				LOGGER.debug(ele);
+			}
+			LOGGER.error(e.getMessage());
+		}
+		return stringBuilder.toString();
+	}
+
 }
