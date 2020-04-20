@@ -10,11 +10,11 @@ public class ProductProfile {
 	private BigDecimal price;
 	private Long inventory;
 
-	public ProductProfile(String name, String category, String price, String inventory) {
+	public ProductProfile(String name, String category, BigDecimal price, Long inventory) {
 		this.name = name;
 	}
 
-	public ProductProfile(Long id, String name) {
+	public ProductProfile(Long id, String name, String category, BigDecimal price, Long inventory) {
 		this.id = id;
 		this.name = name;
 	}
