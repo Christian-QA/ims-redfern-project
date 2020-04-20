@@ -1,0 +1,17 @@
+com\qa\ims\Runner.class
+com\qa\ims\services\CustomerServices.class
+com\qa\ims\config\DBUserDetails.class
+com\qa\ims\InventoryManager.class
+com\qa\ims\config\DBConfiguration.class
+com\qa\ims\services\CRUDServices.class
+com\qa\ims\utils\Utils.class
+com\qa\ims\controllers\DmlCommands.class
+com\qa\ims\persistence\profiles\TableSelectCommand.class
+com\qa\ims\persistence\dataaccessobjects\DataAccessObject.class
+com\qa\ims\config\DB.class
+com\qa\ims\config\DBUser.class
+com\qa\ims\persistence\profiles\CustomerProfile.class
+com\qa\ims\controllers\CustomerController.class
+com\qa\ims\InventoryManager$1.class
+com\qa\ims\persistence\dataaccessobjects\CustomerDataAccessObject.class
+com\qa\ims\controllers\CrudController.class
