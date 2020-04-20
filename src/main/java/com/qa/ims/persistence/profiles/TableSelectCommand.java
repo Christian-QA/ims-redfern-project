@@ -6,7 +6,7 @@ import com.qa.ims.utils.Utils;
 
 public enum TableSelectCommand {
 
-	CUSTOMER("Information about customers"), ITEM("Individual Items"), ORDER("Purchases of items"),
+	CUSTOMER("Information about customers"), PRODUCT("Individual Items"), ORDER("Purchases of items"),
 	STOP("To close the application");
 
 	public static final Logger LOGGER = Logger.getLogger(TableSelectCommand.class);
