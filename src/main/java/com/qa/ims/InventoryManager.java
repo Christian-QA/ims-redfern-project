@@ -30,12 +30,11 @@ public class InventoryManager {
 		String password = Utils.getInput();
 
 		LOGGER.info("Hello, " + username + " how can I help you today?");
-		System.out.println(
-				"1): Review Customers      2): Review Products      3): Review Orders      4): Help      5): Stop");
+		LOGGER.info("1): Review Customers      2): Review Products      3): Review Orders      4): Help      5): Stop");
 		TableSelectCommand tableSelectCommand = TableSelectCommand.getTableSelectCommand();
 
 		LOGGER.info("You have selected '" + tableSelectCommand + "'. How would you like to proceed?");
-		System.out.println("1): Create      2): Read      3): Update      4): Delete      5): Help      6): Back");
+		LOGGER.info("1): Create      2): Read      3): Update      4): Delete      5): Help      6): Back");
 		DmlCommands dmlCommand = DmlCommands.getDmlCommands();
 
 		switch (tableSelectCommand) {
@@ -55,8 +54,8 @@ public class InventoryManager {
 		}
 	}
 
-	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DmlCommands DMLCommand) {
-		switch (DMLCommand) {
+	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DmlCommands dmlCommand) {
+		switch (dmlCommand) {
 		case CREATE:
 			createReadUpdateDestroyController.create();
 			break;

@@ -9,8 +9,8 @@ public class CustomerServices implements CrudServices<CustomerProfile> {
 
 	private DataAccessObject<CustomerProfile> CustomerDataAccessObject;
 
-	public CustomerServices(DataAccessObject<CustomerProfile> CustomerDataAccessObject) {
-		this.CustomerDataAccessObject = CustomerDataAccessObject;
+	public CustomerServices(DataAccessObject<CustomerProfile> customer) {
+		this.CustomerDataAccessObject = customer;
 	}
 
 	public List<CustomerProfile> readAll() {
@@ -25,7 +25,7 @@ public class CustomerServices implements CrudServices<CustomerProfile> {
 		return CustomerDataAccessObject.update(customer);
 	}
 
-	public void delete(Long customer_id) {
-		CustomerDataAccessObject.delete(customer_id);
+	public void delete(Long id) {
+		CustomerDataAccessObject.delete(id);
 	}
 }
