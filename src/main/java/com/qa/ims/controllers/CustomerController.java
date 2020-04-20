@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.qa.ims.persistence.profiles.CustomerProfile;
-import com.qa.ims.services.CRUDServices;
+import com.qa.ims.services.CrudServices;
 import com.qa.ims.utils.Utils;
 
 /**
@@ -16,9 +16,9 @@ public class CustomerController implements CrudController<CustomerProfile> {
 
 	public static final Logger LOGGER = Logger.getLogger(CustomerController.class);
 
-	private CRUDServices<CustomerProfile> customerService;
+	private CrudServices<CustomerProfile> customerService;
 
-	public CustomerController(CRUDServices<CustomerProfile> customerService) {
+	public CustomerController(CrudServices<CustomerProfile> customerService) {
 		this.customerService = customerService;
 	}
 

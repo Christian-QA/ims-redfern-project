@@ -2,7 +2,7 @@ package com.qa.ims.persistence.profiles;
 
 public class CustomerProfile {
 
-	private Long id;
+	private Long customer_id;
 	private String forename;
 	private String surname;
 	private int age;
@@ -10,23 +10,25 @@ public class CustomerProfile {
 	private String address;
 	private String username;
 
+	String age_listed;
+
 	public CustomerProfile(String forename, String surname) {
 		this.forename = forename;
 		this.surname = surname;
 	}
 
-	public CustomerProfile(Long id, String forename, String surname) {
-		this.id = id;
+	public CustomerProfile(Long customer_id, String forename, String surname) {
+		this.customer_id = customer_id;
 		this.forename = forename;
 		this.surname = surname;
 	}
 
 	public final Long getId() {
-		return id;
+		return customer_id;
 	}
 
-	public final void setId(Long id) {
-		this.id = id;
+	public final void setId(Long customer_id) {
+		this.customer_id = customer_id;
 	}
 
 	public final String getForename() {
@@ -78,7 +80,14 @@ public class CustomerProfile {
 	}
 
 	public String toString() {
-		return "id:" + id + " first name:" + forename + " surname:" + surname;
+		if (age == 0) {
+			age_listed = "N/A";
+		} else {
+			age_listed = Integer.toString(age); /// To be tested
+		}
+
+		return "id: " + customer_id + " | first name: " + forename + " | surname: " + surname + " | age: " + age_listed
+				+ "\n ------------------------------------------------------";
 	}
 
 }

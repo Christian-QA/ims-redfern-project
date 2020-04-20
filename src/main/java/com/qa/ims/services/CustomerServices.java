@@ -5,12 +5,12 @@ import java.util.List;
 import com.qa.ims.persistence.dataaccessobjects.DataAccessObject;
 import com.qa.ims.persistence.profiles.CustomerProfile;
 
-public class CustomerServices implements CRUDServices<CustomerProfile> {
+public class CustomerServices implements CrudServices<CustomerProfile> {
 
 	private DataAccessObject<CustomerProfile> CustomerDataAccessObject;
 
-	public CustomerServices(DataAccessObject<CustomerProfile> customerDao) {
-		this.CustomerDataAccessObject = customerDao;
+	public CustomerServices(DataAccessObject<CustomerProfile> CustomerDataAccessObject) {
+		this.CustomerDataAccessObject = CustomerDataAccessObject;
 	}
 
 	public List<CustomerProfile> readAll() {
@@ -25,7 +25,7 @@ public class CustomerServices implements CRUDServices<CustomerProfile> {
 		return CustomerDataAccessObject.update(customer);
 	}
 
-	public void delete(Long id) {
-		CustomerDataAccessObject.delete(id);
+	public void delete(Long customer_id) {
+		CustomerDataAccessObject.delete(customer_id);
 	}
 }

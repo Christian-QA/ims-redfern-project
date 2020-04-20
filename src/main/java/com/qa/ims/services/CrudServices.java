@@ -2,7 +2,7 @@ package com.qa.ims.services;
 
 import java.util.List;
 
-public interface CRUDServices<T> {
+public interface CrudServices<T> {
 
 	public List<T> readAll();
 
