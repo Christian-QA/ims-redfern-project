@@ -64,12 +64,12 @@ public class CustomerController implements CrudController<CustomerProfile> {
 	@Override
 	public CustomerProfile update() {
 		LOGGER.info("Please enter the id of the customer you would like to update: ");
-		Long customer_id = Long.valueOf(getInput());
+		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter a first name: ");
-		String firstName = getInput();
+		String forename = getInput();
 		LOGGER.info("Please enter a surname: ");
 		String surname = getInput();
-		CustomerProfile customer = customerService.update(new CustomerProfile(customer_id, firstName, surname));
+		CustomerProfile customer = customerService.update(new CustomerProfile(id, forename, surname));
 		LOGGER.info("Customer Updated.");
 		return customer;
 	}
@@ -80,8 +80,8 @@ public class CustomerController implements CrudController<CustomerProfile> {
 	@Override
 	public void delete() {
 		LOGGER.info("Please enter the id of the customer you would like to delete: ");
-		Long customer_id = Long.valueOf(getInput());
-		customerService.delete(customer_id);
+		Long id = Long.valueOf(getInput());
+		customerService.delete(id);
 
 	}
 
