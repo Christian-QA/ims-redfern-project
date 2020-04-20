@@ -1,5 +1,6 @@
 package com.qa.ims.persistence.dataaccessobjects;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,33 +11,35 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.qa.ims.persistence.profiles.CustomerProfile;
+import com.qa.ims.persistence.profiles.ProductProfile;
 
-public class CustomerDataAccessObject implements DataAccessObject<CustomerProfile> {
+public class ProductDataAccessObject implements DataAccessObject<ProductProfile> {
 
-	public static final Logger LOGGER = Logger.getLogger(CustomerDataAccessObject.class);
+	public static final Logger LOGGER = Logger.getLogger(ProductDataAccessObject.class);
 
 	private String jdbcConnectionUrl;
 	private String username;
 	private String password;
 
-	public CustomerDataAccessObject(String username, String password) {
+	public ProductDataAccessObject(String username, String password) {
 		this.jdbcConnectionUrl = "jdbc:mysql://35.205.154.97/imsDB";
 		this.username = username;
 		this.password = password;
 	}
 
-	public CustomerDataAccessObject(String jdbcConnectionUrl, String username, String password) {
+	public ProductDataAccessObject(String jdbcConnectionUrl, String username, String password) {
 		this.jdbcConnectionUrl = jdbcConnectionUrl;
 		this.username = username;
 		this.password = password;
 	}
 
-	CustomerProfile customerProfileSet(ResultSet resultSet) throws SQLException {
-		Long id = resultSet.getLong("customer_id");
-		String forename = resultSet.getString("forename");
-		String surname = resultSet.getString("surname");
-		return new CustomerProfile(id, forename, surname);
+	ProductProfile productProfileSet(ResultSet resultSet) throws SQLException {
+		Long id = resultSet.getLong("product_id");
+		String name = resultSet.getString("name");
+		String category = resultSet.getString("category");
+		BigDecimal price = resultSet.getBigDecimal("price");
+		Long inventory = resultSet.getLong("inventory");
+		return new ProductProfile(id, name, category, price, inventory);
 	}
 
 	/**
@@ -45,15 +48,15 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	 * @return A list of customers
 	 */
 	@Override
-	public List<CustomerProfile> readAll() {
+	public List<ProductProfile> readAll() {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");) {
-			ArrayList<CustomerProfile> customers = new ArrayList<>();
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM products");) {
+			ArrayList<ProductProfile> products = new ArrayList<>();
 			while (resultSet.next()) {
-				customers.add(customerProfileSet(resultSet));
+				products.add(productProfileSet(resultSet));
 			}
-			return customers;
+			return products;
 		} catch (SQLException e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -61,13 +64,13 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 		return new ArrayList<>();
 	}
 
-	public CustomerProfile readLatest() {
+	public ProductProfile readLatest() {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
 				ResultSet resultSet = statement
-						.executeQuery("SELECT * FROM customers ORDER BY customer_id DESC LIMIT 1");) {
+						.executeQuery("SELECT * FROM products ORDER BY product_id DESC LIMIT 1");) {
 			resultSet.next();
-			return customerProfileSet(resultSet);
+			return productProfileSet(resultSet);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -81,11 +84,12 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	 * @param customer - takes in a customer object. id will be ignored
 	 */
 	@Override
-	public CustomerProfile create(CustomerProfile customer) {
+	public ProductProfile create(ProductProfile product) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into customers(forename, surname) values('" + customer.getForename() + "','"
-					+ customer.getSurname() + "')");
+			statement.executeUpdate("INSERT INTO products(name, category, price, inventory) values('"
+					+ product.getName() + "','" + product.getCategory() + "','" + product.getPrice() + "','"
+					+ product.getInventory() + "')");
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -94,12 +98,12 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 		return null;
 	}
 
-	public CustomerProfile readCustomer(Long id) {
+	public ProductProfile readProduct(Long id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM customers where customer_id = " + id);) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM products WHERE product_id = " + id);) {
 			resultSet.next();
-			return customerProfileSet(resultSet);
+			return productProfileSet(resultSet);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -115,12 +119,13 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	 * @return
 	 */
 	@Override
-	public CustomerProfile update(CustomerProfile customer) {
+	public ProductProfile update(ProductProfile product) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE customers SET forename='" + customer.getForename() + "', surname='"
-					+ customer.getSurname() + "' WHERE customer_id=" + customer.getId());
-			return readCustomer(customer.getId());
+			statement.executeUpdate("UPDATE products SET name='" + product.getName() + "', category='"
+					+ product.getCategory() + "', price='" + product.getPrice() + "', inventory='"
+					+ product.getInventory() + "' WHERE product_id=" + product.getId());
+			return readProduct(product.getId());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -137,7 +142,7 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	public void delete(long id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from customers where customer_id = " + id);
+			statement.executeUpdate("delete from customers where product_id = " + id);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
