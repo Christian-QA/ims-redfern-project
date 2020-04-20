@@ -78,7 +78,8 @@ public class CustomerProfile {
 	}
 
 	public String toString() {
-		return "id:" + customer_id + " first name:" + forename + " surname:" + surname;
+		return "id: " + customer_id + " | first name: " + forename + " | surname: " + surname
+				+ "\n ------------------------------------------------------";
 	}
 
 }
