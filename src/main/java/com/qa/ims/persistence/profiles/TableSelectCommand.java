@@ -22,22 +22,22 @@ public enum TableSelectCommand {
 	}
 
 	public static void printTableSelectCommands() {
-		for (TableSelectCommand domain : TableSelectCommand.values()) {
-			LOGGER.info(domain.getDescription());
+		for (TableSelectCommand command : TableSelectCommand.values()) {
+			LOGGER.info(command.getDescription());
 		}
 	}
 
 	public static TableSelectCommand getTableSelectCommand() {
-		TableSelectCommand domain;
+		TableSelectCommand command;
 		while (true) {
 			try {
-				domain = TableSelectCommand.valueOf(Utils.getInput().toUpperCase());
+				command = TableSelectCommand.valueOf(Utils.getInput().toUpperCase());
 				break;
 			} catch (IllegalArgumentException e) {
 				LOGGER.error("Invalid selection please try again");
 			}
 		}
-		return domain;
+		return command;
 	}
 
 }
