@@ -118,8 +118,8 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	public CustomerProfile update(CustomerProfile customer) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("update customers set forename ='" + customer.getForename() + "', surname ='"
-					+ customer.getSurname() + "' where customer_id =" + customer.getId());
+			statement.executeUpdate("UPDATE customers SET forename='" + customer.getForename() + "', surname='"
+					+ customer.getSurname() + "' WHERE customer_id=" + customer.getId());
 			return readCustomer(customer.getId());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
