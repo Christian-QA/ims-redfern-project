@@ -27,8 +27,8 @@ public class CustomerProfile {
 		return id;
 	}
 
-	public final void setId(Long customer_id) {
-		this.id = customer_id;
+	public final void setId(Long id) {
+		this.id = id;
 	}
 
 	public final String getForename() {
