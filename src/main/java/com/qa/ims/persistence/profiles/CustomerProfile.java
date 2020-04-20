@@ -10,6 +10,8 @@ public class CustomerProfile {
 	private String address;
 	private String username;
 
+	String age_listed;
+
 	public CustomerProfile(String forename, String surname) {
 		this.forename = forename;
 		this.surname = surname;
@@ -78,7 +80,13 @@ public class CustomerProfile {
 	}
 
 	public String toString() {
-		return "id: " + customer_id + " | first name: " + forename + " | surname: " + surname
+		if (age == 0) {
+			age_listed = "N/A";
+		} else {
+			age_listed = Integer.toString(age); /// To be tested
+		}
+
+		return "id: " + customer_id + " | first name: " + forename + " | surname: " + surname + " | age: " + age_listed
 				+ "\n ------------------------------------------------------";
 	}
 
