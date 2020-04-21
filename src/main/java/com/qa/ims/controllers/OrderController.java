@@ -45,7 +45,7 @@ public class OrderController implements CrudController<OrderProfile> {
 		LOGGER.info("Please enter the date: ");
 		Date dateOrdered = Date.valueOf(getInput());
 		OrderProfile order = orderService.create(new OrderProfile(cid, dateOrdered));
-		LOGGER.info("Customer created.");
+		LOGGER.info("Order created.");
 		return order;
 	}
 
@@ -62,7 +62,7 @@ public class OrderController implements CrudController<OrderProfile> {
 		LOGGER.info("Please enter new date (yyyy-mm-dd): ");
 		Date dateOrdered = Date.valueOf(getInput());
 		OrderProfile order = orderService.update(new OrderProfile(oid, cid, dateOrdered));
-		LOGGER.info("Customer Updated.");
+		LOGGER.info("Order Updated.");
 		return order;
 	}
 
@@ -71,7 +71,7 @@ public class OrderController implements CrudController<OrderProfile> {
 	 */
 	@Override
 	public void delete() {
-		LOGGER.info("Please enter the id of the customer you would like to delete: ");
+		LOGGER.info("Please enter the id of the order you would like to delete: ");
 		Long oid = Long.valueOf(getInput());
 		orderService.delete(oid);
 
