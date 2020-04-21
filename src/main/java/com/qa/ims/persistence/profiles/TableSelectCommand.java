@@ -6,8 +6,8 @@ import com.qa.ims.utils.Utils;
 
 public enum TableSelectCommand {
 
-	CUSTOMER("Information about customers"), PRODUCT("Individual Items"), ORDER("Purchases of items"),
-	STOP("To close the application");
+	CUSTOMERS("Information about customers"), PRODUCTS("Individual Items"), ORDERS("Purchases of items"),
+	HELP("Describes what the other functions do"), STOP("To close the application");
 
 	public static final Logger LOGGER = Logger.getLogger(TableSelectCommand.class);
 
@@ -33,16 +33,23 @@ public enum TableSelectCommand {
 			try {
 				switch (Utils.getInput()) {
 				case "1":
-				case "product":
-					command = TableSelectCommand.CUSTOMER;
+				case "customers":
+					command = TableSelectCommand.CUSTOMERS;
 					break;
 				case "2":
-					command = TableSelectCommand.PRODUCT;
+				case "products":
+					command = TableSelectCommand.PRODUCTS;
 					break;
 				case "3":
-					command = TableSelectCommand.ORDER;
+				case "orders":
+					command = TableSelectCommand.ORDERS;
 					break;
 				case "4":
+				case "help":
+					command = TableSelectCommand.HELP;
+					break;
+				case "5":
+				case "stop":
 					command = TableSelectCommand.STOP;
 					break;
 				default:
