@@ -41,9 +41,9 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	}
 
 	/**
-	 * Reads all customers from the database
+	 * Reads all orders from the database
 	 * 
-	 * @return A list of customers
+	 * @return A list of orders
 	 */
 	@Override
 	public List<OrderProfile> readAll() {
@@ -76,9 +76,9 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	}
 
 	/**
-	 * Creates a customer in the database
+	 * Creates a order in the database
 	 * 
-	 * @param customer - takes in a customer object. id will be ignored
+	 * @param order - takes in a order object. id will be ignored
 	 */
 	@Override
 	public OrderProfile create(OrderProfile order) {
@@ -108,10 +108,10 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	}
 
 	/**
-	 * Updates a customer in the database
+	 * Updates an order in the database
 	 * 
-	 * @param customer - takes in a customer object, the id field will be used to
-	 *                 update that customer in the database
+	 * @param order - takes in a order object, the id field will be used to update
+	 *              that order in the database
 	 * @return
 	 */
 	@Override
@@ -129,9 +129,9 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	}
 
 	/**
-	 * Deletes a customer in the database
+	 * Deletes a order in the database
 	 * 
-	 * @param id - id of the customer
+	 * @param id - id of the order
 	 */
 	@Override
 	public void delete(long id) {

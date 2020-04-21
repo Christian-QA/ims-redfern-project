@@ -24,7 +24,7 @@ public class OrderController implements CrudController<OrderProfile> {
 	}
 
 	/**
-	 * Reads all customers to the logger
+	 * Reads all orders to the logger
 	 */
 	@Override
 	public List<OrderProfile> readAll() {
@@ -36,16 +36,13 @@ public class OrderController implements CrudController<OrderProfile> {
 	}
 
 	/**
-	 * Creates a customer by taking in user input. Selecting 1 (Basic) means the
-	 * input is limited to forename and surname, the NOT NULL values of the
-	 * customers table. Selecting 2 (Advance) means the input includes age, email,
-	 * address and username, the NULL values of the customers table.
+	 * Creates a order by taking in user input.
 	 */
 	@Override
 	public OrderProfile create() {
 		LOGGER.info("Please enter customer id: ");
 		Long cid = Long.valueOf(getInput());
-		LOGGER.info("Please enter surname: ");
+		LOGGER.info("Please enter the date: ");
 		Date dateOrdered = Date.valueOf(getInput());
 		OrderProfile order = orderService.create(new OrderProfile(cid, dateOrdered));
 		LOGGER.info("Customer created.");
@@ -53,18 +50,16 @@ public class OrderController implements CrudController<OrderProfile> {
 	}
 
 	/**
-	 * Updates an existing customer by taking in user input. Selecting 1 (Basic)
-	 * means the input is limited to forename and surname, the NOT NULL values of
-	 * the customers table. Selecting 2 (Advance) means the input includes age,
-	 * email, address and username, the NULL values of the customer table.
+	 * Updates an existing order by taking in user input. The customer needs to
+	 * exists in the customers table. The date needs to be in yyyy-mm-dd format.
 	 */
 	@Override
 	public OrderProfile update() {
-		LOGGER.info("Please enter forename(s): ");
+		LOGGER.info("Please enter order id: ");
 		Long oid = Long.valueOf(getInput());
-		LOGGER.info("Please enter forename(s): ");
+		LOGGER.info("Please enter new customer id: ");
 		Long cid = Long.valueOf(getInput());
-		LOGGER.info("Please enter surname: ");
+		LOGGER.info("Please enter new date (yyyy-mm-dd): ");
 		Date dateOrdered = Date.valueOf(getInput());
 		OrderProfile order = orderService.update(new OrderProfile(oid, cid, dateOrdered));
 		LOGGER.info("Customer Updated.");
@@ -72,7 +67,7 @@ public class OrderController implements CrudController<OrderProfile> {
 	}
 
 	/**
-	 * Deletes an existing customer by the id of the customer
+	 * Deletes an existing order by the id of the order
 	 */
 	@Override
 	public void delete() {
