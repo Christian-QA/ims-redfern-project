@@ -13,9 +13,12 @@ import org.apache.log4j.Logger;
 import com.qa.ims.controllers.CrudController;
 import com.qa.ims.controllers.CustomerController;
 import com.qa.ims.controllers.DmlCommands;
+import com.qa.ims.controllers.ProductController;
 import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
+import com.qa.ims.persistence.dataaccessobjects.ProductDataAccessObject;
 import com.qa.ims.persistence.profiles.TableSelectCommand;
 import com.qa.ims.services.CustomerServices;
+import com.qa.ims.services.ProductServices;
 import com.qa.ims.utils.Utils;
 
 public class InventoryManager {
@@ -44,11 +47,9 @@ public class InventoryManager {
 			doDMLCommand(customerController, dmlCommand);
 			break;
 		case PRODUCT:
-			/*
-			 * ProductController productController = new ProductController( new
-			 * ProductServices(new ProductDataAccessObject(username, password)));
-			 * doDMLCommand(productController, dmlCommand);
-			 */
+			ProductController productController = new ProductController(
+					new ProductServices(new ProductDataAccessObject(username, password)));
+			doDMLCommand(productController, dmlCommand);
 			break;
 		case ORDER:
 			break;

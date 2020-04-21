@@ -66,7 +66,7 @@ public class ProductProfile {
 	}
 
 	public String toString() {
-		return "id: " + id + " | name: " + name + " | category: " + category + " | price: " + price + " | inventory"
+		return "id: " + id + " | Name: " + name + " | Category: " + category + " | Price: £" + price + " | Inventory: "
 				+ inventory + "\n ------------------------------------------------------";
 	}
 
