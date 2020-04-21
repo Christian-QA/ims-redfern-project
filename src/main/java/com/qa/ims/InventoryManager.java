@@ -65,31 +65,28 @@ public class InventoryManager {
 		default:
 			break;
 		}
+		System.out.println(tableSelectCommand.toString());
 		return tableSelectCommand.toString();
 	}
 
 	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DmlCommands dmlCommand) {
-		InventoryManager initiateDMLCommand = new InventoryManager();
-		if (initiateDMLCommand.initiateSystem() != "HELP") {
-			switch (dmlCommand) {
-			case CREATE:
-				createReadUpdateDestroyController.create();
-				break;
-			case READ:
-				createReadUpdateDestroyController.readAll();
-				break;
-			case UPDATE:
-				createReadUpdateDestroyController.update();
-				break;
-			case DELETE:
-				createReadUpdateDestroyController.delete();
-				break;
-			case RETURN:
-				break;
-			default:
-				break;
-
-			}
+		switch (dmlCommand) {
+		case CREATE:
+			createReadUpdateDestroyController.create();
+			break;
+		case READ:
+			createReadUpdateDestroyController.readAll();
+			break;
+		case UPDATE:
+			createReadUpdateDestroyController.update();
+			break;
+		case DELETE:
+			createReadUpdateDestroyController.delete();
+			break;
+		case RETURN:
+			break;
+		default:
+			break;
 		}
 	}
 

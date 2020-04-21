@@ -6,8 +6,10 @@ import com.qa.ims.utils.Utils;
 
 public enum TableSelectCommand {
 
-	CUSTOMERS("Information about customers"), PRODUCTS("Individual Items"), ORDERS("Purchases of items"),
-	HELP("Describes what the other functions do"), STOP("To close the application");
+	CUSTOMERS("Review customers: allow manipulation of the customers table"),
+	PRODUCTS("Review products: allow manipulation of the products table"),
+	ORDERS("Review orders: allow manipulation of the orders table"), HELP("Describes what the other functions do"),
+	STOP("Closes the application");
 
 	public static final Logger LOGGER = Logger.getLogger(TableSelectCommand.class);
 
@@ -18,7 +20,7 @@ public enum TableSelectCommand {
 	}
 
 	public String getDescription() {
-		return this.name() + ": " + this.description;
+		return this.description;
 	}
 
 	public static void printTableSelectCommands() {
@@ -47,6 +49,11 @@ public enum TableSelectCommand {
 				case "4":
 				case "help":
 					command = TableSelectCommand.HELP;
+					LOGGER.info(CUSTOMERS.getDescription());
+					LOGGER.info(PRODUCTS.getDescription());
+					LOGGER.info(ORDERS.getDescription());
+					LOGGER.info(HELP.getDescription());
+					LOGGER.info(STOP.getDescription());
 					break;
 				case "5":
 				case "stop":
