@@ -31,7 +31,24 @@ public enum TableSelectCommand {
 		TableSelectCommand command;
 		while (true) {
 			try {
-				command = TableSelectCommand.valueOf(Utils.getInput().toUpperCase());
+				switch (Utils.getInput()) {
+				case "1":
+				case "product":
+					command = TableSelectCommand.CUSTOMER;
+					break;
+				case "2":
+					command = TableSelectCommand.PRODUCT;
+					break;
+				case "3":
+					command = TableSelectCommand.ORDER;
+					break;
+				case "4":
+					command = TableSelectCommand.STOP;
+					break;
+				default:
+					command = TableSelectCommand.valueOf(Utils.getInput().toUpperCase());
+					break;
+				}
 				break;
 			} catch (IllegalArgumentException e) {
 				LOGGER.error("Invalid selection please try again");
