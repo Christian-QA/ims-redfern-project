@@ -25,7 +25,7 @@ public class InventoryManager {
 
 	public static final Logger LOGGER = Logger.getLogger(InventoryManager.class);
 
-	public String initiateSystem() {
+	public void initiateSystem() {
 
 		LOGGER.info("Please insert username: ");
 		String username = Utils.getInput();
@@ -65,8 +65,7 @@ public class InventoryManager {
 		default:
 			break;
 		}
-		System.out.println(tableSelectCommand.toString());
-		return tableSelectCommand.toString();
+
 	}
 
 	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DmlCommands dmlCommand) {
