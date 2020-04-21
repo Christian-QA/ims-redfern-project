@@ -43,7 +43,12 @@ public class InventoryManager {
 					new CustomerServices(new CustomerDataAccessObject(username, password)));
 			doDMLCommand(customerController, dmlCommand);
 			break;
-		case ITEM:
+		case PRODUCT:
+			/*
+			 * ProductController productController = new ProductController( new
+			 * ProductServices(new ProductDataAccessObject(username, password)));
+			 * doDMLCommand(productController, dmlCommand);
+			 */
 			break;
 		case ORDER:
 			break;
