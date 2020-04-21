@@ -64,6 +64,8 @@ public class ProductController implements CrudController<ProductProfile> {
 	 */
 	@Override
 	public ProductProfile update() {
+		LOGGER.info("Please enter the id of the customer you would like to update: ");
+		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter a name: ");
 		String name = getInput();
 		LOGGER.info("Please enter the product's category: ");
@@ -72,7 +74,7 @@ public class ProductController implements CrudController<ProductProfile> {
 		BigDecimal price = new BigDecimal(getInput());
 		LOGGER.info("Please enter quantity of product: ");
 		Long inventory = Long.valueOf(getInput());
-		ProductProfile product = productService.update(new ProductProfile(name, category, price, inventory));
+		ProductProfile product = productService.update(new ProductProfile(id, name, category, price, inventory));
 		LOGGER.info("Product Updated.");
 		return product;
 	}

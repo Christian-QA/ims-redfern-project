@@ -13,11 +13,14 @@ import org.apache.log4j.Logger;
 import com.qa.ims.controllers.CrudController;
 import com.qa.ims.controllers.CustomerController;
 import com.qa.ims.controllers.DmlCommands;
+import com.qa.ims.controllers.OrderController;
 import com.qa.ims.controllers.ProductController;
 import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
+import com.qa.ims.persistence.dataaccessobjects.OrderDataAccessObject;
 import com.qa.ims.persistence.dataaccessobjects.ProductDataAccessObject;
 import com.qa.ims.persistence.profiles.TableSelectCommand;
 import com.qa.ims.services.CustomerServices;
+import com.qa.ims.services.OrderServices;
 import com.qa.ims.services.ProductServices;
 import com.qa.ims.utils.Utils;
 
@@ -32,32 +35,43 @@ public class InventoryManager {
 		LOGGER.info("Please insert password: ");
 		String password = Utils.getInput();
 
-		LOGGER.info("Hello, " + username + " how can I help you today?");
-		LOGGER.info("1): Review Customers      2): Review Products      3): Review Orders      4): Help      5): Stop");
+		LOGGER.info("Hello, " + username + ", how can I help you today?");
+		LOGGER.info(
+				"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
 		TableSelectCommand tableSelectCommand = TableSelectCommand.getTableSelectCommand();
 
 		LOGGER.info("You have selected '" + tableSelectCommand + "'. How would you like to proceed?");
-		LOGGER.info("1): Create      2): Read      3): Update      4): Delete      5): Help      6): Back");
+		LOGGER.info(
+				"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
 		DmlCommands dmlCommand = DmlCommands.getDmlCommands();
 
 		switch (tableSelectCommand) {
-		case CUSTOMER:
+		case CUSTOMERS:
 			CustomerController customerController = new CustomerController(
 					new CustomerServices(new CustomerDataAccessObject(username, password)));
 			doDMLCommand(customerController, dmlCommand);
 			break;
-		case PRODUCT:
+		case PRODUCTS:
 			ProductController productController = new ProductController(
 					new ProductServices(new ProductDataAccessObject(username, password)));
 			doDMLCommand(productController, dmlCommand);
 			break;
-		case ORDER:
+		case ORDERS:
+			OrderController orderController = new OrderController(
+					new OrderServices(new OrderDataAccessObject(username, password)));
+			doDMLCommand(orderController, dmlCommand);
+			break;
+		case HELP:
+			System.out.println("SDfvdsge");
+			TableSelectCommand.getTableSelectCommand();
 			break;
 		case STOP:
+			System.exit(0);
 			break;
 		default:
 			break;
 		}
+
 	}
 
 	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, DmlCommands dmlCommand) {
@@ -78,7 +92,6 @@ public class InventoryManager {
 			break;
 		default:
 			break;
-
 		}
 	}
 
