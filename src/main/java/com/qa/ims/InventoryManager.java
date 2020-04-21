@@ -13,11 +13,14 @@ import org.apache.log4j.Logger;
 import com.qa.ims.controllers.CrudController;
 import com.qa.ims.controllers.CustomerController;
 import com.qa.ims.controllers.DmlCommands;
+import com.qa.ims.controllers.OrderController;
 import com.qa.ims.controllers.ProductController;
 import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
+import com.qa.ims.persistence.dataaccessobjects.OrderDataAccessObject;
 import com.qa.ims.persistence.dataaccessobjects.ProductDataAccessObject;
 import com.qa.ims.persistence.profiles.TableSelectCommand;
 import com.qa.ims.services.CustomerServices;
+import com.qa.ims.services.OrderServices;
 import com.qa.ims.services.ProductServices;
 import com.qa.ims.utils.Utils;
 
@@ -54,6 +57,9 @@ public class InventoryManager {
 			doDMLCommand(productController, dmlCommand);
 			break;
 		case ORDERS:
+			OrderController orderController = new OrderController(
+					new OrderServices(new OrderDataAccessObject(username, password)));
+			doDMLCommand(orderController, dmlCommand);
 			break;
 		case HELP:
 			System.out.println("SDfvdsge");
