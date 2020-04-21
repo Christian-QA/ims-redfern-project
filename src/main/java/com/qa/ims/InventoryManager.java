@@ -88,6 +88,8 @@ public class InventoryManager {
 		case DELETE:
 			createReadUpdateDestroyController.delete();
 			break;
+		case HELP:
+			break;
 		case RETURN:
 			break;
 		default:
