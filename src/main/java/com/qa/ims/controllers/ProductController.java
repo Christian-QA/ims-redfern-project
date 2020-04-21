@@ -1,5 +1,6 @@
 package com.qa.ims.controllers;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -43,14 +44,14 @@ public class ProductController implements CrudController<ProductProfile> {
 	 */
 	@Override
 	public ProductProfile create() {
-		LOGGER.info("Please enter name: ");
+		LOGGER.info("Please enter a name: ");
 		String name = getInput();
-		LOGGER.info("Please enter category: ");
+		LOGGER.info("Please enter the product's category: ");
 		String category = getInput();
-		LOGGER.info("Please enter price: ");
-		String price = getInput();
-		LOGGER.info("Please enter inventory: ");
-		String inventory = getInput();
+		LOGGER.info("Please enter price per unit: ");
+		BigDecimal price = new BigDecimal(getInput());
+		LOGGER.info("Please enter quantity of product: ");
+		Long inventory = Long.valueOf(getInput());
 		ProductProfile product = ProductServices.create(new ProductProfile(name, category, price, inventory));
 		LOGGER.info("Product created.");
 		return product;
@@ -64,16 +65,14 @@ public class ProductController implements CrudController<ProductProfile> {
 	 */
 	@Override
 	public ProductProfile update() {
-		LOGGER.info("Please enter the id of the product you would like to update: ");
-		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter a name: ");
 		String name = getInput();
 		LOGGER.info("Please enter the product's category: ");
 		String category = getInput();
 		LOGGER.info("Please enter price per unit: ");
-		String price = getInput();
+		BigDecimal price = BigDecimal.valueOf(getInput());
 		LOGGER.info("Please enter quantity of product: ");
-		String inventory = getInput();
+		Long inventory = Long.valueOf(getInput());
 		ProductProfile product = ProductServices.create(new ProductProfile(name, category, price, inventory));
 		LOGGER.info("Product Updated.");
 		return product;

@@ -12,11 +12,17 @@ public class ProductProfile {
 
 	public ProductProfile(String name, String category, BigDecimal price, Long inventory) {
 		this.name = name;
+		this.category = category;
+		this.price = price;
+		this.inventory = inventory;
 	}
 
 	public ProductProfile(Long id, String name, String category, BigDecimal price, Long inventory) {
 		this.id = id;
 		this.name = name;
+		this.category = category;
+		this.price = price;
+		this.inventory = inventory;
 	}
 
 	public final Long getId() {
@@ -55,7 +61,7 @@ public class ProductProfile {
 		return inventory;
 	}
 
-	public final void setInventory(long inventory) {
+	public final void setInventory(Long inventory) {
 		this.inventory = inventory;
 	}
 
