@@ -9,19 +9,19 @@ import com.qa.ims.utils.Utils;
  * function to apply to an entity.
  *
  */
-public enum DmlCommands {
+public enum Action {
 	CREATE("To save a new item into the database"), READ("To read an item from the database"),
 	UPDATE("To change an item already in the database"), DELETE("To remove an item from the database"),
 	HELP("Describes what the other functions do"), RETURN("To return to domain selection");
 
-	public static final Logger LOGGER = Logger.getLogger(DmlCommands.class);
+	public static final Logger LOGGER = Logger.getLogger(Action.class);
 
 	private String description;
 
-	private DmlCommands() {
+	private Action() {
 	}
 
-	DmlCommands(String description) {
+	Action(String description) {
 		this.description = description;
 	}
 
@@ -36,7 +36,7 @@ public enum DmlCommands {
 	 * Prints out all possible actions
 	 */
 	public static void printDmlCommands() {
-		for (DmlCommands dmlcommand : DmlCommands.values()) {
+		for (Action dmlcommand : Action.values()) {
 			LOGGER.info(dmlcommand.getDmlCommandsDescription());
 		}
 	}
@@ -47,30 +47,30 @@ public enum DmlCommands {
 	 * 
 	 * @return DmlCommand type
 	 */
-	public static DmlCommands getDmlCommands() {
-		DmlCommands dmlcommand;
+	public static Action getDmlCommands() {
+		Action dmlcommand;
 		while (true) {
 			try {
 				switch (Utils.getInput()) {
 				case "1":
 				case "create":
-					dmlcommand = DmlCommands.CREATE;
+					dmlcommand = Action.CREATE;
 					break;
 				case "2":
 				case "read":
-					dmlcommand = DmlCommands.READ;
+					dmlcommand = Action.READ;
 					break;
 				case "3":
 				case "update":
-					dmlcommand = DmlCommands.UPDATE;
+					dmlcommand = Action.UPDATE;
 					break;
 				case "4":
 				case "delete":
-					dmlcommand = DmlCommands.DELETE;
+					dmlcommand = Action.DELETE;
 					break;
 				case "5":
 				case "help":
-					dmlcommand = DmlCommands.HELP;
+					dmlcommand = Action.HELP;
 					LOGGER.info(CREATE.getDmlCommandsDescription());
 					LOGGER.info(CREATE.getDmlCommandsDescription());
 					LOGGER.info(UPDATE.getDmlCommandsDescription());
@@ -80,10 +80,10 @@ public enum DmlCommands {
 					break;
 				case "6":
 				case "return":
-					dmlcommand = DmlCommands.RETURN;
+					dmlcommand = Action.RETURN;
 					break;
 				default:
-					dmlcommand = DmlCommands.valueOf(Utils.getInput().toUpperCase());
+					dmlcommand = Action.valueOf(Utils.getInput().toUpperCase());
 					break;
 				}
 				break;

@@ -3,7 +3,7 @@ package com.qa.ims.services;
 import java.util.List;
 
 import com.qa.ims.persistence.dataaccessobjects.DataAccessObject;
-import com.qa.ims.persistence.profiles.CustomerProfile;
+import com.qa.ims.persistence.domain.CustomerProfile;
 
 public class CustomerServices implements CrudServices<CustomerProfile> {
 

@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -14,7 +13,7 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.qa.ims.persistence.profiles.CustomerProfile;
+import com.qa.ims.persistence.domain.CustomerProfile;
 import com.qa.ims.services.CustomerServices;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -35,7 +34,6 @@ public class CustomerControllerTest {
 	@InjectMocks
 	private CustomerController customerController;
 
-	@Ignore
 	@Test
 	public void readAllTest() {
 		CustomerController customerController = new CustomerController(customerServices);
@@ -47,7 +45,6 @@ public class CustomerControllerTest {
 		assertEquals(customers, customerController.readAll());
 	}
 
-	@Ignore
 	@Test
 	public void createTest() {
 		String forename = "Jon";
@@ -62,7 +59,6 @@ public class CustomerControllerTest {
 	/**
 	 * 
 	 */
-	@Ignore
 	@Test
 	public void updateTest() {
 		String customer_id = "1";
@@ -78,7 +74,6 @@ public class CustomerControllerTest {
 	 * Delete doesn't return anything, so we can just verify that it calls the
 	 * delete method
 	 */
-	@Ignore
 	@Test
 	public void deleteTest() {
 		String id = "1";
@@ -86,5 +81,4 @@ public class CustomerControllerTest {
 		customerController.delete();
 		Mockito.verify(customerServices, Mockito.times(1)).delete(1L);
 	}
-
 }

@@ -1,21 +1,21 @@
-package com.qa.ims.persistence.profiles;
+package com.qa.ims.persistence.domain;
 
 import org.apache.log4j.Logger;
 
 import com.qa.ims.utils.Utils;
 
-public enum TableSelectCommand {
+public enum Domain {
 
 	CUSTOMERS("Review customers: allow manipulation of the customers table"),
 	PRODUCTS("Review products: allow manipulation of the products table"),
-	ORDERS("Review orders: allow manipulation of the orders table"), HELP("Describes what the other functions do"),
-	STOP("Closes the application");
+	ORDERS("Review orders: allow manipulation of the orders table"),
+	HELP("Help: Describes what the other functions do"), STOP("Stop: Closes the application");
 
-	public static final Logger LOGGER = Logger.getLogger(TableSelectCommand.class);
+	public static final Logger LOGGER = Logger.getLogger(Domain.class);
 
 	private String description;
 
-	private TableSelectCommand(String description) {
+	private Domain(String description) {
 		this.description = description;
 	}
 
@@ -23,32 +23,32 @@ public enum TableSelectCommand {
 		return this.description;
 	}
 
-	public static void printTableSelectCommands() {
-		for (TableSelectCommand command : TableSelectCommand.values()) {
+	public static void printDomain() {
+		for (Domain command : Domain.values()) {
 			LOGGER.info(command.getDescription());
 		}
 	}
 
-	public static TableSelectCommand getTableSelectCommand() {
-		TableSelectCommand command;
+	public static Domain getDomain() {
+		Domain command;
 		while (true) {
 			try {
 				switch (Utils.getInput()) {
 				case "1":
 				case "customers":
-					command = TableSelectCommand.CUSTOMERS;
+					command = Domain.CUSTOMERS;
 					break;
 				case "2":
 				case "products":
-					command = TableSelectCommand.PRODUCTS;
+					command = Domain.PRODUCTS;
 					break;
 				case "3":
 				case "orders":
-					command = TableSelectCommand.ORDERS;
+					command = Domain.ORDERS;
 					break;
 				case "4":
 				case "help":
-					command = TableSelectCommand.HELP;
+					command = Domain.HELP;
 					LOGGER.info(CUSTOMERS.getDescription());
 					LOGGER.info(PRODUCTS.getDescription());
 					LOGGER.info(ORDERS.getDescription());
@@ -57,10 +57,10 @@ public enum TableSelectCommand {
 					break;
 				case "5":
 				case "stop":
-					command = TableSelectCommand.STOP;
+					command = Domain.STOP;
 					break;
 				default:
-					command = TableSelectCommand.valueOf(Utils.getInput().toUpperCase());
+					command = Domain.valueOf(Utils.getInput().toUpperCase());
 					break;
 				}
 				break;
@@ -70,5 +70,4 @@ public enum TableSelectCommand {
 		}
 		return command;
 	}
-
 }

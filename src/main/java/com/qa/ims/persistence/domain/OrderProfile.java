@@ -1,4 +1,4 @@
-package com.qa.ims.persistence.profiles;
+package com.qa.ims.persistence.domain;
 
 import java.sql.Date;
 
