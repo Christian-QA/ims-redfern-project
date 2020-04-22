@@ -47,7 +47,7 @@ public enum Action {
 	 * 
 	 * @return DmlCommand type
 	 */
-	public static Action getDmlCommands() {
+	public static Action getAction() {
 		Action dmlcommand;
 		while (true) {
 			try {

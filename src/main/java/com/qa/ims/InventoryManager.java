@@ -45,23 +45,23 @@ public class InventoryManager {
 		LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
 		LOGGER.info(
 				"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
-		Action action = Action.getDmlCommands();
+		Action action = Action.getAction();
 
 		switch (domain) {
 		case CUSTOMERS:
 			CustomerController customerController = new CustomerController(
 					new CustomerServices(new CustomerDataAccessObject(username, password)));
-			doDMLCommand(customerController, action);
+			doAction(customerController, action);
 			break;
 		case PRODUCTS:
 			ProductController productController = new ProductController(
 					new ProductServices(new ProductDataAccessObject(username, password)));
-			doDMLCommand(productController, action);
+			doAction(productController, action);
 			break;
 		case ORDERS:
 			OrderController orderController = new OrderController(
 					new OrderServices(new OrderDataAccessObject(username, password)));
-			doDMLCommand(orderController, action);
+			doAction(orderController, action);
 			break;
 		case HELP:
 			break;
@@ -74,19 +74,19 @@ public class InventoryManager {
 
 	}
 
-	public void doDMLCommand(CrudController<?> createReadUpdateDestroyController, Action dmlCommand) {
-		switch (dmlCommand) {
+	public void doAction(CrudController<?> crudController, Action action) {
+		switch (action) {
 		case CREATE:
-			createReadUpdateDestroyController.create();
+			crudController.create();
 			break;
 		case READ:
-			createReadUpdateDestroyController.readAll();
+			crudController.readAll();
 			break;
 		case UPDATE:
-			createReadUpdateDestroyController.update();
+			crudController.update();
 			break;
 		case DELETE:
-			createReadUpdateDestroyController.delete();
+			crudController.delete();
 			break;
 		case HELP:
 			break;
