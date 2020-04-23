@@ -9,25 +9,25 @@ public class DomainTest {
 	@Test
 	public void customerTest() {
 		Domain domain = Domain.CUSTOMERS;
-		assertTrue(domain.getDescription().toLowerCase().contains("customer"));
+		assertTrue(domain.getDomainDescription().toLowerCase().contains("customer"));
 	}
 
 	@Test
 	public void itemTest() {
 		Domain domain = Domain.PRODUCTS;
-		assertTrue(domain.getDescription().toLowerCase().contains("product"));
+		assertTrue(domain.getDomainDescription().toLowerCase().contains("product"));
 	}
 
 	@Ignore
 	@Test
 	public void orderTest() {
 		Domain domain = Domain.ORDERS;
-		assertTrue(domain.getDescription().toLowerCase().contains("products"));
+		assertTrue(domain.getDomainDescription().toLowerCase().contains("products"));
 	}
 
 	@Test
 	public void stopTest() {
 		Domain domain = Domain.STOP;
-		assertTrue(domain.getDescription().toLowerCase().contains("close"));
+		assertTrue(domain.getDomainDescription().toLowerCase().contains("close"));
 	}
 }

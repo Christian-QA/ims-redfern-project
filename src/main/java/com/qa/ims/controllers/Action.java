@@ -28,16 +28,16 @@ public enum Action {
 	/**
 	 * Describes the action
 	 */
-	public String getDmlCommandsDescription() {
+	public String getActionDescription() {
 		return this.name() + ": " + this.description;
 	}
 
 	/**
 	 * Prints out all possible actions
 	 */
-	public static void printDmlCommands() {
+	public static void printAction() {
 		for (Action dmlcommand : Action.values()) {
-			LOGGER.info(dmlcommand.getDmlCommandsDescription());
+			LOGGER.info(dmlcommand.getActionDescription());
 		}
 	}
 
@@ -71,12 +71,12 @@ public enum Action {
 				case "5":
 				case "help":
 					dmlcommand = Action.HELP;
-					LOGGER.info(CREATE.getDmlCommandsDescription());
-					LOGGER.info(CREATE.getDmlCommandsDescription());
-					LOGGER.info(UPDATE.getDmlCommandsDescription());
-					LOGGER.info(DELETE.getDmlCommandsDescription());
-					LOGGER.info(HELP.getDmlCommandsDescription());
-					LOGGER.info(RETURN.getDmlCommandsDescription());
+					LOGGER.info(CREATE.getActionDescription());
+					LOGGER.info(CREATE.getActionDescription());
+					LOGGER.info(UPDATE.getActionDescription());
+					LOGGER.info(DELETE.getActionDescription());
+					LOGGER.info(HELP.getActionDescription());
+					LOGGER.info(RETURN.getActionDescription());
 					break;
 				case "6":
 				case "return":

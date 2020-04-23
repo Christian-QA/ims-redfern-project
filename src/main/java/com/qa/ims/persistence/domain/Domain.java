@@ -19,13 +19,13 @@ public enum Domain {
 		this.description = description;
 	}
 
-	public String getDescription() {
+	public String getDomainDescription() {
 		return this.description;
 	}
 
 	public static void printDomain() {
 		for (Domain command : Domain.values()) {
-			LOGGER.info(command.getDescription());
+			LOGGER.info(command.getDomainDescription());
 		}
 	}
 
@@ -49,11 +49,11 @@ public enum Domain {
 				case "4":
 				case "help":
 					command = Domain.HELP;
-					LOGGER.info(CUSTOMERS.getDescription());
-					LOGGER.info(PRODUCTS.getDescription());
-					LOGGER.info(ORDERS.getDescription());
-					LOGGER.info(HELP.getDescription());
-					LOGGER.info(STOP.getDescription());
+					LOGGER.info(CUSTOMERS.getDomainDescription());
+					LOGGER.info(PRODUCTS.getDomainDescription());
+					LOGGER.info(ORDERS.getDomainDescription());
+					LOGGER.info(HELP.getDomainDescription());
+					LOGGER.info(STOP.getDomainDescription());
 					break;
 				case "5":
 				case "stop":
