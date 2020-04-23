@@ -10,7 +10,7 @@ import com.qa.ims.utils.Utils;
 
 public class OrderlineController implements CrudController<OrderlineProfile> {
 
-	public static final Logger LOGGER = Logger.getLogger(OrderController.class);
+	public static final Logger LOGGER = Logger.getLogger(OrderlineController.class);
 
 	private CrudServices<OrderlineProfile> orderlineService;
 

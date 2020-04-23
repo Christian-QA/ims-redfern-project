@@ -14,13 +14,16 @@ import com.qa.ims.controllers.Action;
 import com.qa.ims.controllers.CrudController;
 import com.qa.ims.controllers.CustomerController;
 import com.qa.ims.controllers.OrderController;
+import com.qa.ims.controllers.OrderlineController;
 import com.qa.ims.controllers.ProductController;
 import com.qa.ims.persistence.dataaccessobjects.CustomerDataAccessObject;
 import com.qa.ims.persistence.dataaccessobjects.OrderDataAccessObject;
+import com.qa.ims.persistence.dataaccessobjects.OrderlineDataAccessObject;
 import com.qa.ims.persistence.dataaccessobjects.ProductDataAccessObject;
 import com.qa.ims.persistence.domain.Domain;
 import com.qa.ims.services.CustomerServices;
 import com.qa.ims.services.OrderServices;
+import com.qa.ims.services.OrderlineServices;
 import com.qa.ims.services.ProductServices;
 import com.qa.ims.utils.Utils;
 
@@ -102,9 +105,15 @@ public class InventoryManager {
 			doAction(productController, action);
 			break;
 		case ORDERS:
-			OrderController orderController = new OrderController(
-					new OrderServices(new OrderDataAccessObject(username, password)));
-			doAction(orderController, action);
+			if (orderline = false) {
+				OrderController orderController = new OrderController(
+						new OrderServices(new OrderDataAccessObject(username, password)));
+				doAction(orderController, action);
+			} else {
+				OrderlineController orderlineController = new OrderlineController(
+						new OrderlineServices(new OrderlineDataAccessObject(username, password)));
+				doAction(orderlineController, action);
+			}
 			break;
 		case HELP:
 			break;
