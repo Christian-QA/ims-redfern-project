@@ -160,6 +160,13 @@ public class ProductProfileTest {
 	}
 
 	@Test
+	public void hashCodeTestWithNull() {
+		ProductProfile order = new ProductProfile(null, null, null, null, null);
+		ProductProfile other = new ProductProfile(null, null, null, null, null);
+		assertEquals(order.hashCode(), other.hashCode());
+	}
+
+	@Test
 	public void toStringTest() {
 		String toString = "id: 1 | Name: Paddie Vs Mason | Category: Movie | Price: £8.99 | Inventory: 160\n ------------------------------------------------------";
 		assertEquals(toString, product.toString());

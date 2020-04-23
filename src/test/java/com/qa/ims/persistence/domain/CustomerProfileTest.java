@@ -112,11 +112,6 @@ public class CustomerProfileTest {
 	}
 
 	@Test
-	public void hashCodeTest() {
-		assertEquals(customer.hashCode(), other.hashCode());
-	}
-
-	@Test
 	public void hashCodeTestWithNull() {
 		CustomerProfile order = new CustomerProfile(null, null, null);
 		CustomerProfile other = new CustomerProfile(null, null, null);

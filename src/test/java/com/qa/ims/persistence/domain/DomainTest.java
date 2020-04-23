@@ -2,7 +2,6 @@ package com.qa.ims.persistence.domain;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class DomainTest {
@@ -18,11 +17,10 @@ public class DomainTest {
 		assertTrue(domain.getDomainDescription().toLowerCase().contains("product"));
 	}
 
-	@Ignore
 	@Test
 	public void orderTest() {
 		Domain domain = Domain.ORDERS;
-		assertTrue(domain.getDomainDescription().toLowerCase().contains("products"));
+		assertTrue(domain.getDomainDescription().toLowerCase().contains("orders"));
 	}
 
 	@Test

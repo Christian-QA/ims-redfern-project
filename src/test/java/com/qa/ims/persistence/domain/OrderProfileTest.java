@@ -83,7 +83,8 @@ public class OrderProfileTest {
 
 	@Test
 	public void cidNotEqual() {
-		other.setOid(1L);
+		order.setCid(1L);
+		other.setCid(1L);
 		assertFalse(order.equals(other));
 	}
 
@@ -106,11 +107,6 @@ public class OrderProfileTest {
 		assertNotNull(product.getCid());
 		assertNotNull(product.getDateOrdered());
 
-	}
-
-	@Test
-	public void hashCodeTest() {
-		assertEquals(order.hashCode(), other.hashCode());
 	}
 
 	@Test
