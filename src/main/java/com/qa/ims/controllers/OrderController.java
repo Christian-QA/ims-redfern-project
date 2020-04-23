@@ -1,6 +1,7 @@
 package com.qa.ims.controllers;
 
 import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -42,8 +43,7 @@ public class OrderController implements CrudController<OrderProfile> {
 	public OrderProfile create() {
 		LOGGER.info("Please enter customer id: ");
 		Long cid = Long.valueOf(getInput());
-		LOGGER.info("Please enter the date: ");
-		Date dateOrdered = Date.valueOf(getInput());
+		Date dateOrdered = new java.sql.Date(Calendar.getInstance().getTime().getTime());
 		OrderProfile order = orderService.create(new OrderProfile(cid, dateOrdered));
 		LOGGER.info("Order created.");
 		return order;

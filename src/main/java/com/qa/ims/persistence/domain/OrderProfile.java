@@ -43,6 +43,16 @@ public class OrderProfile {
 		this.dateOrdered = dateOrdered;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((oid == null) ? 0 : oid.hashCode());
+		result = prime * result + ((cid == null) ? 0 : cid.hashCode());
+		result = prime * result + ((dateOrdered == null) ? 0 : dateOrdered.hashCode());
+		return result;
+	}
+
 	public String toString() {
 		return "order id: " + oid + " | customer id: " + cid + " | Date Ordered: " + dateOrdered
 				+ "\n ------------------------------------------------------";

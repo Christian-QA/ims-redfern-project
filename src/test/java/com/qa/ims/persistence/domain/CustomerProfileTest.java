@@ -16,7 +16,7 @@ public class CustomerProfileTest {
 	@Before
 	public void setUp() {
 		customer = new CustomerProfile(1L, "Chris", "Perrins");
-		other = new CustomerProfile(1L, "Chris", "Perrins");
+		other = new CustomerProfile(1L, "Rhys", "Thompson");
 	}
 
 	@Test
@@ -58,7 +58,7 @@ public class CustomerProfileTest {
 
 	@Test
 	public void checkEqualityBetweenDifferentObjects() {
-		assertTrue(customer.equals(other));
+		assertFalse(customer.equals(other));
 	}
 
 	@Test
@@ -74,23 +74,15 @@ public class CustomerProfileTest {
 	}
 
 	@Test
-	public void checkEqualityBetweenDifferentObjectsNullName() {
-		customer.setForename(null);
-		other.setForename(null);
-		assertTrue(customer.equals(other));
-	}
-
-	@Test
 	public void nullId() {
 		customer.setId(null);
 		assertFalse(customer.equals(other));
 	}
 
 	@Test
-	public void nullIdOnBoth() {
-		customer.setId(null);
-		other.setId(null);
-		assertTrue(customer.equals(other));
+	public void customerIDDifferent() {
+		other.setId(1L);
+		assertFalse(customer.equals(other));
 	}
 
 	@Test
@@ -103,13 +95,6 @@ public class CustomerProfileTest {
 	public void nullSurname() {
 		customer.setSurname(null);
 		assertFalse(customer.equals(other));
-	}
-
-	@Test
-	public void nullSurnameOnBoth() {
-		customer.setSurname(null);
-		other.setSurname(null);
-		assertTrue(customer.equals(other));
 	}
 
 	@Test
@@ -133,14 +118,15 @@ public class CustomerProfileTest {
 
 	@Test
 	public void hashCodeTestWithNull() {
-		CustomerProfile customer = new CustomerProfile(null, null);
-		CustomerProfile other = new CustomerProfile(null, null);
-		assertEquals(customer.hashCode(), other.hashCode());
+		CustomerProfile order = new CustomerProfile(null, null, null);
+		CustomerProfile other = new CustomerProfile(null, null, null);
+		assertEquals(order.hashCode(), other.hashCode());
 	}
 
 	@Test
 	public void toStringTest() {
-		String toString = "id:1 first name:Chris surname:Perrins";
+		String toString = "id: 1 | first name: Chris | surname: Perrins | age: N/A\n ------------------------------------------------------";
 		assertEquals(toString, customer.toString());
 	}
+
 }
