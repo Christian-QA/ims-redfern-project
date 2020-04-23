@@ -14,7 +14,7 @@ import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.qa.ims.persistence.profiles.CustomerProfile;
+import com.qa.ims.persistence.domain.CustomerProfile;
 import com.qa.ims.services.CustomerServices;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -35,7 +35,6 @@ public class CustomerControllerTest {
 	@InjectMocks
 	private CustomerController customerController;
 
-	@Ignore
 	@Test
 	public void readAllTest() {
 		CustomerController customerController = new CustomerController(customerServices);
@@ -50,11 +49,11 @@ public class CustomerControllerTest {
 	@Ignore
 	@Test
 	public void createTest() {
-		String forename = "Jon";
-		String surname = "Bon";
+		String forename = "Chris";
+		String surname = "Perrins";
 		Mockito.doReturn(forename, surname).when(customerController).getInput();
 		CustomerProfile customer = new CustomerProfile(forename, surname);
-		CustomerProfile savedCustomer = new CustomerProfile(1L, "Jon", "Bon");
+		CustomerProfile savedCustomer = new CustomerProfile(1L, "Chris", "Perrins");
 		Mockito.when(customerServices.create(customer)).thenReturn(savedCustomer);
 		assertEquals(savedCustomer, customerController.create());
 	}
@@ -78,7 +77,6 @@ public class CustomerControllerTest {
 	 * Delete doesn't return anything, so we can just verify that it calls the
 	 * delete method
 	 */
-	@Ignore
 	@Test
 	public void deleteTest() {
 		String id = "1";
@@ -86,5 +84,4 @@ public class CustomerControllerTest {
 		customerController.delete();
 		Mockito.verify(customerServices, Mockito.times(1)).delete(1L);
 	}
-
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.qa.ims.persistence.profiles.CustomerProfile;
+import com.qa.ims.persistence.domain.CustomerProfile;
 
 public class CustomerDataAccessObject implements DataAccessObject<CustomerProfile> {
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.qa.ims.persistence.profiles.ProductProfile;
+import com.qa.ims.persistence.domain.ProductProfile;
 import com.qa.ims.services.CrudServices;
 import com.qa.ims.utils.Utils;
 
