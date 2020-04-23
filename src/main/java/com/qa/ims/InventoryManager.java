@@ -40,11 +40,13 @@ public class InventoryManager {
 				"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
 		Domain domain = Domain.getDomain();
 
-		if (domain.name().equalsIgnoreCase("stop") || domain.name().equalsIgnoreCase("5")) {
+		if (domain.name().equalsIgnoreCase("stop")) {
 			LOGGER.info("Ending Program");
 			System.exit(0);
-		} else if (domain.name().equalsIgnoreCase("help") || domain.name().equalsIgnoreCase("4")) {
-			domain = Domain.getDomain();
+		} else if (domain.name().equalsIgnoreCase("help")) {
+			while (domain.name().equalsIgnoreCase("help")) {
+				domain = Domain.getDomain();
+			}
 		}
 
 		/// Help and Stop go here
