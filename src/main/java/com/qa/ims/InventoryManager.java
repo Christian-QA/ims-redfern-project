@@ -30,6 +30,8 @@ public class InventoryManager {
 
 	public void initiateSystem() {
 
+		boolean orderline = false;
+
 		LOGGER.info("Please insert username: ");
 		String username = Utils.getInput();
 		LOGGER.info("Please insert password: ");
@@ -47,11 +49,43 @@ public class InventoryManager {
 			while (domain.name().equalsIgnoreCase("help")) {
 				domain = Domain.getDomain();
 			}
+		} else if (domain.name().equalsIgnoreCase("orders")) {
+			LOGGER.info("Would you like to view all orders or a specific customer's orderline?");
+			LOGGER.info("[1]: all [orders]      [2]: specific [orderline]");
+
+			boolean orderlineSelecting = true;
+			while (orderlineSelecting) {
+				try {
+					switch (Utils.getInput()) {
+					case "1":
+					case "orders":
+
+						orderlineSelecting = false;
+						break;
+					case "2":
+					case "orderline":
+
+						orderlineSelecting = false;
+						break;
+					default:
+						orderlineSelecting = true;
+						throw new IllegalArgumentException(
+								"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
+					}
+				} catch (IllegalArgumentException e) {
+					LOGGER.error(
+							"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
+				}
+			}
 		}
 
 		/// Help and Stop go here
 
-		LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
+		if (orderline = true) {
+			LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
+		} else {
+			LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
+		}
 		LOGGER.info(
 				"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
 		Action action = Action.getAction();
