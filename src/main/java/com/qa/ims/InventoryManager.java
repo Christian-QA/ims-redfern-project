@@ -40,6 +40,13 @@ public class InventoryManager {
 				"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
 		Domain domain = Domain.getDomain();
 
+		if (domain.name().equalsIgnoreCase("stop") || domain.name().equalsIgnoreCase("5")) {
+			LOGGER.info("Ending Program");
+			System.exit(0);
+		} else if (domain.name().equalsIgnoreCase("help") || domain.name().equalsIgnoreCase("4")) {
+			domain = Domain.getDomain();
+		}
+
 		/// Help and Stop go here
 
 		LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
@@ -66,7 +73,6 @@ public class InventoryManager {
 		case HELP:
 			break;
 		case STOP:
-			System.exit(0);
 			break;
 		default:
 			break;
@@ -90,6 +96,7 @@ public class InventoryManager {
 			break;
 		case HELP:
 			break;
+
 		case RETURN:
 			break;
 		default:
