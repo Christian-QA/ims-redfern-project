@@ -49,7 +49,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 		LOGGER.info("How many would you like to add?");
 		Long quantity = Long.valueOf(getInput());
 		OrderlineProfile orderline = orderlineService.create(new OrderlineProfile(pid, oid, quantity));
-		LOGGER.info("Customer created.");
+		LOGGER.info("Order created.");
 		return orderline;
 	}
 
@@ -66,7 +66,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 		LOGGER.info("How many would you like to add?");
 		Long quantity = Long.valueOf(getInput());
 		OrderlineProfile orderline = orderlineService.update(new OrderlineProfile(pid, oid, quantity));
-		LOGGER.info("Orderline Updated.");
+		LOGGER.info("Order Updated.");
 		return orderline;
 	}
 
@@ -75,7 +75,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 	 */
 	@Override
 	public void delete() {
-		LOGGER.info("Please enter the orderline (by id) you wish to delete: ");
+		LOGGER.info("Please enter the order (by id) you wish to delete: ");
 		Long oid = Long.valueOf(getInput());
 		orderlineService.delete(oid);
 

@@ -1,5 +1,6 @@
 package com.qa.ims.persistence.dataaccessobjects;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -36,7 +37,9 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 		Long pid = resultSet.getLong("product_id");
 		Long oid = resultSet.getLong("order_id");
 		Long quantityOrdered = resultSet.getLong("quantity_ordered");
-		return new OrderlineProfile(pid, oid, quantityOrdered);
+		String name = resultSet.getString("name");
+		BigDecimal price = resultSet.getBigDecimal("price");
+		return new OrderlineProfile(pid, oid, quantityOrdered, name, price);
 	}
 
 	/**
