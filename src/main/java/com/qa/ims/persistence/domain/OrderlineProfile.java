@@ -12,6 +12,10 @@ public class OrderlineProfile {
 		this.quantityOrdered = quantityOrdered;
 	}
 
+	public OrderlineProfile(Long oid) {
+		this.oid = oid;
+	}
+
 	public final Long getPid() {
 		return pid;
 	}

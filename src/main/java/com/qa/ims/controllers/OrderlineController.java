@@ -12,10 +12,10 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 
 	public static final Logger LOGGER = Logger.getLogger(OrderlineController.class);
 
-	private CrudServices<OrderlineProfile> orderlineServices;
+	private CrudServices<OrderlineProfile> orderlineService;
 
-	public OrderlineController(CrudServices<OrderlineProfile> orderlineServices) {
-		this.orderlineServices = orderlineServices;
+	public OrderlineController(CrudServices<OrderlineProfile> orderlineService) {
+		this.orderlineService = orderlineService;
 	}
 
 	String getInput() {
@@ -27,7 +27,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 	 */
 	@Override
 	public List<OrderlineProfile> readAll() {
-		List<OrderlineProfile> orderlines = orderlineServices.readAll();
+		List<OrderlineProfile> orderlines = orderlineService.readAll();
 		for (OrderlineProfile orderline : orderlines) {
 			LOGGER.info(orderline.toString());
 		}
@@ -46,8 +46,8 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 		Long pid = Long.valueOf(getInput());
 		LOGGER.info("How many would you like to add?");
 		Long quantity = Long.valueOf(getInput());
-		OrderlineProfile orderline = orderlineServices.create(new OrderlineProfile(pid, oid, quantity));
-		LOGGER.info("New order created.");
+		OrderlineProfile orderline = orderlineService.create(new OrderlineProfile(pid, oid, quantity));
+		LOGGER.info("Customer created.");
 		return orderline;
 	}
 
@@ -63,7 +63,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 		Long pid = Long.valueOf(getInput());
 		LOGGER.info("How many would you like to add?");
 		Long quantity = Long.valueOf(getInput());
-		OrderlineProfile orderline = orderlineServices.update(new OrderlineProfile(pid, oid, quantity));
+		OrderlineProfile orderline = orderlineService.update(new OrderlineProfile(pid, oid, quantity));
 		LOGGER.info("Orderline Updated.");
 		return orderline;
 	}
@@ -75,7 +75,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 	public void delete() {
 		LOGGER.info("Please enter the orderline (by id) you wish to delete: ");
 		Long oid = Long.valueOf(getInput());
-		orderlineServices.delete(oid);
+		orderlineService.delete(oid);
 
 	}
 
