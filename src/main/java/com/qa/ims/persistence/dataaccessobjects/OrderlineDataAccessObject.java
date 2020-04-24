@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 
 import com.qa.ims.persistence.domain.OrderlineProfile;
 
-public class OrderlineDataAccessObject implements DataAccessObject<OrderlineProfile> {
+public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpecific<OrderlineProfile> {
 
 	public static final Logger LOGGER = Logger.getLogger(OrderlineDataAccessObject.class);
 
@@ -45,7 +45,7 @@ public class OrderlineDataAccessObject implements DataAccessObject<OrderlineProf
 	 * @return A list of products within an orderline
 	 */
 	@Override
-	public List<OrderlineProfile> readAll() {
+	public List<OrderlineProfile> readAll(long id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery(
