@@ -2,9 +2,9 @@ package com.qa.ims.persistence.dataaccessobjects;
 
 import java.util.List;
 
-public interface DataAccessObject<T> {
+public interface DataAccessObjectOrderlineSpecific<T> {
 
-	List<T> readAll();
+	List<T> readAll(long id);
 
 	T create(T t);
 
