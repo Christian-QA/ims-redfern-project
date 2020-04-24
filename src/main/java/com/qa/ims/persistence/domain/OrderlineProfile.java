@@ -60,9 +60,8 @@ public class OrderlineProfile {
 	public String toString() {
 		BigDecimal finalPrice = price.multiply(new BigDecimal(quantityOrdered));
 
-		return "product id: " + pid + " | name: " + name + " | Quantity: £" + quantityOrdered + " | Price : £"
-				+ finalPrice + " (" + price + " per item)"
-				+ "\n ------------------------------------------------------";
+		return "product id: " + pid + " | name: " + name + " | Quantity: " + quantityOrdered + " | Price : £"
+				+ finalPrice + " (£" + price + " per item)";
 	}
 
 }

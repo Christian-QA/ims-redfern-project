@@ -11,8 +11,9 @@ public class Runner {
 
 		BasicConfigurator.configure();
 
-		InventoryManager ims = new InventoryManager();
-		ims.initiateSystem();
-
+		while (1 < 2) {
+			InventoryManager ims = new InventoryManager();
+			ims.initiateSystem();
+		}
 	}
 }

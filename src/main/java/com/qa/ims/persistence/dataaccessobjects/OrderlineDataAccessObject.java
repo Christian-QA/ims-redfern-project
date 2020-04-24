@@ -41,6 +41,13 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 		return new OrderlineProfile(pid, quantityOrdered, name, price);
 	}
 
+	OrderlineProfile orderlineProfileSetTwo(ResultSet resultSet) throws SQLException {
+		Long oid = resultSet.getLong("order_id");
+		Long pid = resultSet.getLong("product_id");
+		Long quantityOrdered = resultSet.getLong("quantity_ordered");
+		return new OrderlineProfile(oid, pid, quantityOrdered);
+	}
+
 	/**
 	 * Reads all of a specific orderline from the database
 	 * 
@@ -71,7 +78,7 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 				ResultSet resultSet = statement
 						.executeQuery("SELECT * FROM orderline ORDER BY order_id DESC LIMIT 1");) {
 			resultSet.next();
-			return orderlineProfileSet(resultSet);
+			return orderlineProfileSetTwo(resultSet);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -88,7 +95,7 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	public OrderlineProfile create(OrderlineProfile orderline) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into orderline(order_id, customer_id, quantity_ordered) values('"
+			statement.executeUpdate("insert into orderline(order_id, product_id, quantity_ordered) values('"
 					+ orderline.getOid() + "','" + orderline.getPid() + "','" + orderline.getQuantityOrdered() + "')");
 			return readLatest();
 		} catch (Exception e) {
