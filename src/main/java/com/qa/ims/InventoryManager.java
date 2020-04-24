@@ -62,15 +62,16 @@ public class InventoryManager {
 					switch (Utils.getInput()) {
 					case "1":
 					case "orders":
-
+						orderline = false;
 						orderlineSelecting = false;
 						break;
 					case "2":
 					case "orderline":
-
+						orderline = true;
 						orderlineSelecting = false;
 						break;
 					default:
+						orderline = false;
 						orderlineSelecting = true;
 						throw new IllegalArgumentException(
 								"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
@@ -84,7 +85,7 @@ public class InventoryManager {
 
 		/// Help and Stop go here
 
-		if (orderline = true) {
+		if (orderline == true) {
 			LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
 		} else {
 			LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
@@ -105,7 +106,7 @@ public class InventoryManager {
 			doAction(productController, action);
 			break;
 		case ORDERS:
-			if (orderline = false) {
+			if (orderline == false) {
 				OrderController orderController = new OrderController(
 						new OrderServices(new OrderDataAccessObject(username, password)));
 				doAction(orderController, action);

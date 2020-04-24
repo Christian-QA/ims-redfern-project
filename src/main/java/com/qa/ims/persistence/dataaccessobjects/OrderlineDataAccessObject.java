@@ -49,7 +49,8 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery(
-						"SELECT o.quantity_ordered, p.product_id, name FROM products p JOIN orderline o ON p.product_id=o.product_id");) {
+						"SELECT o.quantity_ordered, o.order_id, p.product_id, name FROM products p JOIN orderline o ON p.product_id=o.product_id WHERE o.order_id = "
+								+ id);) {
 			ArrayList<OrderlineProfile> orderline = new ArrayList<>();
 			while (resultSet.next()) {
 				orderline.add(orderlineProfileSet(resultSet));

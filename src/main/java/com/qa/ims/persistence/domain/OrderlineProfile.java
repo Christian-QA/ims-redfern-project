@@ -51,7 +51,7 @@ public class OrderlineProfile {
 	}
 
 	public String toString() {
-		return "order id: " + oid + " | product id: " + pid + " | Date Ordered: " + quantityOrdered
+		return "order id: " + oid + " | product id: " + pid + " | Quantity: " + quantityOrdered
 				+ "\n ------------------------------------------------------";
 	}
 
