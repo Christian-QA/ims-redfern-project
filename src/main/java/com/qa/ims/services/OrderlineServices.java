@@ -5,7 +5,7 @@ import java.util.List;
 import com.qa.ims.persistence.dataaccessobjects.DataAccessObject;
 import com.qa.ims.persistence.domain.OrderlineProfile;
 
-public class OrderlineServices implements CrudServices<OrderlineProfile> {
+public class OrderlineServices {
 
 	private DataAccessObject<OrderlineProfile> OrderlineDataAccessObject;
 
