@@ -1,10 +1,14 @@
 package com.qa.ims.persistence.domain;
 
+import java.math.BigDecimal;
+
 public class OrderlineProfile {
 
 	private Long pid;
 	private Long oid;
 	private Long quantityOrdered;
+	private String name;
+	private BigDecimal price;
 
 	public OrderlineProfile(Long pid, Long oid, Long quantityOrdered) {
 		this.pid = pid;
@@ -12,8 +16,11 @@ public class OrderlineProfile {
 		this.quantityOrdered = quantityOrdered;
 	}
 
-	public OrderlineProfile(Long oid) {
-		this.oid = oid;
+	public OrderlineProfile(Long pid, Long quantityOrdered, String name, BigDecimal price) {
+		this.pid = pid;
+		this.quantityOrdered = quantityOrdered;
+		this.name = name;
+		this.price = price;
 	}
 
 	public final Long getPid() {
@@ -51,7 +58,10 @@ public class OrderlineProfile {
 	}
 
 	public String toString() {
-		return "order id: " + oid + " | product id: " + pid + " | Quantity: " + quantityOrdered
+		BigDecimal finalPrice = price.multiply(new BigDecimal(quantityOrdered));
+
+		return "product id: " + pid + " | name: " + name + " | Quantity: £" + quantityOrdered + " | Price : £"
+				+ finalPrice + " (" + price + " per item)"
 				+ "\n ------------------------------------------------------";
 	}
 

@@ -35,11 +35,10 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 
 	OrderlineProfile orderlineProfileSet(ResultSet resultSet) throws SQLException {
 		Long pid = resultSet.getLong("product_id");
-		Long oid = resultSet.getLong("order_id");
 		Long quantityOrdered = resultSet.getLong("quantity_ordered");
 		String name = resultSet.getString("name");
 		BigDecimal price = resultSet.getBigDecimal("price");
-		return new OrderlineProfile(pid, oid, quantityOrdered, name, price);
+		return new OrderlineProfile(pid, quantityOrdered, name, price);
 	}
 
 	/**
@@ -52,7 +51,7 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
 				ResultSet resultSet = statement.executeQuery(
-						"SELECT o.quantity_ordered, o.order_id, p.product_id, name FROM products p JOIN orderline o ON p.product_id=o.product_id WHERE o.order_id = "
+						"SELECT o.quantity_ordered, o.order_id, p.product_id, name, price FROM products p JOIN orderline o ON p.product_id=o.product_id WHERE o.order_id = "
 								+ id);) {
 			ArrayList<OrderlineProfile> orderline = new ArrayList<>();
 			while (resultSet.next()) {
