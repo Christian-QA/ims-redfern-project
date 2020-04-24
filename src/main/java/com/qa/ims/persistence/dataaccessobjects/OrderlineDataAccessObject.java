@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -44,10 +45,11 @@ public class OrderlineDataAccessObject implements DataAccessObject<OrderlineProf
 	 * @return A list of products within an orderline
 	 */
 	@Override
-	public OrderlineProfile readSpecific() {
+	public List<OrderlineProfile> readAll() {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM orderline");) {
+				ResultSet resultSet = statement.executeQuery(
+						"SELECT o.quantity_ordered, p.product_id, name FROM products p JOIN orderline o ON p.product_id=o.product_id");) {
 			ArrayList<OrderlineProfile> orderline = new ArrayList<>();
 			while (resultSet.next()) {
 				orderline.add(orderlineProfileSet(resultSet));

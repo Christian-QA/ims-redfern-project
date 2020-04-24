@@ -1,18 +1,20 @@
 package com.qa.ims.controllers;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import com.qa.ims.persistence.domain.OrderlineProfile;
-import com.qa.ims.services.OrderlineAlternateCrudServices;
+import com.qa.ims.services.CrudServicesOrderlineSpecific;
 import com.qa.ims.utils.Utils;
 
-public class OrderlineController implements CrudOrderlineController<OrderlineProfile> {
+public class OrderlineController implements CrudController<OrderlineProfile> {
 
 	public static final Logger LOGGER = Logger.getLogger(OrderlineController.class);
 
-	private OrderlineAlternateCrudServices<OrderlineProfile> orderlineService;
+	private CrudServicesOrderlineSpecific<OrderlineProfile> orderlineService;
 
-	public OrderlineController(OrderlineAlternateCrudServices<OrderlineProfile> orderlineService) {
+	public OrderlineController(CrudServicesOrderlineSpecific<OrderlineProfile> orderlineService) {
 		this.orderlineService = orderlineService;
 	}
 
@@ -21,15 +23,17 @@ public class OrderlineController implements CrudOrderlineController<OrderlinePro
 	}
 
 	/**
-	 * Reads specific orderline to the logger
+	 * Reads all orderlines to the logger
 	 */
 	@Override
-	public OrderlineProfile readSpecific() {
-		LOGGER.info("Please enter the order (by id) you wish to read: ");
+	public List<OrderlineProfile> readAll() {
+		LOGGER.info("Please enter the orderline (by id) you wish to view: ");
 		Long oid = Long.valueOf(getInput());
-		OrderlineProfile orderline = orderlineService.readSpecific(oid);
-		LOGGER.info(orderline.toString());
-		return orderline;
+		List<OrderlineProfile> orderlines = orderlineService.readAll(oid);
+		for (OrderlineProfile orderline : orderlines) {
+			LOGGER.info(orderline.toString());
+		}
+		return orderlines;
 	}
 
 	/**
