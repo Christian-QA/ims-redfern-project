@@ -84,7 +84,7 @@ public class OrderlineDataAccessObject implements DataAccessObject<OrderlineProf
 	public OrderlineProfile create(OrderlineProfile orderline) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into orderline(order_id, customer_id, quantity_ordered) values('"
+			statement.executeUpdate("insert into orderline(order_id, product_id, quantity_ordered) values('"
 					+ orderline.getOid() + "','" + orderline.getPid() + "','" + orderline.getQuantityOrdered() + "')");
 			return readLatest();
 		} catch (Exception e) {
