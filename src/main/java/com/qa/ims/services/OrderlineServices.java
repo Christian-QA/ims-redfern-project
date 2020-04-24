@@ -1,11 +1,9 @@
 package com.qa.ims.services;
 
-import java.util.List;
-
 import com.qa.ims.persistence.dataaccessobjects.DataAccessObject;
 import com.qa.ims.persistence.domain.OrderlineProfile;
 
-public class OrderlineServices implements CrudServices<OrderlineProfile> {
+public class OrderlineServices implements OrderlineAlternateCrudServices<OrderlineProfile> {
 
 	private DataAccessObject<OrderlineProfile> OrderlineDataAccessObject;
 
@@ -13,8 +11,8 @@ public class OrderlineServices implements CrudServices<OrderlineProfile> {
 		this.OrderlineDataAccessObject = orderline;
 	}
 
-	public List<OrderlineProfile> readAll() {
-		return OrderlineDataAccessObject.readAll();
+	public OrderlineProfile readSpecific() {
+		return OrderlineDataAccessObject.readSpecific();
 	}
 
 	public OrderlineProfile create(OrderlineProfile orderline) {
