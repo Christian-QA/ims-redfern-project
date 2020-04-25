@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CustomerProfileTest {
@@ -109,6 +110,12 @@ public class CustomerProfileTest {
 		assertNull(customer.getId());
 		assertNotNull(customer.getForename());
 		assertNotNull(customer.getSurname());
+	}
+
+	@Ignore
+	@Test
+	public void hashCodeTest() {
+		assertEquals(customer.hashCode(), other.hashCode());
 	}
 
 	@Test

@@ -150,3 +150,29 @@
 2020-04-25 114410 INFO  CustomerController33 - id: 1 | Name: Cactus | Category: Miscellaneous | Price: £4.9900000000000002131628207280300557613372802734375 | Inventory: 10
  ------------------------------------------------------
 2020-04-25 114410 INFO  CustomerController87 - Please enter the id of the product you would like to delete: 
+2020-04-25 114605 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 114607 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 114607 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 114607 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 114609 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 114609 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 114609 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 114609 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 114610 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 114612 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 50 | Price : £0.0 (£0.0 per item)
+2020-04-25 114612 INFO  OrderlineController34 - product id: 2 | name: Dora the Annihilator | Quantity: 5 | Price : £499.95 (£99.99 per item)
+2020-04-25 114612 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 114612 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 114613 INFO  InventoryManager94 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 114613 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 121206 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 121552 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 121610 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 121716 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 121727 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 121731 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 121814 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 122618 INFO  OrderlineController62 - Please enter the order (by id) you wish to add to: 
+2020-04-25 122618 INFO  OrderlineController64 - Please enter the product (by id) you wish to add: 
+2020-04-25 122618 INFO  OrderlineController66 - How many would you like to add?
+2020-04-25 122618 INFO  OrderlineController69 - Order Updated.
