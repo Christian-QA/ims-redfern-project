@@ -40,9 +40,9 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Reads all customers from the database
+	 * Reads all products from the database
 	 * 
-	 * @return A list of customers
+	 * @return A list of products
 	 */
 	@Override
 	public List<ProductProfile> readAll() {
@@ -76,9 +76,9 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Creates a customer in the database
+	 * Creates a product in the database
 	 * 
-	 * @param customer - takes in a customer object. id will be ignored
+	 * @param product - takes in a product object. id will be ignored
 	 */
 	@Override
 	public ProductProfile create(ProductProfile product) {
@@ -109,10 +109,10 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Updates a customer in the database
+	 * Updates a product in the database
 	 * 
-	 * @param customer - takes in a customer object, the id field will be used to
-	 *                 update that customer in the database
+	 * @param product - takes in a product object, the id field will be used to
+	 *                update that product in the database
 	 * @return
 	 */
 	@Override
@@ -131,9 +131,9 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Deletes a customer in the database
+	 * Deletes a product in the database
 	 * 
-	 * @param id - id of the customer
+	 * @param id - id of the product
 	 */
 	@Override
 	public void delete(long id) {
