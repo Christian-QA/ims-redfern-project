@@ -33,7 +33,7 @@ public class InventoryManager {
 
 	boolean managerLoop = true;
 
-	public String initiateSystem() {
+	public String initSystem() {
 
 		LOGGER.info("Please insert username: ");
 		String username = getInput();
