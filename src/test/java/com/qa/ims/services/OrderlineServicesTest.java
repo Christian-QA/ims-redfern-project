@@ -43,9 +43,9 @@ public class OrderlineServicesTest {
 
 	@Test
 	public void orderServicesDelete() {
-		orderlineServices.delete(1L);
+		orderlineServices.delete(1L, 1L);
 		;
-		Mockito.verify(orderlineDataAccessObject, Mockito.times(1)).delete(1L);
+		Mockito.verify(orderlineDataAccessObject, Mockito.times(1)).delete(1L, 1L);
 	}
 
 }
