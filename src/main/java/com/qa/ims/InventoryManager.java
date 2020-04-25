@@ -42,7 +42,7 @@ public class InventoryManager {
 
 			boolean orderline = false;
 
-			LOGGER.info("Hello, " + username + ", how can I help you today?");
+			LOGGER.info("\n\nHello, " + username + ", how can I help you today?");
 			LOGGER.info(
 					"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
 			Domain domain = Domain.getDomain();
@@ -114,9 +114,15 @@ public class InventoryManager {
 							new OrderServices(new OrderDataAccessObject(username, password)));
 					doAction(orderController, action);
 				} else {
-					OrderlineController orderlineController = new OrderlineController(
-							new OrderlineServices(new OrderlineDataAccessObject(username, password)));
-					doAction(orderlineController, action);
+					boolean orderlineRepeat = true;
+					while (orderlineRepeat) {
+						OrderlineController orderlineController = new OrderlineController(
+								new OrderlineServices(new OrderlineDataAccessObject(username, password)));
+						doAction(orderlineController, action);
+						if (action != Action.CREATE) {
+							orderlineRepeat = false;
+						}
+					}
 				}
 				break;
 			case HELP:

@@ -98,7 +98,7 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	public OrderlineProfile create(OrderlineProfile orderline) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into orderline(order_id, product_id, quantity_ordered) values('"
+			statement.executeUpdate("INSERT INTO orderline(order_id, product_id, quantity_ordered) values('"
 					+ orderline.getOid() + "','" + orderline.getPid() + "','" + orderline.getQuantityOrdered() + "')");
 			return readLatest();
 		} catch (Exception e) {
@@ -148,10 +148,10 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	 * @param id - id of the order
 	 */
 	@Override
-	public void delete(long id) {
+	public void delete(long pid, long oid) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from orderline where order_id = " + id);
+			statement.executeUpdate("DELETE FROM orderline WHERE order_id = " + oid + " AND product_id = " + pid);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());

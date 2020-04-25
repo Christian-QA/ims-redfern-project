@@ -176,3 +176,209 @@
 2020-04-25 122618 INFO  OrderlineController64 - Please enter the product (by id) you wish to add: 
 2020-04-25 122618 INFO  OrderlineController66 - How many would you like to add?
 2020-04-25 122618 INFO  OrderlineController69 - Order Updated.
+2020-04-25 195142 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 195144 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 195145 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195145 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195146 INFO  InventoryManager94 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 195146 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 195149 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 195149 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 195149 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195149 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195413 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 195415 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 195416 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195416 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195417 INFO  InventoryManager94 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 195417 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 195419 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 195419 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 195419 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195419 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195422 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 195424 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 195424 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195424 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195425 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 195425 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 195426 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 195426 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 195427 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 195429 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 50 | Price : £0.0 (£0.0 per item)
+2020-04-25 195429 INFO  OrderlineController34 - product id: 2 | name: Dora the Annihilator | Quantity: 5 | Price : £499.95 (£99.99 per item)
+2020-04-25 195429 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195429 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195634 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 195637 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 195638 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195638 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195638 INFO  InventoryManager94 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-25 195638 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 195641 INFO  CustomerController33 - id: 1 | Name: Secondhand Goods | Category: Miscellaneous | Price: £0.0 | Inventory: 0
+ ------------------------------------------------------
+2020-04-25 195641 INFO  CustomerController33 - id: 2 | Name: Dora the Annihilator | Category: Movies | Price: £99.99 | Inventory: 5
+ ------------------------------------------------------
+2020-04-25 195641 INFO  CustomerController33 - id: 4 | Name: Ketchup | Category: Food | Price: £2.99 | Inventory: 400
+ ------------------------------------------------------
+2020-04-25 195641 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195641 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 195646 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 195646 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 195647 INFO  InventoryManager94 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 195647 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 195648 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 195648 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 195648 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 195648 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 195648 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 195648 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 195648 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200122 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 200124 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 200124 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 200124 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200125 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 200125 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 200126 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 200126 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 200127 INFO  OrderlineController62 - Please enter the order (by id) you wish to add to: 
+2020-04-25 200133 INFO  OrderlineController64 - Please enter the product (by id) you wish to add: 
+2020-04-25 200137 INFO  OrderlineController66 - How many would you like to add?
+2020-04-25 200141 DEBUG OrderlineDataAccessObject139 - [Ljava.lang.StackTraceElement;@23a5fd2
+2020-04-25 200141 ERROR OrderlineDataAccessObject140 - Cannot add or update a child row: a foreign key constraint fails (`imsDB`.`orderline`, CONSTRAINT `orderline_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`))
+2020-04-25 200141 INFO  OrderlineController69 - Order Updated.
+2020-04-25 200141 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 200141 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200309 INFO  InventoryManager94 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-25 200309 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 200310 INFO  CustomerController33 - id: 1 | Name: Secondhand Goods | Category: Miscellaneous | Price: £0.0 | Inventory: 0
+ ------------------------------------------------------
+2020-04-25 200310 INFO  CustomerController33 - id: 2 | Name: Dora the Annihilator | Category: Movies | Price: £99.99 | Inventory: 5
+ ------------------------------------------------------
+2020-04-25 200310 INFO  CustomerController33 - id: 4 | Name: Ketchup | Category: Food | Price: £2.99 | Inventory: 400
+ ------------------------------------------------------
+2020-04-25 200310 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 200310 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200313 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 200313 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 200315 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 200315 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 200316 INFO  OrderlineController62 - Please enter the order (by id) you wish to add to: 
+2020-04-25 200322 INFO  OrderlineController64 - Please enter the product (by id) you wish to add: 
+2020-04-25 200326 INFO  OrderlineController66 - How many would you like to add?
+2020-04-25 200327 DEBUG OrderlineDataAccessObject118 - [Ljava.lang.StackTraceElement;@3b2c72c2
+2020-04-25 200327 ERROR OrderlineDataAccessObject119 - Illegal operation on empty result set.
+2020-04-25 200327 INFO  OrderlineController69 - Order Updated.
+2020-04-25 200327 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 200327 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200357 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 200357 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 200359 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 200359 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 200400 INFO  OrderlineController45 - Please enter the order (by id) you wish to add to: 
+2020-04-25 200407 INFO  OrderlineController47 - Please enter the product (by id) you wish to add: 
+2020-04-25 200420 INFO  OrderlineController49 - How many would you like to add?
+2020-04-25 200422 INFO  OrderlineController52 - Order created.
+2020-04-25 200422 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 200422 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200852 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 200854 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 200855 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 200855 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 200856 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 200856 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 200856 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 200856 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 200858 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 200906 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 50 | Price : £0.0 (£0.0 per item)
+2020-04-25 200906 INFO  OrderlineController34 - product id: 2 | name: Dora the Annihilator | Quantity: 5 | Price : £499.95 (£99.99 per item)
+2020-04-25 200906 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 201059 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 201101 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 201101 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 201101 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201102 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 201102 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 201103 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 201103 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 201105 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 201108 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 50 | Price : £0.0 (£0.0 per item)
+2020-04-25 201108 INFO  OrderlineController34 - product id: 2 | name: Dora the Annihilator | Quantity: 5 | Price : £499.95 (£99.99 per item)
+2020-04-25 201108 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 201108 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201127 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 201129 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 201129 INFO  InventoryManager45 - 
+Hello, root, how can I help you today?
+2020-04-25 201129 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201144 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 201145 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 201146 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 201146 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201151 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 201151 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 201152 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 201152 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 201154 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 201157 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 50 | Price : £0.0 (£0.0 per item)
+2020-04-25 201157 INFO  OrderlineController34 - product id: 2 | name: Dora the Annihilator | Quantity: 5 | Price : £499.95 (£99.99 per item)
+2020-04-25 201157 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 201157 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201200 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 201200 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 201202 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 201202 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 201203 INFO  OrderlineController45 - Please enter the order (by id) you wish to add to: 
+2020-04-25 201205 INFO  OrderlineController47 - Please enter the product (by id) you wish to add: 
+2020-04-25 201216 INFO  OrderlineController49 - How many would you like to add?
+2020-04-25 201218 INFO  OrderlineController52 - Order created.
+2020-04-25 201218 INFO  OrderlineController45 - Please enter the order (by id) you wish to add to: 
+2020-04-25 201422 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 201424 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 201425 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 201425 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201427 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 201427 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 201428 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 201428 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 201429 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 201434 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 50 | Price : £0.0 (£0.0 per item)
+2020-04-25 201434 INFO  OrderlineController34 - product id: 1 | name: Secondhand Goods | Quantity: 1 | Price : £0.0 (£0.0 per item)
+2020-04-25 201434 INFO  OrderlineController34 - product id: 2 | name: Dora the Annihilator | Quantity: 5 | Price : £499.95 (£99.99 per item)
+2020-04-25 201434 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 201434 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 201714 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 201714 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 201716 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 201716 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 201719 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 202021 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 202023 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 202023 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 202023 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 202024 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 202024 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 202025 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 202025 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 202027 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 202033 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 

@@ -10,6 +10,6 @@ public interface CrudServicesOrderlineSpecific<T> {
 
 	T update(T t);
 
-	void delete(Long id);
+	void delete(Long pid, Long oid);
 
 }
