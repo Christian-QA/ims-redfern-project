@@ -30,12 +30,6 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 		this.password = password;
 	}
 
-	public OrderDataAccessObject(String jdbcConnectionUrl, String username, String password) {
-		this.jdbcConnectionUrl = jdbcConnectionUrl;
-		this.username = username;
-		this.password = password;
-	}
-
 	OrderProfile orderProfileSet(ResultSet resultSet) throws SQLException {
 		Long oid = resultSet.getLong("order_id");
 		Long cid = resultSet.getLong("customer_id");

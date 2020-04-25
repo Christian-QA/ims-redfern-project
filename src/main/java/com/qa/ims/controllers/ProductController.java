@@ -11,7 +11,7 @@ import com.qa.ims.utils.Utils;
 
 public class ProductController implements CrudController<ProductProfile> {
 
-	public static final Logger LOGGER = Logger.getLogger(CustomerController.class);
+	public static final Logger LOGGER = Logger.getLogger(ProductController.class);
 
 	private CrudServices<ProductProfile> productService;
 

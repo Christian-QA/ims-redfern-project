@@ -30,12 +30,6 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 		this.password = password;
 	}
 
-	public ProductDataAccessObject(String jdbcConnectionUrl, String username, String password) {
-		this.jdbcConnectionUrl = jdbcConnectionUrl;
-		this.username = username;
-		this.password = password;
-	}
-
 	ProductProfile productProfileSet(ResultSet resultSet) throws SQLException {
 		Long id = resultSet.getLong("product_id");
 		String name = resultSet.getString("name");
