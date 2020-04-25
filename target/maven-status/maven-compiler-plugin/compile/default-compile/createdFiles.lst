@@ -15,6 +15,7 @@ com\qa\ims\persistence\dataaccessobjects\OrderDataAccessObject.class
 com\qa\ims\persistence\domain\Domain.class
 com\qa\ims\services\CrudServices.class
 com\qa\ims\controllers\OrderlineController.class
+com\qa\ims\DBConfiguration.class
 com\qa\ims\persistence\dataaccessobjects\ProductDataAccessObject.class
 com\qa\ims\persistence\dataaccessobjects\DataAccessObject.class
 com\qa\ims\persistence\domain\CustomerProfile.class

@@ -31,12 +31,12 @@ public class InventoryManager {
 
 	public static final Logger LOGGER = Logger.getLogger(InventoryManager.class);
 
-	public void initiateSystem(boolean managerLoop) {
+	public String initiateSystem(boolean managerLoop) {
 
 		LOGGER.info("Please insert username: ");
-		String username = Utils.getInput();
+		String username = getInput();
 		LOGGER.info("Please insert password: ");
-		String password = Utils.getInput();
+		String password = getInput();
 
 		while (managerLoop = true) {
 
@@ -45,14 +45,16 @@ public class InventoryManager {
 			LOGGER.info("\n\nHello, " + username + ", how can I help you today?");
 			LOGGER.info(
 					"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
-			Domain domain = Domain.getDomain();
+			String domainString = getInput();
+			Domain domain = Domain.getDomain(domainString);
 
 			if (domain.name().equalsIgnoreCase("stop")) {
 				LOGGER.info("Ending Program");
-				System.exit(0);
+				break;
 			} else if (domain.name().equalsIgnoreCase("help")) {
 				while (domain.name().equalsIgnoreCase("help")) {
-					domain = Domain.getDomain();
+					String helpString = getInput();
+					domain = Domain.getDomain(helpString);
 				}
 			} else if (domain.name().equalsIgnoreCase("orders")) {
 				LOGGER.info("Would you like to view all orders or a specific customer's orderline?");
@@ -61,7 +63,7 @@ public class InventoryManager {
 				boolean orderlineSelecting = true;
 				while (orderlineSelecting) {
 					try {
-						switch (Utils.getInput()) {
+						switch (getInput()) {
 						case "1":
 						case "orders":
 							orderline = false;
@@ -83,10 +85,7 @@ public class InventoryManager {
 								"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
 					}
 				}
-
 			}
-
-			/// Help and Stop go here
 
 			if (orderline == true) {
 				LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
@@ -95,7 +94,8 @@ public class InventoryManager {
 			}
 			LOGGER.info(
 					"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
-			Action action = Action.getAction();
+			String actionString = getInput();
+			Action action = Action.getAction(actionString);
 
 			switch (domain) {
 			case CUSTOMERS:
@@ -133,6 +133,11 @@ public class InventoryManager {
 				break;
 			}
 		}
+		return "Ending Program";
+	}
+
+	String getInput() {
+		return Utils.getInput();
 	}
 
 	public void doAction(CrudController<?> crudController, Action action) {
