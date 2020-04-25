@@ -71,8 +71,21 @@ public class InventoryManagerTest {
 	}
 
 	@Test
+	public void customerWithSecondHelpTest() {
+		Mockito.doReturn("root", "root", "customers", "help", "stop").when(inventoryManager).getInput();
+		assertEquals("Ending Program", inventoryManager.initSystem());
+	}
+
+	@Test
 	public void orderOrderlineInvalidTest() {
 		Mockito.doReturn("root", "root", "orders", "rgdrth", "orders", "read", "stop").when(inventoryManager)
+				.getInput();
+		assertEquals("Ending Program", inventoryManager.initSystem());
+	}
+
+	@Test
+	public void noUsername() {
+		Mockito.doReturn("", "root", "root", "orders", "rgdrth", "orders", "read", "stop").when(inventoryManager)
 				.getInput();
 		assertEquals("Ending Program", inventoryManager.initSystem());
 	}

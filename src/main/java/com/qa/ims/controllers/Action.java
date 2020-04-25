@@ -10,8 +10,8 @@ import com.qa.ims.utils.Utils;
  *
  */
 public enum Action {
-	CREATE("To save a new item into the database"), READ("To read an item from the database"),
-	UPDATE("To change an item already in the database"), DELETE("To remove an item from the database"),
+	CREATE("To save a new entity into the database"), READ("To read an entity from the database"),
+	UPDATE("To change an entity already in the database"), DELETE("To remove an entity from the database"),
 	HELP("Describes what the other functions do"), RETURN("To return to domain selection");
 
 	public static final Logger LOGGER = Logger.getLogger(Action.class);
@@ -74,7 +74,7 @@ public enum Action {
 				case "help":
 					dmlcommand = Action.HELP;
 					LOGGER.info(CREATE.getActionDescription());
-					LOGGER.info(CREATE.getActionDescription());
+					LOGGER.info(READ.getActionDescription());
 					LOGGER.info(UPDATE.getActionDescription());
 					LOGGER.info(DELETE.getActionDescription());
 					LOGGER.info(HELP.getActionDescription());

@@ -35,11 +35,17 @@ public class InventoryManager {
 
 	public String initSystem() {
 
-		LOGGER.info("Please insert username: ");
-		String username = getInput();
-		LOGGER.info("Please insert password: ");
-		String password = getInput();
+		String username = "";
+		String password = "";
 
+		while (username.isEmpty()) {
+			LOGGER.info("Please insert username: ");
+			username = getInput();
+		}
+		while (password.isEmpty()) {
+			LOGGER.info("Please insert password: ");
+			password = getInput();
+		}
 		while (true) {
 
 			boolean orderline = false;
@@ -121,9 +127,6 @@ public class InventoryManager {
 						OrderlineController orderlineController = new OrderlineController(
 								new OrderlineServices(new OrderlineDataAccessObject(username, password)));
 						doAction(orderlineController, action);
-						if (action != Action.CREATE) {
-							orderlineRepeat = false;
-						}
 					}
 				}
 				break;
