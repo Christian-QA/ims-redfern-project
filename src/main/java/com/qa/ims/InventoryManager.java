@@ -162,7 +162,8 @@ public class InventoryManager {
 	 */
 
 	public void init(String username, String password) {
-		init("jdbc:mysql://35.205.154.97/imsDB", username, password, "src/main/resources/imsDB-schema.sql");
+		DBConfiguration dBConfiguration = new DBConfiguration();
+		init(dBConfiguration.getJdbcConnectionUrl(), username, password, dBConfiguration.getImsDBSchema());
 	}
 
 	public String readFile(String fileLocation) {

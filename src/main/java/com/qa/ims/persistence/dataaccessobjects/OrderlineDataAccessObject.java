@@ -11,18 +11,21 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.qa.ims.DBConfiguration;
 import com.qa.ims.persistence.domain.OrderlineProfile;
 
 public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpecific<OrderlineProfile> {
 
 	public static final Logger LOGGER = Logger.getLogger(OrderlineDataAccessObject.class);
 
+	DBConfiguration dBConfiguration = new DBConfiguration();
+
 	private String jdbcConnectionUrl;
 	private String username;
 	private String password;
 
 	public OrderlineDataAccessObject(String username, String password) {
-		this.jdbcConnectionUrl = "jdbc:mysql://35.205.154.97/imsDB";
+		this.jdbcConnectionUrl = dBConfiguration.getJdbcConnectionUrl();
 		this.username = username;
 		this.password = password;
 	}
