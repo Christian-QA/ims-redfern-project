@@ -1,0 +1,152 @@
+2020-04-25 105448 INFO  CustomerController36 - id: null | first name: Jon | surname: B | age: N/A
+ ------------------------------------------------------
+2020-04-25 105448 INFO  CustomerController36 - id: null | first name: Bon | surname: T | age: N/A
+ ------------------------------------------------------
+2020-04-25 105448 INFO  CustomerController36 - id: null | first name: Fon | surname: J | age: N/A
+ ------------------------------------------------------
+2020-04-25 105448 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-25 105507 INFO  CustomerController36 - id: null | first name: Jon | surname: B | age: N/A
+ ------------------------------------------------------
+2020-04-25 105507 INFO  CustomerController36 - id: null | first name: Bon | surname: T | age: N/A
+ ------------------------------------------------------
+2020-04-25 105507 INFO  CustomerController36 - id: null | first name: Fon | surname: J | age: N/A
+ ------------------------------------------------------
+2020-04-25 105507 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-25 105524 INFO  CustomerController36 - id: null | first name: Jon | surname: B | age: N/A
+ ------------------------------------------------------
+2020-04-25 105524 INFO  CustomerController36 - id: null | first name: Bon | surname: T | age: N/A
+ ------------------------------------------------------
+2020-04-25 105524 INFO  CustomerController36 - id: null | first name: Fon | surname: J | age: N/A
+ ------------------------------------------------------
+2020-04-25 105524 INFO  CustomerController49 - Please enter forename(s): 
+2020-04-25 105524 INFO  CustomerController51 - Please enter surname: 
+2020-04-25 105524 INFO  CustomerController54 - Customer created.
+2020-04-25 105524 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-25 105531 INFO  CustomerController36 - id: null | first name: Jon | surname: B | age: N/A
+ ------------------------------------------------------
+2020-04-25 105531 INFO  CustomerController36 - id: null | first name: Bon | surname: T | age: N/A
+ ------------------------------------------------------
+2020-04-25 105531 INFO  CustomerController36 - id: null | first name: Fon | surname: J | age: N/A
+ ------------------------------------------------------
+2020-04-25 105531 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-25 110055 INFO  CustomerController33 - id: 1 | Name: Dora the Annihilator | Category: Movies | Price: £99.9899999999999948840923025272786617279052734375 | Inventory: 500
+ ------------------------------------------------------
+2020-04-25 110055 INFO  CustomerController33 - id: 1 | Name: Ketchup | Category: Food | Price: £2.9900000000000002131628207280300557613372802734375 | Inventory: 1000
+ ------------------------------------------------------
+2020-04-25 110055 INFO  CustomerController33 - id: 1 | Name: Cactus | Category: Miscellaneous | Price: £4.9900000000000002131628207280300557613372802734375 | Inventory: 10
+ ------------------------------------------------------
+2020-04-25 110133 INFO  CustomerController33 - id: 1 | Name: Dora the Annihilator | Category: Movies | Price: £99.9899999999999948840923025272786617279052734375 | Inventory: 500
+ ------------------------------------------------------
+2020-04-25 110133 INFO  CustomerController33 - id: 1 | Name: Ketchup | Category: Food | Price: £2.9900000000000002131628207280300557613372802734375 | Inventory: 1000
+ ------------------------------------------------------
+2020-04-25 110133 INFO  CustomerController33 - id: 1 | Name: Cactus | Category: Miscellaneous | Price: £4.9900000000000002131628207280300557613372802734375 | Inventory: 10
+ ------------------------------------------------------
+2020-04-25 110133 INFO  CustomerController87 - Please enter the id of the product you would like to delete: 
+2020-04-25 110626 INFO  CustomerController33 - id: 1 | Name: Dora the Annihilator | Category: Movies | Price: £99.9899999999999948840923025272786617279052734375 | Inventory: 500
+ ------------------------------------------------------
+2020-04-25 110626 INFO  CustomerController33 - id: 1 | Name: Ketchup | Category: Food | Price: £2.9900000000000002131628207280300557613372802734375 | Inventory: 1000
+ ------------------------------------------------------
+2020-04-25 110626 INFO  CustomerController33 - id: 1 | Name: Cactus | Category: Miscellaneous | Price: £4.9900000000000002131628207280300557613372802734375 | Inventory: 10
+ ------------------------------------------------------
+2020-04-25 110626 INFO  CustomerController67 - Please enter the id of the customer you would like to update: 
+2020-04-25 110626 INFO  CustomerController69 - Please enter a name: 
+2020-04-25 110626 INFO  CustomerController71 - Please enter the product's category: 
+2020-04-25 110626 INFO  CustomerController73 - Please enter price per unit: 
+2020-04-25 110626 INFO  CustomerController75 - Please enter quantity of product: 
+2020-04-25 110626 INFO  CustomerController78 - Product Updated.
+2020-04-25 110626 INFO  CustomerController87 - Please enter the id of the product you would like to delete: 
+2020-04-25 112547 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 112718 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112718 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112718 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112718 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 112734 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112734 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112734 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112734 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 112741 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112741 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112741 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 112741 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 113303 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113303 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113303 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113303 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 113322 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113322 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113322 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113322 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 113335 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113335 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113335 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113335 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 113739 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113739 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113739 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113739 INFO  OrderController58 - Please enter order id: 
+2020-04-25 113739 INFO  OrderController60 - Please enter new customer id: 
+2020-04-25 113739 INFO  OrderController62 - Please enter new date (yyyy-mm-dd): 
+2020-04-25 113739 INFO  OrderController65 - Order Updated.
+2020-04-25 113739 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 113835 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113835 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113835 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 113835 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 113840 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 113842 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 113842 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 113842 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 113914 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 113950 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 113953 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 114240 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 114333 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 114342 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 114344 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 114345 INFO  InventoryManager45 - Hello, root, how can I help you today?
+2020-04-25 114345 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 114410 INFO  CustomerController36 - id: null | first name: Jon | surname: B | age: N/A
+ ------------------------------------------------------
+2020-04-25 114410 INFO  CustomerController36 - id: null | first name: Bon | surname: T | age: N/A
+ ------------------------------------------------------
+2020-04-25 114410 INFO  CustomerController36 - id: null | first name: Fon | surname: J | age: N/A
+ ------------------------------------------------------
+2020-04-25 114410 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-25 114410 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 114410 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 114410 INFO  OrderController34 - order id: 1 | customer id: 1 | Date Ordered: 2020-04-25
+ ------------------------------------------------------
+2020-04-25 114410 INFO  OrderController74 - Please enter the id of the order you would like to delete: 
+2020-04-25 114410 INFO  CustomerController33 - id: 1 | Name: Dora the Annihilator | Category: Movies | Price: £99.9899999999999948840923025272786617279052734375 | Inventory: 500
+ ------------------------------------------------------
+2020-04-25 114410 INFO  CustomerController33 - id: 1 | Name: Ketchup | Category: Food | Price: £2.9900000000000002131628207280300557613372802734375 | Inventory: 1000
+ ------------------------------------------------------
+2020-04-25 114410 INFO  CustomerController33 - id: 1 | Name: Cactus | Category: Miscellaneous | Price: £4.9900000000000002131628207280300557613372802734375 | Inventory: 10
+ ------------------------------------------------------
+2020-04-25 114410 INFO  CustomerController87 - Please enter the id of the product you would like to delete: 

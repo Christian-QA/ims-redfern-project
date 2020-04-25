@@ -33,14 +33,14 @@ public class InventoryManager {
 
 	public void initiateSystem(boolean managerLoop) {
 
-		boolean orderline = false;
-
 		LOGGER.info("Please insert username: ");
 		String username = Utils.getInput();
 		LOGGER.info("Please insert password: ");
 		String password = Utils.getInput();
 
 		while (managerLoop = true) {
+
+			boolean orderline = false;
 
 			LOGGER.info("Hello, " + username + ", how can I help you today?");
 			LOGGER.info(
