@@ -382,3 +382,39 @@ Hello, root, how can I help you today?
 2020-04-25 202025 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
 2020-04-25 202027 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
 2020-04-25 202033 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 202125 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 202126 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 202127 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 202127 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 202128 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 202128 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 202128 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 202128 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 202129 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 202130 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 202132 DEBUG OrderlineDataAccessObject156 - [Ljava.lang.StackTraceElement;@23a5fd2
+2020-04-25 202132 ERROR OrderlineDataAccessObject157 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' product_id = 1' at line 1
+2020-04-25 202132 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 202132 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 202303 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 202305 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 202307 INFO  InventoryManager36 - Please insert username: 
+2020-04-25 202309 INFO  InventoryManager38 - Please insert password: 
+2020-04-25 202310 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 202310 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 202311 INFO  InventoryManager58 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 202311 INFO  InventoryManager59 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 202311 INFO  InventoryManager92 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 202311 INFO  InventoryManager96 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 202313 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 202314 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 202316 INFO  InventoryManager45 - 
+
+Hello, root, how can I help you today?
+2020-04-25 202316 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
