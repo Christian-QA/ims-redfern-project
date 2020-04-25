@@ -31,7 +31,9 @@ public class InventoryManager {
 
 	public static final Logger LOGGER = Logger.getLogger(InventoryManager.class);
 
-	public String initiateSystem(boolean managerLoop) {
+	boolean managerLoop = true;
+
+	public String initiateSystem() {
 
 		LOGGER.info("Please insert username: ");
 		String username = getInput();

@@ -9,7 +9,7 @@ public class Runner {
 	public static void main(String[] args) {
 
 		InventoryManager inventoryManager = new InventoryManager();
-		inventoryManager.initiateSystem(true);
+		inventoryManager.initiateSystem();
 
 	}
 }

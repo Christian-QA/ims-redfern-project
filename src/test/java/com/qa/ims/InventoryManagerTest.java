@@ -36,59 +36,59 @@ public class InventoryManagerTest {
 	@Test
 	public void customerReadTest() {
 		Mockito.doReturn("root", "root", "customers", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void customerReadByNumberTest() {
 		Mockito.doReturn("root", "root", "1", "2", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void productReadTest() {
 		Mockito.doReturn("root", "root", "products", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void orderReadTest() {
 		Mockito.doReturn("root", "root", "orders", "orders", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void orderlineReturnTest() {
 		Mockito.doReturn("root", "root", "orders", "orderline", "return", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void allWithFirstHelpReadTest() {
 		Mockito.doReturn("root", "root", "help", "customers", "read", "products", "read", "orders", "orders", "read",
 				"stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void orderOrderlineInvalidTest() {
 		Mockito.doReturn("root", "root", "orders", "rgdrth", "orders", "read", "stop").when(inventoryManager)
 				.getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Ignore
 	@Test
 	public void invalidDomainTest() {
 		Mockito.doReturn("root", "root", "sertgbsdrt", "customers", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Ignore
 	@Test
 	public void invalidActionTest() {
 		Mockito.doReturn("root", "root", "customers", "9", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Rule
@@ -103,13 +103,13 @@ public class InventoryManagerTest {
 		inventoryManager.init(dBConfiguration.getJdbcConnectionUrl(), "root", "root", dBConfiguration.getImsDBSchema());
 		Mockito.doReturn("root", "root", "customers").when(inventoryManager).getInput();
 		exception.expect(IOException.class);
-		assertNotEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertNotEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 	@Test
 	public void wrongUsername() {
 		Mockito.doReturn("doot", "doot", "customers", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initiateSystem(true));
+		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
 }
