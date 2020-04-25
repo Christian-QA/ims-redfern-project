@@ -45,13 +45,15 @@ public enum Action {
 	 * Gets an action based on a users input. If user enters a non-specified
 	 * enumeration, it will ask for another input.
 	 * 
+	 * @param actionString
+	 * 
 	 * @return DmlCommand type
 	 */
-	public static Action getAction() {
+	public static Action getAction(String actionString) {
 		Action dmlcommand;
 		while (true) {
 			try {
-				switch (Utils.getInput()) {
+				switch (actionString) {
 				case "1":
 				case "create":
 					dmlcommand = Action.CREATE;
@@ -92,6 +94,10 @@ public enum Action {
 			}
 		}
 		return dmlcommand;
+	}
+
+	String getInput() {
+		return Utils.getInput();
 	}
 
 }

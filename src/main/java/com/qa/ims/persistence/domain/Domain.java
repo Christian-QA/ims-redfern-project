@@ -29,11 +29,11 @@ public enum Domain {
 		}
 	}
 
-	public static Domain getDomain() {
+	public static Domain getDomain(String domainString) {
 		Domain command;
 		while (true) {
 			try {
-				switch (Utils.getInput()) {
+				switch (domainString) {
 				case "1":
 				case "customers":
 					command = Domain.CUSTOMERS;

@@ -58,7 +58,7 @@ public class ProductControllerTest {
 		String category = "Movies";
 		String price = "99.99";
 		String inventory = "500";
-		Mockito.doReturn(id, name, category, price, inventory).when(productController).getInput();
+		Mockito.doReturn(name, category, price, inventory).when(productController).getInput();
 		ProductProfile product = new ProductProfile(1L, name, category, new BigDecimal(99.99), 500L);
 		Mockito.when(productServices.update(product)).thenReturn(product);
 		assertEquals(product, productController.update());
