@@ -418,3 +418,38 @@ Hello, root, how can I help you today?
 
 Hello, root, how can I help you today?
 2020-04-25 202316 INFO  InventoryManager46 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 203821 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 203831 INFO  OrderlineController34 - product id: 1 | name: Genuine Runestone | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 203831 INFO  OrderlineController34 - product id: 1 | name: Whey Protein | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 203831 INFO  OrderlineController34 - product id: 1 | name: Beats by Dre | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 203831 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 203831 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 203929 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204125 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 204125 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 204315 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204512 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204513 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204516 INFO  OrderlineController34 - product id: 1 | name: Genuine Runestone | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204516 INFO  OrderlineController34 - product id: 1 | name: Whey Protein | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204516 INFO  OrderlineController34 - product id: 1 | name: Beats by Dre | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204516 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 204516 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 204557 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204558 INFO  OrderlineController34 - product id: 1 | name: Genuine Runestone | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204558 INFO  OrderlineController34 - product id: 1 | name: Whey Protein | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204558 INFO  OrderlineController34 - product id: 1 | name: Beats by Dre | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204558 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 204558 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 204706 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204706 INFO  OrderlineController34 - product id: 1 | name: Genuine Runestone | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204706 INFO  OrderlineController34 - product id: 1 | name: Whey Protein | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204706 INFO  OrderlineController34 - product id: 1 | name: Beats by Dre | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204706 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 204706 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 
+2020-04-25 204715 INFO  OrderlineController30 - Please enter the orderline (by id) you wish to view: 
+2020-04-25 204715 INFO  OrderlineController34 - product id: 1 | name: Genuine Runestone | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204715 INFO  OrderlineController34 - product id: 1 | name: Whey Protein | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204715 INFO  OrderlineController34 - product id: 1 | name: Beats by Dre | Quantity: 1 | Price : £9.9900000000000002131628207280300557613372802734375 (£9.9900000000000002131628207280300557613372802734375 per item)
+2020-04-25 204715 INFO  OrderlineController78 - Please enter the order (by id) you wish to delete: 
+2020-04-25 204715 INFO  OrderlineController80 - Please enter the product (by id) you wish to delete: 

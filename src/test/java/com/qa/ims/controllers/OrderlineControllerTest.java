@@ -38,7 +38,8 @@ public class OrderlineControllerTest {
 
 	@Test
 	public void readAllTest() {
-		OrderlineController orderlineController = new OrderlineController(orderlineServices);
+		String oid = "1";
+		Mockito.doReturn(oid).when(orderlineController).getInput();
 		List<OrderlineProfile> orderline = new ArrayList<>();
 		orderline.add(new OrderlineProfile(1L, 1L, "Genuine Runestone", new BigDecimal(9.99)));
 		orderline.add(new OrderlineProfile(1L, 1L, "Whey Protein", new BigDecimal(9.99)));
@@ -68,10 +69,11 @@ public class OrderlineControllerTest {
 	 */
 	@Test
 	public void deleteTest() {
-		String id = "1";
-		Mockito.doReturn(id).when(orderlineController).getInput();
+		String pid = "1";
+		String oid = "1";
+		Mockito.doReturn(pid, oid).when(orderlineController).getInput();
 		orderlineController.delete();
-		Mockito.verify(orderlineServices, Mockito.times(1)).delete(1L);
+		Mockito.verify(orderlineServices, Mockito.times(1)).delete(1L, 1L);
 	}
 
 }
