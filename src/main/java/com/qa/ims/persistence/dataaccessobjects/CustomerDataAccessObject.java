@@ -29,12 +29,6 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 		this.password = password;
 	}
 
-	public CustomerDataAccessObject(String jdbcConnectionUrl, String username, String password) {
-		this.jdbcConnectionUrl = jdbcConnectionUrl;
-		this.username = username;
-		this.password = password;
-	}
-
 	CustomerProfile customerProfileSet(ResultSet resultSet) throws SQLException {
 		Long id = resultSet.getLong("customer_id");
 		String forename = resultSet.getString("forename");

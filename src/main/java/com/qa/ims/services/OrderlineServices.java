@@ -7,26 +7,26 @@ import com.qa.ims.persistence.domain.OrderlineProfile;
 
 public class OrderlineServices implements CrudServicesOrderlineSpecific<OrderlineProfile> {
 
-	private DataAccessObjectOrderlineSpecific<OrderlineProfile> OrderlineDataAccessObject;
+	private DataAccessObjectOrderlineSpecific<OrderlineProfile> orderlineDataAccessObject;
 
 	public OrderlineServices(DataAccessObjectOrderlineSpecific<OrderlineProfile> orderline) {
-		this.OrderlineDataAccessObject = orderline;
+		this.orderlineDataAccessObject = orderline;
 	}
 
 	public List<OrderlineProfile> readAll(Long oid) {
-		return OrderlineDataAccessObject.readAll(oid);
+		return orderlineDataAccessObject.readAll(oid);
 	}
 
 	public OrderlineProfile create(OrderlineProfile orderline) {
-		return OrderlineDataAccessObject.create(orderline);
+		return orderlineDataAccessObject.create(orderline);
 	}
 
 	public OrderlineProfile update(OrderlineProfile orderline) {
-		return OrderlineDataAccessObject.update(orderline);
+		return orderlineDataAccessObject.update(orderline);
 	}
 
 	public void delete(Long pid, Long oid) {
-		OrderlineDataAccessObject.delete(pid, oid);
+		orderlineDataAccessObject.delete(pid, oid);
 	}
 
 }

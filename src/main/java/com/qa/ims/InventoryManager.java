@@ -31,14 +31,16 @@ public class InventoryManager {
 
 	public static final Logger LOGGER = Logger.getLogger(InventoryManager.class);
 
-	public String initiateSystem(boolean managerLoop) {
+	boolean managerLoop = true;
+
+	public String initSystem() {
 
 		LOGGER.info("Please insert username: ");
 		String username = getInput();
 		LOGGER.info("Please insert password: ");
 		String password = getInput();
 
-		while (managerLoop = true) {
+		while (true) {
 
 			boolean orderline = false;
 
@@ -87,7 +89,7 @@ public class InventoryManager {
 				}
 			}
 
-			if (orderline == true) {
+			if (orderline) {
 				LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
 			} else {
 				LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
@@ -109,7 +111,7 @@ public class InventoryManager {
 				doAction(productController, action);
 				break;
 			case ORDERS:
-				if (orderline == false) {
+				if (!orderline) {
 					OrderController orderController = new OrderController(
 							new OrderServices(new OrderDataAccessObject(username, password)));
 					doAction(orderController, action);

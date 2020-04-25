@@ -30,12 +30,6 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 		this.password = password;
 	}
 
-	public OrderlineDataAccessObject(String jdbcConnectionUrl, String username, String password) {
-		this.jdbcConnectionUrl = jdbcConnectionUrl;
-		this.username = username;
-		this.password = password;
-	}
-
 	OrderlineProfile orderlineProfileSet(ResultSet resultSet) throws SQLException {
 		Long pid = resultSet.getLong("product_id");
 		Long quantityOrdered = resultSet.getLong("quantity_ordered");
