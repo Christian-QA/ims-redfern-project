@@ -7,25 +7,25 @@ import com.qa.ims.persistence.domain.CustomerProfile;
 
 public class CustomerServices implements CrudServices<CustomerProfile> {
 
-	private DataAccessObject<CustomerProfile> CustomerDataAccessObject;
+	private DataAccessObject<CustomerProfile> customerDataAccessObject;
 
 	public CustomerServices(DataAccessObject<CustomerProfile> customer) {
-		this.CustomerDataAccessObject = customer;
+		this.customerDataAccessObject = customer;
 	}
 
 	public List<CustomerProfile> readAll() {
-		return CustomerDataAccessObject.readAll();
+		return customerDataAccessObject.readAll();
 	}
 
 	public CustomerProfile create(CustomerProfile customer) {
-		return CustomerDataAccessObject.create(customer);
+		return customerDataAccessObject.create(customer);
 	}
 
 	public CustomerProfile update(CustomerProfile customer) {
-		return CustomerDataAccessObject.update(customer);
+		return customerDataAccessObject.update(customer);
 	}
 
 	public void delete(Long id) {
-		CustomerDataAccessObject.delete(id);
+		customerDataAccessObject.delete(id);
 	}
 }

@@ -1179,3 +1179,379 @@ Hello, doot, how can I help you today?
 Hello, doot, how can I help you today?
 2020-04-25 231408 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
 2020-04-25 231408 INFO  InventoryManager54 - Ending Program
+2020-04-25 231706 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231706 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231706 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231706 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231706 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231706 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231706 ERROR InventoryManager86 - Invalid selection please try again
+ Would you like to view all orders or a specific customer's orderline?
+ [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231706 INFO  InventoryManager95 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 231706 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231707 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager54 - Ending Program
+2020-04-25 231707 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231707 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  Domain52 - Review customers: allow manipulation of the customers table
+2020-04-25 231707 INFO  Domain53 - Review products: allow manipulation of the products table
+2020-04-25 231707 INFO  Domain54 - Review orders: allow manipulation of the orders table
+2020-04-25 231707 INFO  Domain55 - Help: Describes what the other functions do
+2020-04-25 231707 INFO  Domain56 - Stop: Closes the application
+2020-04-25 231707 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231707 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231707 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 231707 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager95 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-25 231707 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231707 INFO  ProductController33 - id: 1 | Name: Secondhand Goods | Category: Miscellaneous | Price: £0.0 | Inventory: 0
+ ------------------------------------------------------
+2020-04-25 231707 INFO  ProductController33 - id: 2 | Name: Dora the Annihilator | Category: Movies | Price: £99.99 | Inventory: 5
+ ------------------------------------------------------
+2020-04-25 231707 INFO  ProductController33 - id: 4 | Name: Ketchup | Category: Food | Price: £2.99 | Inventory: 400
+ ------------------------------------------------------
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231707 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231707 INFO  InventoryManager95 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 231707 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231707 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231707 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager54 - Ending Program
+2020-04-25 231707 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231707 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231707 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231707 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 231707 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager54 - Ending Program
+2020-04-25 231707 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231707 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager95 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-25 231707 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231707 INFO  ProductController33 - id: 1 | Name: Secondhand Goods | Category: Miscellaneous | Price: £0.0 | Inventory: 0
+ ------------------------------------------------------
+2020-04-25 231707 INFO  ProductController33 - id: 2 | Name: Dora the Annihilator | Category: Movies | Price: £99.99 | Inventory: 5
+ ------------------------------------------------------
+2020-04-25 231707 INFO  ProductController33 - id: 4 | Name: Ketchup | Category: Food | Price: £2.99 | Inventory: 400
+ ------------------------------------------------------
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager54 - Ending Program
+2020-04-25 231707 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231707 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231707 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231707 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231707 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231707 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231708 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 231708 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager54 - Ending Program
+2020-04-25 231708 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231708 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231708 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231708 INFO  InventoryManager93 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 231708 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager54 - Ending Program
+2020-04-25 231708 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231708 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231708 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231708 INFO  InventoryManager95 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 231708 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231708 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 231708 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 231708 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231708 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231708 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager54 - Ending Program
+2020-04-25 231708 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231708 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, doot, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231708 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231708 DEBUG CustomerDataAccessObject55 - [Ljava.lang.StackTraceElement;@48590849
+2020-04-25 231708 ERROR CustomerDataAccessObject56 - Access denied for user 'doot'@'86.165.163.76' (using password: YES)
+2020-04-25 231708 INFO  InventoryManager47 - 
+
+Hello, doot, how can I help you today?
+2020-04-25 231708 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231708 INFO  InventoryManager54 - Ending Program
+2020-04-25 231732 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231732 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231732 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231732 ERROR InventoryManager86 - Invalid selection please try again
+ Would you like to view all orders or a specific customer's orderline?
+ [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231732 INFO  InventoryManager95 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 231732 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231732 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  InventoryManager54 - Ending Program
+2020-04-25 231732 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231732 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  Domain52 - Review customers: allow manipulation of the customers table
+2020-04-25 231732 INFO  Domain53 - Review products: allow manipulation of the products table
+2020-04-25 231732 INFO  Domain54 - Review orders: allow manipulation of the orders table
+2020-04-25 231732 INFO  Domain55 - Help: Describes what the other functions do
+2020-04-25 231732 INFO  Domain56 - Stop: Closes the application
+2020-04-25 231732 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231732 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231732 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 231732 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  InventoryManager95 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-25 231732 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231732 INFO  ProductController33 - id: 1 | Name: Secondhand Goods | Category: Miscellaneous | Price: £0.0 | Inventory: 0
+ ------------------------------------------------------
+2020-04-25 231732 INFO  ProductController33 - id: 2 | Name: Dora the Annihilator | Category: Movies | Price: £99.99 | Inventory: 5
+ ------------------------------------------------------
+2020-04-25 231732 INFO  ProductController33 - id: 4 | Name: Ketchup | Category: Food | Price: £2.99 | Inventory: 400
+ ------------------------------------------------------
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231732 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231732 INFO  InventoryManager95 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 231732 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231732 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231732 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  InventoryManager54 - Ending Program
+2020-04-25 231732 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231732 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231732 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231732 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231732 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231732 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231733 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 231733 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager54 - Ending Program
+2020-04-25 231733 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231733 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager95 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-25 231733 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231733 INFO  ProductController33 - id: 1 | Name: Secondhand Goods | Category: Miscellaneous | Price: £0.0 | Inventory: 0
+ ------------------------------------------------------
+2020-04-25 231733 INFO  ProductController33 - id: 2 | Name: Dora the Annihilator | Category: Movies | Price: £99.99 | Inventory: 5
+ ------------------------------------------------------
+2020-04-25 231733 INFO  ProductController33 - id: 4 | Name: Ketchup | Category: Food | Price: £2.99 | Inventory: 400
+ ------------------------------------------------------
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager54 - Ending Program
+2020-04-25 231733 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231733 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231733 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231733 INFO  CustomerController36 - id: 14 | first name: tqq | surname: add | age: N/A
+ ------------------------------------------------------
+2020-04-25 231733 INFO  CustomerController36 - id: 15 | first name: Big | surname: Funny | age: N/A
+ ------------------------------------------------------
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager54 - Ending Program
+2020-04-25 231733 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231733 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231733 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231733 INFO  InventoryManager93 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-25 231733 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager54 - Ending Program
+2020-04-25 231733 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231733 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager62 - Would you like to view all orders or a specific customer's orderline?
+2020-04-25 231733 INFO  InventoryManager63 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-25 231733 INFO  InventoryManager95 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-25 231733 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231733 INFO  OrderController34 - order id: 1 | customer id: 15 | Date Ordered: 2006-11-11
+ ------------------------------------------------------
+2020-04-25 231733 INFO  OrderController34 - order id: 3 | customer id: 15 | Date Ordered: 2019-05-05
+ ------------------------------------------------------
+2020-04-25 231733 INFO  OrderController34 - order id: 5 | customer id: 14 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231733 INFO  OrderController34 - order id: 7 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231733 INFO  OrderController34 - order id: 8 | customer id: 15 | Date Ordered: 2020-04-24
+ ------------------------------------------------------
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, root, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager54 - Ending Program
+2020-04-25 231733 INFO  InventoryManager38 - Please insert username: 
+2020-04-25 231733 INFO  InventoryManager40 - Please insert password: 
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, doot, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager95 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-25 231733 INFO  InventoryManager97 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]
+2020-04-25 231733 DEBUG CustomerDataAccessObject55 - [Ljava.lang.StackTraceElement;@48590849
+2020-04-25 231733 ERROR CustomerDataAccessObject56 - Access denied for user 'doot'@'86.165.163.76' (using password: YES)
+2020-04-25 231733 INFO  InventoryManager47 - 
+
+Hello, doot, how can I help you today?
+2020-04-25 231733 INFO  InventoryManager48 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-25 231733 INFO  InventoryManager54 - Ending Program

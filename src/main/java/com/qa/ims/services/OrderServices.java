@@ -7,25 +7,25 @@ import com.qa.ims.persistence.domain.OrderProfile;
 
 public class OrderServices implements CrudServices<OrderProfile> {
 
-	private DataAccessObject<OrderProfile> OrderDataAccessObject;
+	private DataAccessObject<OrderProfile> orderDataAccessObject;
 
 	public OrderServices(DataAccessObject<OrderProfile> customer) {
-		this.OrderDataAccessObject = customer;
+		this.orderDataAccessObject = customer;
 	}
 
 	public List<OrderProfile> readAll() {
-		return OrderDataAccessObject.readAll();
+		return orderDataAccessObject.readAll();
 	}
 
 	public OrderProfile create(OrderProfile customer) {
-		return OrderDataAccessObject.create(customer);
+		return orderDataAccessObject.create(customer);
 	}
 
 	public OrderProfile update(OrderProfile customer) {
-		return OrderDataAccessObject.update(customer);
+		return orderDataAccessObject.update(customer);
 	}
 
 	public void delete(Long id) {
-		OrderDataAccessObject.delete(id);
+		orderDataAccessObject.delete(id);
 	}
 }
