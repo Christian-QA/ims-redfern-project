@@ -10,6 +10,7 @@ import java.sql.Date;
 import java.util.Calendar;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class OrderProfileTest {
@@ -107,6 +108,12 @@ public class OrderProfileTest {
 		assertNotNull(product.getCid());
 		assertNotNull(product.getDateOrdered());
 
+	}
+
+	@Ignore
+	@Test
+	public void hashCodeTest() {
+		assertEquals(order.hashCode(), other.hashCode());
 	}
 
 	@Test

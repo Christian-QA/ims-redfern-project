@@ -25,8 +25,8 @@ public class OrderlineServices implements CrudServicesOrderlineSpecific<Orderlin
 		return OrderlineDataAccessObject.update(orderline);
 	}
 
-	public void delete(Long oid) {
-		OrderlineDataAccessObject.delete(oid);
+	public void delete(Long pid, Long oid) {
+		OrderlineDataAccessObject.delete(pid, oid);
 	}
 
 }

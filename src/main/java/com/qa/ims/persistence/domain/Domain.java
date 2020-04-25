@@ -70,4 +70,9 @@ public enum Domain {
 		}
 		return command;
 	}
+
+	public String toString(String input) {
+		return input;
+
+	}
 }

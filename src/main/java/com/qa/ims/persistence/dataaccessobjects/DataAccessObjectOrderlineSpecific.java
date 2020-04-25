@@ -10,6 +10,6 @@ public interface DataAccessObjectOrderlineSpecific<T> {
 
 	T update(T t);
 
-	void delete(long id);
+	void delete(long pid, long oid);
 
 }

@@ -77,7 +77,9 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 	public void delete() {
 		LOGGER.info("Please enter the order (by id) you wish to delete: ");
 		Long oid = Long.valueOf(getInput());
-		orderlineService.delete(oid);
+		LOGGER.info("Please enter the product (by id) you wish to delete: ");
+		Long pid = Long.valueOf(getInput());
+		orderlineService.delete(pid, oid);
 
 	}
 

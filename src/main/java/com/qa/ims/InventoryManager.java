@@ -1,10 +1,8 @@
 package com.qa.ims;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.management.ManagementFactory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,99 +31,108 @@ public class InventoryManager {
 
 	public static final Logger LOGGER = Logger.getLogger(InventoryManager.class);
 
-	public void initiateSystem() {
-
-		boolean orderline = false;
+	public void initiateSystem(boolean managerLoop) {
 
 		LOGGER.info("Please insert username: ");
 		String username = Utils.getInput();
 		LOGGER.info("Please insert password: ");
 		String password = Utils.getInput();
 
-		LOGGER.info("Hello, " + username + ", how can I help you today?");
-		LOGGER.info(
-				"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
-		Domain domain = Domain.getDomain();
+		while (managerLoop = true) {
 
-		if (domain.name().equalsIgnoreCase("stop")) {
-			LOGGER.info("Ending Program");
-			System.exit(0);
-		} else if (domain.name().equalsIgnoreCase("help")) {
-			while (domain.name().equalsIgnoreCase("help")) {
-				domain = Domain.getDomain();
-			}
-		} else if (domain.name().equalsIgnoreCase("orders")) {
-			LOGGER.info("Would you like to view all orders or a specific customer's orderline?");
-			LOGGER.info("[1]: all [orders]      [2]: specific [orderline]");
+			boolean orderline = false;
 
-			boolean orderlineSelecting = true;
-			while (orderlineSelecting) {
-				try {
-					switch (Utils.getInput()) {
-					case "1":
-					case "orders":
-						orderline = false;
-						orderlineSelecting = false;
-						break;
-					case "2":
-					case "orderline":
-						orderline = true;
-						orderlineSelecting = false;
-						break;
-					default:
-						orderline = false;
-						orderlineSelecting = true;
-						throw new IllegalArgumentException(
+			LOGGER.info("\n\nHello, " + username + ", how can I help you today?");
+			LOGGER.info(
+					"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
+			Domain domain = Domain.getDomain();
+
+			if (domain.name().equalsIgnoreCase("stop")) {
+				LOGGER.info("Ending Program");
+				System.exit(0);
+			} else if (domain.name().equalsIgnoreCase("help")) {
+				while (domain.name().equalsIgnoreCase("help")) {
+					domain = Domain.getDomain();
+				}
+			} else if (domain.name().equalsIgnoreCase("orders")) {
+				LOGGER.info("Would you like to view all orders or a specific customer's orderline?");
+				LOGGER.info("[1]: all [orders]      [2]: specific [orderline]");
+
+				boolean orderlineSelecting = true;
+				while (orderlineSelecting) {
+					try {
+						switch (Utils.getInput()) {
+						case "1":
+						case "orders":
+							orderline = false;
+							orderlineSelecting = false;
+							break;
+						case "2":
+						case "orderline":
+							orderline = true;
+							orderlineSelecting = false;
+							break;
+						default:
+							orderline = false;
+							orderlineSelecting = true;
+							throw new IllegalArgumentException(
+									"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
+						}
+					} catch (IllegalArgumentException e) {
+						LOGGER.error(
 								"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
 					}
-				} catch (IllegalArgumentException e) {
-					LOGGER.error(
-							"Invalid selection please try again\n Would you like to view all orders or a specific customer's orderline?\n [1]: all [orders]      [2]: specific [orderline]");
 				}
+
 			}
-		}
 
-		/// Help and Stop go here
+			/// Help and Stop go here
 
-		if (orderline == true) {
-			LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
-		} else {
-			LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
-		}
-		LOGGER.info(
-				"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
-		Action action = Action.getAction();
-
-		switch (domain) {
-		case CUSTOMERS:
-			CustomerController customerController = new CustomerController(
-					new CustomerServices(new CustomerDataAccessObject(username, password)));
-			doAction(customerController, action);
-			break;
-		case PRODUCTS:
-			ProductController productController = new ProductController(
-					new ProductServices(new ProductDataAccessObject(username, password)));
-			doAction(productController, action);
-			break;
-		case ORDERS:
-			if (orderline == false) {
-				OrderController orderController = new OrderController(
-						new OrderServices(new OrderDataAccessObject(username, password)));
-				doAction(orderController, action);
+			if (orderline == true) {
+				LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
 			} else {
-				OrderlineController orderlineController = new OrderlineController(
-						new OrderlineServices(new OrderlineDataAccessObject(username, password)));
-				doAction(orderlineController, action);
+				LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
 			}
-			break;
-		case HELP:
-			break;
-		case STOP:
-			break;
-		default:
-			break;
-		}
+			LOGGER.info(
+					"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
+			Action action = Action.getAction();
 
+			switch (domain) {
+			case CUSTOMERS:
+				CustomerController customerController = new CustomerController(
+						new CustomerServices(new CustomerDataAccessObject(username, password)));
+				doAction(customerController, action);
+				break;
+			case PRODUCTS:
+				ProductController productController = new ProductController(
+						new ProductServices(new ProductDataAccessObject(username, password)));
+				doAction(productController, action);
+				break;
+			case ORDERS:
+				if (orderline == false) {
+					OrderController orderController = new OrderController(
+							new OrderServices(new OrderDataAccessObject(username, password)));
+					doAction(orderController, action);
+				} else {
+					boolean orderlineRepeat = true;
+					while (orderlineRepeat) {
+						OrderlineController orderlineController = new OrderlineController(
+								new OrderlineServices(new OrderlineDataAccessObject(username, password)));
+						doAction(orderlineController, action);
+						if (action != Action.CREATE) {
+							orderlineRepeat = false;
+						}
+					}
+				}
+				break;
+			case HELP:
+				break;
+			case STOP:
+				break;
+			default:
+				break;
+			}
+		}
 	}
 
 	public void doAction(CrudController<?> crudController, Action action) {
@@ -161,7 +168,8 @@ public class InventoryManager {
 	 */
 
 	public void init(String username, String password) {
-		init("jdbc:mysql://35.205.154.97/imsDB", username, password, "src/main/resources/imsDB-schema.sql");
+		DBConfiguration dBConfiguration = new DBConfiguration();
+		init(dBConfiguration.getJdbcConnectionUrl(), username, password, dBConfiguration.getImsDBSchema());
 	}
 
 	public String readFile(String fileLocation) {
@@ -197,7 +205,5 @@ public class InventoryManager {
 			LOGGER.error(e.getMessage());
 		}
 	}
-
-
 
 }
