@@ -30,7 +30,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 	public List<OrderlineProfile> readAll() {
 		LOGGER.info("Please enter the orderline (by id) you wish to view: ");
 		Long oid = Long.valueOf(getInput());
-		BigDecimal totalCost = new BigDecimal(0.0);
+		BigDecimal totalCost = new BigDecimal("0.0");
 		List<OrderlineProfile> orderlines = orderlineService.readAll(oid);
 		for (OrderlineProfile orderline : orderlines) {
 			LOGGER.info(orderline.toString());
