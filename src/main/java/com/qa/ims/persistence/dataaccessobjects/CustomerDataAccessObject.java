@@ -99,9 +99,11 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				PreparedStatement statementPrepared = connection.prepareStatement(readCustomerPrepared);) {
 			statementPrepared.setLong(1, id);
-			ResultSet resultSet = statementPrepared.executeQuery();
-			resultSet.next();
-			return customerProfileSet(resultSet);
+			statementPrepared.executeQuery();
+			try (ResultSet resultSet = statementPrepared.executeQuery();) {
+				resultSet.next();
+				return customerProfileSet(resultSet);
+			}
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());

@@ -100,9 +100,11 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				PreparedStatement statementPrepared = connection.prepareStatement(readOrderPrepared);) {
 			statementPrepared.setLong(1, id);
-			ResultSet resultSet = statementPrepared.executeQuery();
-			resultSet.next();
-			return orderProfileSet(resultSet);
+			statementPrepared.executeQuery();
+			try (ResultSet resultSet = statementPrepared.executeQuery();) {
+				resultSet.next();
+				return orderProfileSet(resultSet);
+			}
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());

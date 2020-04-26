@@ -104,9 +104,11 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				PreparedStatement statementPrepared = connection.prepareStatement(readProductPrepared);) {
 			statementPrepared.setLong(1, id);
-			ResultSet resultSet = statementPrepared.executeQuery();
-			resultSet.next();
-			return productProfileSet(resultSet);
+			statementPrepared.executeQuery();
+			try (ResultSet resultSet = statementPrepared.executeQuery();) {
+				resultSet.next();
+				return productProfileSet(resultSet);
+			}
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
