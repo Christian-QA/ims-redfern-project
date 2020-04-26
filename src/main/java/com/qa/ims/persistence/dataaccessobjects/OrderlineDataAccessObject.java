@@ -126,8 +126,8 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	public OrderlineProfile update(OrderlineProfile orderline) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE orderline SET product_id ='" + orderline.getPid() + "', quantity_ordered='"
-					+ orderline.getQuantityOrdered() + "' WHERE order_id=" + orderline.getOid());
+			statement.executeUpdate("UPDATE orderline SET quantity_ordered='" + orderline.getQuantityOrdered()
+					+ "' WHERE order_id=" + orderline.getOid() + " AND product_id = " + orderline.getPid());
 			return readCustomer(orderline.getOid());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
