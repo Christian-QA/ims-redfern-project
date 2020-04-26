@@ -2,6 +2,7 @@ package com.qa.ims.persistence.dataaccessobjects;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -79,10 +80,12 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	 */
 	@Override
 	public CustomerProfile create(CustomerProfile customer) {
+		String createPrepared = "insert into customers(forename, surname) values(? , ?)";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into customers(forename, surname) values('" + customer.getForename() + "','"
-					+ customer.getSurname() + "')");
+				PreparedStatement statementPrepared = connection.prepareStatement(createPrepared);) {
+			statementPrepared.setString(1, customer.getForename());
+			statementPrepared.setString(2, customer.getSurname());
+			statementPrepared.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -92,11 +95,15 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	}
 
 	public CustomerProfile readCustomer(Long id) {
+		String readCustomerPrepared = "SELECT * FROM customers where customer_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM customers where customer_id = " + id);) {
-			resultSet.next();
-			return customerProfileSet(resultSet);
+				PreparedStatement statementPrepared = connection.prepareStatement(readCustomerPrepared);) {
+			statementPrepared.setLong(1, id);
+			ResultSet resultSet = statementPrepared.executeQuery();
+			{
+				resultSet.next();
+				return customerProfileSet(resultSet);
+			}
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -113,10 +120,13 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	 */
 	@Override
 	public CustomerProfile update(CustomerProfile customer) {
+		String updatePrepared = "UPDATE customers SET forename = ? , surname = ? WHERE customer_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE customers SET forename='" + customer.getForename() + "', surname='"
-					+ customer.getSurname() + "' WHERE customer_id=" + customer.getId());
+				PreparedStatement statementPrepared = connection.prepareStatement(updatePrepared);) {
+			statementPrepared.setString(1, customer.getForename());
+			statementPrepared.setString(2, customer.getSurname());
+			statementPrepared.setLong(3, customer.getId());
+			statementPrepared.executeUpdate();
 			return readCustomer(customer.getId());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -132,9 +142,11 @@ public class CustomerDataAccessObject implements DataAccessObject<CustomerProfil
 	 */
 	@Override
 	public void delete(long id) {
+		String deletePrepared = "delete from customers where customer_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from customers where customer_id = " + id);
+				PreparedStatement statementPrepared = connection.prepareStatement(deletePrepared);) {
+			statementPrepared.setLong(1, id);
+			statementPrepared.executeUpdate();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
