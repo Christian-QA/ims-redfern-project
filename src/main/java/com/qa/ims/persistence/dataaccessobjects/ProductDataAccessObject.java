@@ -83,13 +83,13 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	 */
 	@Override
 	public ProductProfile create(ProductProfile product) {
-		String createPrepared = "insert into customers(name, category, price, inventory) values(? , ?, ?, ?)";
+		String createPrepared = "insert into products(name, category, price, inventory) values(?, ?, ?, ?)";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				PreparedStatement statementPrepared = connection.prepareStatement(createPrepared);) {
 			statementPrepared.setString(1, product.getName());
 			statementPrepared.setString(2, product.getCategory());
-			statementPrepared.setBigDecimal(2, product.getPrice());
-			statementPrepared.setLong(2, product.getInventory());
+			statementPrepared.setBigDecimal(3, product.getPrice());
+			statementPrepared.setLong(4, product.getInventory());
 			statementPrepared.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
@@ -100,9 +100,11 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	public ProductProfile readProduct(Long id) {
+		String readProductPrepared = "SELECT * FROM products where product_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM products WHERE product_id = " + id);) {
+				PreparedStatement statementPrepared = connection.prepareStatement(readProductPrepared);) {
+			statementPrepared.setLong(1, id);
+			ResultSet resultSet = statementPrepared.executeQuery();
 			resultSet.next();
 			return productProfileSet(resultSet);
 		} catch (Exception e) {
@@ -121,11 +123,15 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	 */
 	@Override
 	public ProductProfile update(ProductProfile product) {
+		String updatePrepared = "UPDATE products SET name = ? , category = ?, price = ?, inventory = ? WHERE product_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE products SET name='" + product.getName() + "', category='"
-					+ product.getCategory() + "', price='" + product.getPrice() + "', inventory='"
-					+ product.getInventory() + "' WHERE product_id=" + product.getId());
+				PreparedStatement statementPrepared = connection.prepareStatement(updatePrepared);) {
+			statementPrepared.setString(1, product.getName());
+			statementPrepared.setString(2, product.getCategory());
+			statementPrepared.setBigDecimal(3, product.getPrice());
+			statementPrepared.setLong(4, product.getInventory());
+			statementPrepared.setLong(5, product.getId());
+			statementPrepared.executeUpdate();
 			return readProduct(product.getId());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -141,9 +147,11 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	 */
 	@Override
 	public void delete(long id) {
+		String deletePrepared = "delete from products where product_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from products where product_id = " + id);
+				PreparedStatement statementPrepared = connection.prepareStatement(deletePrepared);) {
+			statementPrepared.setLong(1, id);
+			statementPrepared.executeUpdate();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());

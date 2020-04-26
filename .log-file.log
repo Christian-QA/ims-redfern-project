@@ -5331,3 +5331,239 @@ Hello, root, how can I help you today?
 
 Hello, root, how can I help you today?
 2020-04-26 183413 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183651 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 183653 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 183653 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183653 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183655 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 183655 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183655 INFO  ProductController46 - Please enter a name: 
+2020-04-26 183701 INFO  ProductController48 - Please enter the product's category: 
+2020-04-26 183703 INFO  ProductController50 - Please enter price per unit: 
+2020-04-26 183708 INFO  ProductController52 - Please enter quantity of product: 
+2020-04-26 183713 DEBUG ProductDataAccessObject96 - [Ljava.lang.StackTraceElement;@61d47554
+2020-04-26 183713 ERROR ProductDataAccessObject97 - No value specified for parameter 3
+2020-04-26 183713 INFO  ProductController55 - Product created.
+2020-04-26 183713 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183713 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183718 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 183718 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 183721 INFO  InventoryManager102 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-26 183721 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183723 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183723 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183724 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 183724 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183725 INFO  ProductController33 - id: 1 | Name: Boots | Category: Footwear | Price: £5.99 | Inventory: 500
+ ------------------------------------------------------
+2020-04-26 183725 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183725 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183729 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 183729 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183736 INFO  ProductController46 - Please enter a name: 
+2020-04-26 183740 INFO  ProductController48 - Please enter the product's category: 
+2020-04-26 183745 INFO  ProductController50 - Please enter price per unit: 
+2020-04-26 183746 INFO  ProductController52 - Please enter quantity of product: 
+2020-04-26 183748 DEBUG ProductDataAccessObject96 - [Ljava.lang.StackTraceElement;@1a052a00
+2020-04-26 183748 ERROR ProductDataAccessObject97 - No value specified for parameter 3
+2020-04-26 183748 INFO  ProductController55 - Product created.
+2020-04-26 183748 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183748 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183814 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 183814 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183819 INFO  ProductController46 - Please enter a name: 
+2020-04-26 183829 INFO  ProductController48 - Please enter the product's category: 
+2020-04-26 183833 INFO  ProductController50 - Please enter price per unit: 
+2020-04-26 183835 INFO  ProductController52 - Please enter quantity of product: 
+2020-04-26 183837 DEBUG ProductDataAccessObject96 - [Ljava.lang.StackTraceElement;@61009542
+2020-04-26 183837 ERROR ProductDataAccessObject97 - No value specified for parameter 3
+2020-04-26 183837 INFO  ProductController55 - Product created.
+2020-04-26 183837 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183837 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191534 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 191537 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 191537 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191537 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191538 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 191538 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 191539 INFO  ProductController46 - Please enter a name: 
+2020-04-26 191543 INFO  ProductController48 - Please enter the product's category: 
+2020-04-26 191548 INFO  ProductController50 - Please enter price per unit: 
+2020-04-26 191550 INFO  ProductController52 - Please enter quantity of product: 
+2020-04-26 191553 DEBUG ProductDataAccessObject96 - [Ljava.lang.StackTraceElement;@3f200884
+2020-04-26 191553 ERROR ProductDataAccessObject97 - Unknown column 'name' in 'field list'
+2020-04-26 191553 INFO  ProductController55 - Product created.
+2020-04-26 191553 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191553 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191610 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 191616 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 191617 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191617 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191618 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 191618 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 191620 INFO  ProductController46 - Please enter a name: 
+2020-04-26 191633 INFO  ProductController48 - Please enter the product's category: 
+2020-04-26 191638 INFO  ProductController50 - Please enter price per unit: 
+2020-04-26 191639 INFO  ProductController52 - Please enter quantity of product: 
+2020-04-26 191641 INFO  ProductController55 - Product created.
+2020-04-26 191641 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191641 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191643 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 191643 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 191644 INFO  ProductController33 - id: 1 | Name: Boots | Category: Footwear | Price: £5.99 | Inventory: 500
+ ------------------------------------------------------
+2020-04-26 191644 INFO  ProductController33 - id: 2 | Name: BigStick(tm) | Category: Miscellaneous | Price: £5.0 | Inventory: 5
+ ------------------------------------------------------
+2020-04-26 191644 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191644 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191921 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 191928 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 191928 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191928 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191929 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 191929 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 191931 INFO  ProductController67 - Please enter the id of the customer you would like to update: 
+2020-04-26 191935 INFO  ProductController69 - Please enter a name: 
+2020-04-26 191940 INFO  ProductController71 - Please enter the product's category: 
+2020-04-26 191943 INFO  ProductController73 - Please enter price per unit: 
+2020-04-26 191945 INFO  ProductController75 - Please enter quantity of product: 
+2020-04-26 191947 DEBUG ProductDataAccessObject134 - [Ljava.lang.StackTraceElement;@61d47554
+2020-04-26 191947 ERROR ProductDataAccessObject135 - No value specified for parameter 4
+2020-04-26 191947 INFO  ProductController78 - Product Updated.
+2020-04-26 191947 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191947 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191953 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 191955 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 191955 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 191955 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 191957 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 191957 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 191958 INFO  ProductController67 - Please enter the id of the customer you would like to update: 
+2020-04-26 192000 INFO  ProductController69 - Please enter a name: 
+2020-04-26 192003 INFO  ProductController71 - Please enter the product's category: 
+2020-04-26 192008 INFO  ProductController73 - Please enter price per unit: 
+2020-04-26 192009 INFO  ProductController75 - Please enter quantity of product: 
+2020-04-26 192011 DEBUG ProductDataAccessObject134 - [Ljava.lang.StackTraceElement;@3f200884
+2020-04-26 192011 ERROR ProductDataAccessObject135 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' inventory =4' at line 1
+2020-04-26 192011 INFO  ProductController78 - Product Updated.
+2020-04-26 192011 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192011 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192129 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 192131 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 192132 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192132 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192132 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 192132 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 192134 INFO  ProductController67 - Please enter the id of the customer you would like to update: 
+2020-04-26 192136 INFO  ProductController69 - Please enter a name: 
+2020-04-26 192139 INFO  ProductController71 - Please enter the product's category: 
+2020-04-26 192144 INFO  ProductController73 - Please enter price per unit: 
+2020-04-26 192145 INFO  ProductController75 - Please enter quantity of product: 
+2020-04-26 192151 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 192153 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 192154 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192154 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192155 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 192155 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 192159 INFO  ProductController67 - Please enter the id of the customer you would like to update: 
+2020-04-26 192220 INFO  ProductController69 - Please enter a name: 
+2020-04-26 192222 INFO  ProductController71 - Please enter the product's category: 
+2020-04-26 192227 INFO  ProductController73 - Please enter price per unit: 
+2020-04-26 192229 INFO  ProductController75 - Please enter quantity of product: 
+2020-04-26 192231 INFO  ProductController78 - Product Updated.
+2020-04-26 192231 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192231 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192236 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 192236 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 192238 INFO  ProductController33 - id: 1 | Name: Boots | Category: Footwear | Price: £5.99 | Inventory: 500
+ ------------------------------------------------------
+2020-04-26 192238 INFO  ProductController33 - id: 2 | Name: Big Stick | Category: Miscellaneous | Price: £4.0 | Inventory: 5
+ ------------------------------------------------------
+2020-04-26 192238 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192238 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192440 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 192441 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 192442 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192442 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192444 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 192444 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 192445 INFO  ProductController61 - Please enter the id of the product you would like to update: 
+2020-04-26 192447 INFO  ProductController63 - Please enter a name: 
+2020-04-26 192455 INFO  ProductController65 - Please enter the product's category: 
+2020-04-26 192459 INFO  ProductController67 - Please enter price per unit: 
+2020-04-26 192500 INFO  ProductController69 - Please enter quantity of product: 
+2020-04-26 192502 DEBUG ProductDataAccessObject111 - [Ljava.lang.StackTraceElement;@f0f2775
+2020-04-26 192502 ERROR ProductDataAccessObject112 - Unknown column 'customer_id' in 'where clause'
+2020-04-26 192502 INFO  ProductController72 - Product Updated.
+2020-04-26 192502 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192502 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192513 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 192515 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 192516 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192516 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192517 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 192517 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 192518 INFO  ProductController61 - Please enter the id of the product you would like to update: 
+2020-04-26 192520 INFO  ProductController63 - Please enter a name: 
+2020-04-26 192524 INFO  ProductController65 - Please enter the product's category: 
+2020-04-26 192537 INFO  ProductController67 - Please enter price per unit: 
+2020-04-26 192538 INFO  ProductController69 - Please enter quantity of product: 
+2020-04-26 192540 INFO  ProductController72 - Product Updated.
+2020-04-26 192540 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192540 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 192542 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 192542 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 192543 INFO  ProductController33 - id: 1 | Name: Boots | Category: Footwear | Price: £5.99 | Inventory: 500
+ ------------------------------------------------------
+2020-04-26 192543 INFO  ProductController33 - id: 2 | Name: Big Stick(tm) | Category: Miscellaneous | Price: £5.0 | Inventory: 4
+ ------------------------------------------------------
+2020-04-26 192543 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 192543 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]

@@ -36,10 +36,7 @@ public class ProductController implements CrudController<ProductProfile> {
 	}
 
 	/**
-	 * Creates a customer by taking in user input. Selecting 1 (Basic) means the
-	 * input is limited to forename and surname, the NOT NULL values of the
-	 * customers table. Selecting 2 (Advance) means the input includes age, email,
-	 * address and username, the NULL values of the customers table.
+	 * Creates a product by taking in user input.
 	 */
 	@Override
 	public ProductProfile create() {
@@ -57,14 +54,11 @@ public class ProductController implements CrudController<ProductProfile> {
 	}
 
 	/**
-	 * Updates an existing customer by taking in user input. Selecting 1 (Basic)
-	 * means the input is limited to forename and surname, the NOT NULL values of
-	 * the customers table. Selecting 2 (Advance) means the input includes age,
-	 * email, address and username, the NULL values of the customer table.
+	 * Updates an existing product by taking in user input.
 	 */
 	@Override
 	public ProductProfile update() {
-		LOGGER.info("Please enter the id of the customer you would like to update: ");
+		LOGGER.info("Please enter the id of the product you would like to update: ");
 		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter a name: ");
 		String name = getInput();
@@ -80,7 +74,7 @@ public class ProductController implements CrudController<ProductProfile> {
 	}
 
 	/**
-	 * Deletes an existing customer by the id of the customer
+	 * Deletes an existing product by the id of the customer
 	 */
 	@Override
 	public void delete() {
