@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -47,22 +46,6 @@ public class OrderControllerTest {
 		orders.add(new OrderProfile(1L, 1L, (java.sql.Date) dateOrdered));
 		Mockito.when(orderServices.readAll()).thenReturn(orders);
 		assertEquals(orders, orderController.readAll());
-	}
-
-	/**
-	 * 
-	 */
-	@Ignore
-	@Test
-	public void updateTest() {
-		String oid = "1";
-		String cid = "1";
-		String dateOrdered = "2005-05-05";
-		Date dateOrdered2 = Date.valueOf(dateOrdered);
-		Mockito.doReturn(oid, cid, dateOrdered).when(orderController).getInput();
-		OrderProfile order = new OrderProfile(1L, 1L, (java.sql.Date) dateOrdered2);
-		Mockito.when(orderServices.update(order)).thenReturn(order);
-		assertEquals(order, orderController.update());
 	}
 
 	/**

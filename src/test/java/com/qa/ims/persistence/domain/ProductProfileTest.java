@@ -11,7 +11,6 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class ProductProfileTest {
@@ -158,12 +157,6 @@ public class ProductProfileTest {
 		assertNotNull(product.getCategory());
 		assertNotNull(product.getPrice());
 		assertNotNull(product.getInventory());
-	}
-
-	@Ignore
-	@Test
-	public void hashCodeTest() {
-		assertEquals(product.hashCode(), other.hashCode());
 	}
 
 	@Test

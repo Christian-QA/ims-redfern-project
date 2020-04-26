@@ -11,7 +11,6 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class OrderlineProfileTest {
@@ -120,12 +119,6 @@ public class OrderlineProfileTest {
 	public void nullQuantity() {
 		orderline.setQuantityOrdered(null);
 		assertFalse(orderline.equals(other));
-	}
-
-	@Ignore
-	@Test
-	public void hashCodeTest() {
-		assertEquals(orderline.hashCode(), other.hashCode());
 	}
 
 	@Test

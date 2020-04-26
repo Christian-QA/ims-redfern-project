@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -45,23 +44,6 @@ public class ProductControllerTest {
 		products.add(new ProductProfile(1L, "Cactus", "Miscellaneous", new BigDecimal(4.99), 10L));
 		Mockito.when(productServices.readAll()).thenReturn(products);
 		assertEquals(products, productController.readAll());
-	}
-
-	/**
-	 * 
-	 */
-	@Ignore
-	@Test
-	public void updateTest() {
-		String id = "1";
-		String name = "Dora the Annihilator";
-		String category = "Movies";
-		String price = "99.99";
-		String inventory = "500";
-		Mockito.doReturn(name, category, price, inventory).when(productController).getInput();
-		ProductProfile product = new ProductProfile(1L, name, category, new BigDecimal(99.99), 500L);
-		Mockito.when(productServices.update(product)).thenReturn(product);
-		assertEquals(product, productController.update());
 	}
 
 	/**

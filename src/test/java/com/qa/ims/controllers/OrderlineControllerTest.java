@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -46,21 +45,6 @@ public class OrderlineControllerTest {
 		orderline.add(new OrderlineProfile(1L, 1L, "Beats by Dre", new BigDecimal(9.99)));
 		Mockito.when(orderlineServices.readAll(1L)).thenReturn(orderline);
 		assertEquals(orderline, orderlineController.readAll());
-	}
-
-	/**
-	 * 
-	 */
-	@Ignore
-	@Test
-	public void updateTest() {
-		String pid = "1";
-		String oid = "1";
-		String inventory = "500";
-		Mockito.doReturn(pid, oid, inventory).when(orderlineController).getInput();
-		OrderlineProfile orderline = new OrderlineProfile(1L, 1L, 500L);
-		Mockito.when(orderlineServices.update(orderline)).thenReturn(orderline);
-		assertEquals(orderline, orderlineController.update());
 	}
 
 	/**
