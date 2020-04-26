@@ -53,8 +53,9 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 		Long pid = Long.valueOf(getInput());
 		LOGGER.info("How many would you like to add?");
 		Long quantity = Long.valueOf(getInput());
-		OrderlineProfile orderline = orderlineService.create(new OrderlineProfile(pid, oid, quantity));
-		return orderline;
+		LOGGER.info("Order Updated.");
+		return orderlineService.create(new OrderlineProfile(pid, oid, quantity));
+
 	}
 
 	/**

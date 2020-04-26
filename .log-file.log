@@ -4569,3 +4569,20 @@ Hello, doot, how can I help you today?
 2020-04-26 173534 INFO  CustomerController36 - id: null | first name: Fon | surname: J
  ------------------------------------------------------
 2020-04-26 173534 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-26 173540 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 173543 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 173544 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173544 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173546 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 173546 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 173547 INFO  InventoryManager99 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-26 173547 INFO  InventoryManager100 - [1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 173548 INFO  OrderlineController31 - Please enter the orderline (by id) you wish to view: 
+2020-04-26 173551 INFO  OrderlineController39 - Total: £0.0
+2020-04-26 173551 INFO  OrderlineController40 - -------------------------------------------
+2020-04-26 173551 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173551 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
