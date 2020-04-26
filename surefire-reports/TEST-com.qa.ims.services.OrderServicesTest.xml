@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="4" failures="0" name="com.qa.ims.services.OrderServicesTest" time="0.001" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="G:\Java\jdk1.8.0_241\jre\bin"/>
+    <property name="java.vm.version" value="25.241-b07"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="G:/eclipse-workspace/ims-redfern-project"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="G:\eclipse-workspace\ims-redfern-project"/>
+    <property name="java.runtime.version" value="1.8.0_241-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="G:\Java\jdk1.8.0_241\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\BACKUP~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="G:/Program Files (x86)/apache-maven-3.6.1/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="G:\Java\jdk1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Backup Bob\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Backup Bob\bin;C:\Python38\Scripts;C:\Python38;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Java\jdk1.8.0_241;C:\VulkanSDK\1.1.82.1\Bin;C:\windows\system3;.;C:\program files (x86)\amd app\bin\x86_64;C:\program files (x86)\amd app\bin\x86;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\system32\windowspowershell\v1.0;C:\program files (x86)\ati technologies\ati.ace\core-static;C:\windows\system32\openssh;C:\program files\git\cmd;C:\program files (x86)\nvidia corporation\physx\common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;G:\metasploit-framework\bin;G:\Java\jdk1.8.0_241\bin;G:\Program Files (x86)\apache-maven-3.6.1\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\Backup Bob\AppData\Local\Microsoft\WindowsApps;C:\Users\Backup Bob\AppData\Roaming\npm;C:\Users\Backup Bob\AppData\Local\GitHubDesktop\bin;G:\Users\Backup Bob\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="G:/Program Files (x86)/apache-maven-3.6.1/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="G:/Program Files (x86)/apache-maven-3.6.1/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\Backup Bob"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Backup Bob"/>
+    <property name="java.class.path" value="G:/Program Files (x86)/apache-maven-3.6.1/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="G:\Java\jdk1.8.0_241\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_241"/>
+    <property name="java.ext.dirs" value="G:\Java\jdk1.8.0_241\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="G:\Java\jdk1.8.0_241\jre\lib\resources.jar;G:\Java\jdk1.8.0_241\jre\lib\rt.jar;G:\Java\jdk1.8.0_241\jre\lib\sunrsasign.jar;G:\Java\jdk1.8.0_241\jre\lib\jsse.jar;G:\Java\jdk1.8.0_241\jre\lib\jce.jar;G:\Java\jdk1.8.0_241\jre\lib\charsets.jar;G:\Java\jdk1.8.0_241\jre\lib\jfr.jar;G:\Java\jdk1.8.0_241\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="G:\Program Files (x86)\apache-maven-3.6.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.qa.ims.services.OrderServicesTest" name="orderServicesRead" time="0"/>
+  <testcase classname="com.qa.ims.services.OrderServicesTest" name="orderServicesCreate" time="0"/>
+  <testcase classname="com.qa.ims.services.OrderServicesTest" name="orderServicesDelete" time="0.001"/>
+  <testcase classname="com.qa.ims.services.OrderServicesTest" name="orderServicesUpdate" time="0"/>
+</testsuite>
