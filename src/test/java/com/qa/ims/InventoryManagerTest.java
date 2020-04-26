@@ -90,8 +90,6 @@ public class InventoryManagerTest {
 		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
-<<<<<<< HEAD
-=======
 	@Ignore
 	@Test
 	public void invalidDomainTest() {
@@ -106,7 +104,6 @@ public class InventoryManagerTest {
 		assertEquals("Ending Program", inventoryManager.initiateSystem());
 	}
 
->>>>>>> feature
 	@Rule
 	public final ExpectedException exception = ExpectedException.none();
 

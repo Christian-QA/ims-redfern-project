@@ -103,12 +103,7 @@ public class InventoryManager {
 				LOGGER.info(
 						"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]");
 			}
-<<<<<<< HEAD
-			LOGGER.info(
-					"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
-=======
 
->>>>>>> feature
 			String actionString = getInput().toLowerCase();
 			Action action = Action.getAction(actionString);
 

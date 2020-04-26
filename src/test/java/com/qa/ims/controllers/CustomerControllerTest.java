@@ -45,31 +45,6 @@ public class CustomerControllerTest {
 		assertEquals(customers, customerController.readAll());
 	}
 
-	@Test
-	public void createTest() {
-		String forename = "Chris";
-		String surname = "Perrins";
-		Mockito.doReturn(forename, surname).when(customerController).getInput();
-		CustomerProfile customer = new CustomerProfile(1L, forename, surname);
-		CustomerProfile savedCustomer = new CustomerProfile(1L, "Chris", "Perrins");
-		Mockito.when(customerServices.create(customer)).thenReturn(savedCustomer);
-		assertEquals(savedCustomer, customerController.create());
-	}
-
-	/**
-	 * 
-	 */
-	@Test
-	public void updateTest() {
-		String customer_id = "1";
-		String forename = "Chris";
-		String surname = "Perrins";
-		Mockito.doReturn(customer_id, forename, surname).when(customerController).getInput();
-		CustomerProfile customer = new CustomerProfile(1L, forename, surname);
-		Mockito.when(customerServices.update(customer)).thenReturn(customer);
-		assertEquals(customer, customerController.update());
-	}
-
 	/**
 	 * Delete doesn't return anything, so we can just verify that it calls the
 	 * delete method
