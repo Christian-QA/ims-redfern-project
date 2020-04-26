@@ -4586,3 +4586,135 @@ Hello, root, how can I help you today?
 
 Hello, root, how can I help you today?
 2020-04-26 173551 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173907 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 173909 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 173910 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173910 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173912 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 173912 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 173912 INFO  InventoryManager102 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-26 173912 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 173913 INFO  OrderController44 - Please enter customer id: 
+2020-04-26 173916 DEBUG OrderDataAccessObject89 - [Ljava.lang.StackTraceElement;@23a5fd2
+2020-04-26 173916 ERROR OrderDataAccessObject90 - Cannot add or update a child row: a foreign key constraint fails (`imsDB`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`))
+2020-04-26 173916 INFO  OrderController48 - Order created.
+2020-04-26 173916 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173916 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173919 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 173919 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 173920 INFO  CustomerController49 - Please enter forename(s): 
+2020-04-26 173922 INFO  CustomerController51 - Please enter surname: 
+2020-04-26 173923 INFO  CustomerController54 - Customer created. Would you like to add another
+2020-04-26 173923 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173923 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173932 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 173932 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 173933 INFO  InventoryManager102 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-26 173933 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 173933 INFO  OrderController44 - Please enter customer id: 
+2020-04-26 173935 INFO  OrderController48 - Order created.
+2020-04-26 173935 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173935 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173936 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 173936 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 173937 INFO  InventoryManager99 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-26 173937 INFO  InventoryManager100 - [1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 173938 INFO  OrderlineController50 - Please enter the order (by id) you wish to add to: 
+2020-04-26 173940 INFO  OrderlineController52 - Please enter the product (by id) you wish to add: 
+2020-04-26 173942 INFO  OrderlineController54 - How many would you like to add?
+2020-04-26 173943 DEBUG OrderlineDataAccessObject99 - [Ljava.lang.StackTraceElement;@51931956
+2020-04-26 173943 ERROR OrderlineDataAccessObject100 - Cannot add or update a child row: a foreign key constraint fails (`imsDB`.`orderline`, CONSTRAINT `orderline_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`))
+2020-04-26 173943 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 173943 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 173947 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 173947 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 173947 INFO  ProductController46 - Please enter a name: 
+2020-04-26 173955 INFO  ProductController48 - Please enter the product's category: 
+2020-04-26 173959 INFO  ProductController50 - Please enter price per unit: 
+2020-04-26 174002 INFO  ProductController52 - Please enter quantity of product: 
+2020-04-26 174005 INFO  ProductController55 - Product created.
+2020-04-26 174005 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174005 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174006 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 174006 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 174007 INFO  InventoryManager99 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-26 174007 INFO  InventoryManager100 - [1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174009 INFO  OrderlineController50 - Please enter the order (by id) you wish to add to: 
+2020-04-26 174010 INFO  OrderlineController52 - Please enter the product (by id) you wish to add: 
+2020-04-26 174010 INFO  OrderlineController54 - How many would you like to add?
+2020-04-26 174012 DEBUG OrderlineDataAccessObject99 - [Ljava.lang.StackTraceElement;@57175e74
+2020-04-26 174012 ERROR OrderlineDataAccessObject100 - Cannot add or update a child row: a foreign key constraint fails (`imsDB`.`orderline`, CONSTRAINT `orderline_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`))
+2020-04-26 174012 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174012 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174025 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 174025 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 174027 INFO  InventoryManager99 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-26 174027 INFO  InventoryManager100 - [1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174029 INFO  OrderlineController31 - Please enter the orderline (by id) you wish to view: 
+2020-04-26 174030 INFO  OrderlineController39 - Total: £0.0
+2020-04-26 174030 INFO  OrderlineController40 - -------------------------------------------
+2020-04-26 174030 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174030 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174030 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 174030 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174039 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174039 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174040 INFO  InventoryManager102 - You have selected 'PRODUCTS'. How would you like to proceed?
+2020-04-26 174040 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174041 INFO  ProductController33 - id: 1 | Name: Boots | Category: Footwear | Price: £5.99 | Inventory: 500
+ ------------------------------------------------------
+2020-04-26 174041 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174041 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174043 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 174043 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 174045 INFO  InventoryManager102 - You have selected 'ORDERS'. How would you like to proceed?
+2020-04-26 174045 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174046 INFO  OrderController34 - order id: 2 | customer id: 1 | Date Ordered: 2020-04-26
+ ------------------------------------------------------
+2020-04-26 174046 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174046 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174051 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 174051 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 174051 INFO  InventoryManager99 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-26 174051 INFO  InventoryManager100 - [1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174052 INFO  OrderlineController50 - Please enter the order (by id) you wish to add to: 
+2020-04-26 174053 INFO  OrderlineController52 - Please enter the product (by id) you wish to add: 
+2020-04-26 174054 INFO  OrderlineController54 - How many would you like to add?
+2020-04-26 174056 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174056 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 174115 INFO  InventoryManager68 - Would you like to view all orders or a specific customer's orderline?
+2020-04-26 174115 INFO  InventoryManager69 - [1]: all [orders]      [2]: specific [orderline]
+2020-04-26 174116 INFO  InventoryManager99 - You have selected 'ORDERLINE'. How would you like to proceed?
+2020-04-26 174116 INFO  InventoryManager100 - [1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 174117 INFO  OrderlineController31 - Please enter the orderline (by id) you wish to view: 
+2020-04-26 174119 INFO  OrderlineController36 - product id: 1 | name: Boots | Quantity: 5 | Price : £29.95 (£5.99 per item)
+2020-04-26 174119 INFO  OrderlineController39 - Total: £29.95
+2020-04-26 174119 INFO  OrderlineController40 - -------------------------------------------
+2020-04-26 174119 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 174119 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
