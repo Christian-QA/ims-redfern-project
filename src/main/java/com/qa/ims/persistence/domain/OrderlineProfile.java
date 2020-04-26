@@ -47,6 +47,22 @@ public class OrderlineProfile {
 		this.quantityOrdered = quantityOrdered;
 	}
 
+	public final String getName() {
+		return name;
+	}
+
+	public final void setName(String name) {
+		this.name = name;
+	}
+
+	public final BigDecimal getPrice() {
+		return price;
+	}
+
+	public final void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -55,6 +71,33 @@ public class OrderlineProfile {
 		result = prime * result + ((oid == null) ? 0 : oid.hashCode());
 		result = prime * result + ((quantityOrdered == null) ? 0 : quantityOrdered.hashCode());
 		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OrderlineProfile other = (OrderlineProfile) obj;
+		if (oid == null) {
+			if (other.oid != null)
+				return false;
+		} else if (!oid.equals(other.oid))
+			return false;
+		if (pid == null) {
+			if (other.pid != null)
+				return false;
+		} else if (!pid.equals(other.pid))
+			return false;
+		if (quantityOrdered == null) {
+			if (other.quantityOrdered != null)
+				return false;
+		} else if (!quantityOrdered.equals(other.quantityOrdered))
+			return false;
+		return true;
 	}
 
 	public String toString() {

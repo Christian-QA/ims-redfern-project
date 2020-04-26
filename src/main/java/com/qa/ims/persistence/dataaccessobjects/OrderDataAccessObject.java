@@ -16,7 +16,7 @@ import com.qa.ims.persistence.domain.OrderProfile;
 
 public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 
-	public static final Logger LOGGER = Logger.getLogger(CustomerDataAccessObject.class);
+	public static final Logger LOGGER = Logger.getLogger(OrderDataAccessObject.class);
 
 	DBConfiguration dBConfiguration = new DBConfiguration();
 
@@ -73,9 +73,10 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	}
 
 	/**
-	 * Creates a order in the database
+	 * Creates an empty order in the database
 	 * 
-	 * @param order - takes in a order object. id will be ignored
+	 * @param order - takes in a order object. id will be ignored. Products are
+	 *              added through the orderline
 	 */
 	@Override
 	public OrderProfile create(OrderProfile order) {

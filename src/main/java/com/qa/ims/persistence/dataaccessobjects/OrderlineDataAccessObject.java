@@ -46,7 +46,7 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	}
 
 	/**
-	 * Reads all of a specific orderline from the database
+	 * Reads all of the items in a specific orderline
 	 * 
 	 * @return A list of products within an orderline
 	 */
@@ -84,9 +84,9 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	}
 
 	/**
-	 * Creates a order in the database
+	 * Adds products to an order in the form of an orderline
 	 * 
-	 * @param order - takes in a order object. id will be ignored
+	 * @param orderline - takes in a orderline object. id will be ignored
 	 */
 	@Override
 	public OrderlineProfile create(OrderlineProfile orderline) {
@@ -116,18 +116,18 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	}
 
 	/**
-	 * Updates an order in the database
+	 * Allows the user to add products to an orderline in the database
 	 * 
-	 * @param order - takes in a order object, the id field will be used to update
-	 *              that order in the database
+	 * @param orderline - takes in a order object, the id field will be used to
+	 *                  update that order in the database
 	 * @return
 	 */
 	@Override
 	public OrderlineProfile update(OrderlineProfile orderline) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE orderline SET product_id ='" + orderline.getPid() + "', quantity_ordered='"
-					+ orderline.getQuantityOrdered() + "' WHERE order_id=" + orderline.getOid());
+			statement.executeUpdate("UPDATE orderline SET quantity_ordered='" + orderline.getQuantityOrdered()
+					+ "' WHERE order_id=" + orderline.getOid() + " AND product_id = " + orderline.getPid());
 			return readCustomer(orderline.getOid());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -137,7 +137,7 @@ public class OrderlineDataAccessObject implements DataAccessObjectOrderlineSpeci
 	}
 
 	/**
-	 * Deletes a order in the database
+	 * Deletes a product from an order in the database
 	 * 
 	 * @param id - id of the order
 	 */

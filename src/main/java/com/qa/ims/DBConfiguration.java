@@ -3,7 +3,7 @@ package com.qa.ims;
 public class DBConfiguration {
 
 	private String jdbcConnectionUrl = "jdbc:mysql://35.205.154.97/imsDB";
-	private String imsDBSchema = "src/main/resources/imsDB-schema.sql";
+	private String imsDBSchema = "src/main/resources/mysql-schema.sql";
 
 	public final String getImsDBSchema() {
 		return imsDBSchema;

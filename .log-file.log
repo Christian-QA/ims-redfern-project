@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-04-25 233937 INFO  InventoryManager41 - Please insert username: 
 2020-04-25 233938 INFO  InventoryManager41 - Please insert username: 
 2020-04-25 233938 INFO  InventoryManager41 - Please insert username: 
@@ -3485,3 +3486,5 @@ Hello, doot, how can I help you today?
 2020-04-26 133528 INFO  CustomerController51 - Please enter surname: 
 2020-04-26 133528 INFO  CustomerController54 - Customer created.
 2020-04-26 133528 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+=======
+>>>>>>> feature

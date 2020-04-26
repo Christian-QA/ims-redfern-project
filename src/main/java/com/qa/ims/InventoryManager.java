@@ -33,13 +33,19 @@ public class InventoryManager {
 
 	boolean managerLoop = true;
 
-	public String initSystem() {
+	public String initiateSystem() {
 
-		LOGGER.info("Please insert username: ");
-		String username = getInput();
-		LOGGER.info("Please insert password: ");
-		String password = getInput();
+		String username = "";
+		String password = "";
 
+		while (username.isEmpty()) {
+			LOGGER.info("Please insert username: ");
+			username = getInput();
+		}
+		while (password.isEmpty()) {
+			LOGGER.info("Please insert password: ");
+			password = getInput();
+		}
 		while (true) {
 
 			boolean orderline = false;
@@ -91,11 +97,18 @@ public class InventoryManager {
 
 			if (orderline) {
 				LOGGER.info("You have selected 'ORDERLINE'. How would you like to proceed?");
+				LOGGER.info("[1]: [create]      [2]: [read]      [4]: [delete]      [5]: [help]      [6]: [return]");
 			} else {
 				LOGGER.info("You have selected '" + domain + "'. How would you like to proceed?");
+				LOGGER.info(
+						"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]");
 			}
+<<<<<<< HEAD
 			LOGGER.info(
 					"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
+=======
+
+>>>>>>> feature
 			String actionString = getInput().toLowerCase();
 			Action action = Action.getAction(actionString);
 
@@ -111,20 +124,14 @@ public class InventoryManager {
 				doAction(productController, action);
 				break;
 			case ORDERS:
-				if (!orderline) {
+				if (orderline) {
+					OrderlineController orderlineController = new OrderlineController(
+							new OrderlineServices(new OrderlineDataAccessObject(username, password)));
+					doAction(orderlineController, action);
+				} else {
 					OrderController orderController = new OrderController(
 							new OrderServices(new OrderDataAccessObject(username, password)));
 					doAction(orderController, action);
-				} else {
-					boolean orderlineRepeat = true;
-					while (orderlineRepeat) {
-						OrderlineController orderlineController = new OrderlineController(
-								new OrderlineServices(new OrderlineDataAccessObject(username, password)));
-						doAction(orderlineController, action);
-						if (action != Action.CREATE) {
-							orderlineRepeat = false;
-						}
-					}
 				}
 				break;
 			case HELP:
