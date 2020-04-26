@@ -3,6 +3,7 @@ package com.qa.ims.persistence.dataaccessobjects;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -82,11 +83,14 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	 */
 	@Override
 	public ProductProfile create(ProductProfile product) {
+		String createPrepared = "insert into customers(name, category, price, inventory) values(? , ?, ?, ?)";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("INSERT INTO products(name, category, price, inventory) values('"
-					+ product.getName() + "','" + product.getCategory() + "','" + product.getPrice() + "','"
-					+ product.getInventory() + "')");
+				PreparedStatement statementPrepared = connection.prepareStatement(createPrepared);) {
+			statementPrepared.setString(1, product.getName());
+			statementPrepared.setString(2, product.getCategory());
+			statementPrepared.setBigDecimal(2, product.getPrice());
+			statementPrepared.setLong(2, product.getInventory());
+			statementPrepared.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());

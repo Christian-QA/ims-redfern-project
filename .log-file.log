@@ -5305,3 +5305,29 @@ Hello, root, how can I help you today?
 
 Hello, root, how can I help you today?
 2020-04-26 182421 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183346 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 183348 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 183349 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183349 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183351 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 183351 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183353 INFO  CustomerController66 - Please enter the id of the customer you would like to update: 
+2020-04-26 183354 INFO  CustomerController68 - Please enter a first name: 
+2020-04-26 183405 INFO  CustomerController70 - Please enter a surname: 
+2020-04-26 183409 INFO  CustomerController73 - Customer Updated.
+2020-04-26 183409 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183409 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 183411 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 183411 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 183413 INFO  CustomerController36 - id: 1 | first name: Danny | surname: Trejo
+ ------------------------------------------------------
+2020-04-26 183413 INFO  CustomerController36 - id: 2 | first name: David | surname: Biggington
+ ------------------------------------------------------
+2020-04-26 183413 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 183413 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
