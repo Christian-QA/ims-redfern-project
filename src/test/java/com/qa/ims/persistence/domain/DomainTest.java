@@ -42,14 +42,4 @@ public class DomainTest {
 		assertTrue(domain.getDomainDescription().toLowerCase().contains("close"));
 	}
 
-//	@Test
-//	public void getDomainCommandTest() {
-//		String givenCommand = "stop";
-//		Mockito.doReturn(givenCommand).when(inventoryManager).getInput();
-//
-//		Mockito.when(domain).thenReturn(Domain.STOP);
-//
-//		assertEquals(domain, givenCommand);
-//	}
-
 }

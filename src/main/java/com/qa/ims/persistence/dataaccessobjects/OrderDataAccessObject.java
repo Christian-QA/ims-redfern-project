@@ -3,6 +3,7 @@ package com.qa.ims.persistence.dataaccessobjects;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -80,10 +81,12 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	 */
 	@Override
 	public OrderProfile create(OrderProfile order) {
+		String createPrepared = "insert into orders(customer_id, date_ordered) values(? , ?)";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("insert into orders(customer_id, date_ordered) values('" + order.getCid() + "','"
-					+ order.getDateOrdered() + "')");
+				PreparedStatement statementPrepared = connection.prepareStatement(createPrepared);) {
+			statementPrepared.setLong(1, order.getCid());
+			statementPrepared.setDate(2, order.getDateOrdered());
+			statementPrepared.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -92,12 +95,16 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 		return null;
 	}
 
-	public OrderProfile readCustomer(Long id) {
+	public OrderProfile readOrder(Long id) {
+		String readOrderPrepared = "SELECT * FROM orders where order_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where order_id = " + id);) {
-			resultSet.next();
-			return orderProfileSet(resultSet);
+				PreparedStatement statementPrepared = connection.prepareStatement(readOrderPrepared);) {
+			statementPrepared.setLong(1, id);
+			statementPrepared.executeQuery();
+			try (ResultSet resultSet = statementPrepared.executeQuery();) {
+				resultSet.next();
+				return orderProfileSet(resultSet);
+			}
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -114,11 +121,14 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	 */
 	@Override
 	public OrderProfile update(OrderProfile order) {
+		String updatePrepared = "UPDATE orders SET customer_id = ? , date_ordered = ? WHERE order_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE orders SET customer_id ='" + order.getCid() + "', date_ordered='"
-					+ order.getDateOrdered() + "' WHERE order_id=" + order.getOid());
-			return readCustomer(order.getOid());
+				PreparedStatement statementPrepared = connection.prepareStatement(updatePrepared);) {
+			statementPrepared.setLong(1, order.getCid());
+			statementPrepared.setDate(2, order.getDateOrdered());
+			statementPrepared.setLong(3, order.getOid());
+			statementPrepared.executeUpdate();
+			return readOrder(order.getOid());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -133,9 +143,11 @@ public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 	 */
 	@Override
 	public void delete(long id) {
+		String deletePrepared = "delete from orders where order_id = ?";
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
-				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from orders where order_id = " + id);
+				PreparedStatement statementPrepared = connection.prepareStatement(deletePrepared);) {
+			statementPrepared.setLong(1, id);
+			statementPrepared.executeUpdate();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
