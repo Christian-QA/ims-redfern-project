@@ -1,7 +1,7 @@
 package com.qa.ims.persistence.dataaccessobjects;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,11 +12,11 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.qa.ims.DBConfiguration;
-import com.qa.ims.persistence.domain.ProductProfile;
+import com.qa.ims.persistence.domain.OrderProfile;
 
-public class ProductDataAccessObject implements DataAccessObject<ProductProfile> {
+public class OrderDataAccessObject implements DataAccessObject<OrderProfile> {
 
-	public static final Logger LOGGER = Logger.getLogger(ProductDataAccessObject.class);
+	public static final Logger LOGGER = Logger.getLogger(OrderDataAccessObject.class);
 
 	DBConfiguration dBConfiguration = new DBConfiguration();
 
@@ -24,36 +24,34 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	private String username;
 	private String password;
 
-	public ProductDataAccessObject(String username, String password) {
+	public OrderDataAccessObject(String username, String password) {
 		this.jdbcConnectionUrl = dBConfiguration.getJdbcConnectionUrl();
 		this.username = username;
 		this.password = password;
 	}
 
-	ProductProfile productProfileSet(ResultSet resultSet) throws SQLException {
-		Long id = resultSet.getLong("product_id");
-		String name = resultSet.getString("name");
-		String category = resultSet.getString("category");
-		BigDecimal price = resultSet.getBigDecimal("price");
-		Long inventory = resultSet.getLong("inventory");
-		return new ProductProfile(id, name, category, price, inventory);
+	OrderProfile orderProfileSet(ResultSet resultSet) throws SQLException {
+		Long oid = resultSet.getLong("order_id");
+		Long cid = resultSet.getLong("customer_id");
+		Date dateOrdered = resultSet.getDate("date_ordered");
+		return new OrderProfile(oid, cid, dateOrdered);
 	}
 
 	/**
-	 * Reads all products from the database
+	 * Reads all orders from the database
 	 * 
-	 * @return A list of products
+	 * @return A list of orders
 	 */
 	@Override
-	public List<ProductProfile> readAll() {
+	public List<OrderProfile> readAll() {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM products");) {
-			ArrayList<ProductProfile> products = new ArrayList<>();
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders");) {
+			ArrayList<OrderProfile> orders = new ArrayList<>();
 			while (resultSet.next()) {
-				products.add(productProfileSet(resultSet));
+				orders.add(orderProfileSet(resultSet));
 			}
-			return products;
+			return orders;
 		} catch (SQLException e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -61,13 +59,12 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 		return new ArrayList<>();
 	}
 
-	public ProductProfile readLatest() {
+	public OrderProfile readLatest() {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement
-						.executeQuery("SELECT * FROM products ORDER BY product_id DESC LIMIT 1");) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders ORDER BY order_id DESC LIMIT 1");) {
 			resultSet.next();
-			return productProfileSet(resultSet);
+			return orderProfileSet(resultSet);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -76,17 +73,17 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Creates a product in the database
+	 * Creates an empty order in the database
 	 * 
-	 * @param product - takes in a product object. id will be ignored
+	 * @param order - takes in a order object. id will be ignored. Products are
+	 *              added through the orderline
 	 */
 	@Override
-	public ProductProfile create(ProductProfile product) {
+	public OrderProfile create(OrderProfile order) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("INSERT INTO products(name, category, price, inventory) values('"
-					+ product.getName() + "','" + product.getCategory() + "','" + product.getPrice() + "','"
-					+ product.getInventory() + "')");
+			statement.executeUpdate("insert into orders(customer_id, date_ordered) values('" + order.getCid() + "','"
+					+ order.getDateOrdered() + "')");
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
@@ -95,12 +92,12 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 		return null;
 	}
 
-	public ProductProfile readProduct(Long id) {
+	public OrderProfile readCustomer(Long id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();
-				ResultSet resultSet = statement.executeQuery("SELECT * FROM products WHERE product_id = " + id);) {
+				ResultSet resultSet = statement.executeQuery("SELECT * FROM orders where order_id = " + id);) {
 			resultSet.next();
-			return productProfileSet(resultSet);
+			return orderProfileSet(resultSet);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -109,20 +106,19 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Updates a product in the database
+	 * Updates an order in the database
 	 * 
-	 * @param product - takes in a product object, the id field will be used to
-	 *                update that product in the database
+	 * @param order - takes in a order object, the id field will be used to update
+	 *              that order in the database
 	 * @return
 	 */
 	@Override
-	public ProductProfile update(ProductProfile product) {
+	public OrderProfile update(OrderProfile order) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("UPDATE products SET name='" + product.getName() + "', category='"
-					+ product.getCategory() + "', price='" + product.getPrice() + "', inventory='"
-					+ product.getInventory() + "' WHERE product_id=" + product.getId());
-			return readProduct(product.getId());
+			statement.executeUpdate("UPDATE orders SET customer_id ='" + order.getCid() + "', date_ordered='"
+					+ order.getDateOrdered() + "' WHERE order_id=" + order.getOid());
+			return readCustomer(order.getOid());
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());
@@ -131,15 +127,15 @@ public class ProductDataAccessObject implements DataAccessObject<ProductProfile>
 	}
 
 	/**
-	 * Deletes a product in the database
+	 * Deletes a order in the database
 	 * 
-	 * @param id - id of the product
+	 * @param id - id of the order
 	 */
 	@Override
 	public void delete(long id) {
 		try (Connection connection = DriverManager.getConnection(jdbcConnectionUrl, username, password);
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("delete from products where product_id = " + id);
+			statement.executeUpdate("delete from orders where order_id = " + id);
 		} catch (Exception e) {
 			LOGGER.debug(e.getStackTrace());
 			LOGGER.error(e.getMessage());

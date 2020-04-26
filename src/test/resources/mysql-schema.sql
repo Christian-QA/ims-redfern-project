@@ -1,3 +1,4 @@
+drop database imsDB
 create database if not exists imsDB;
 create table if not exists imsDB.customers(customer_id int(11) primary key NOT NULL auto_increment, forename varchar(120) NOT NULL, surname varchar(40) NOT NULL, age int(3), email varchar(320), address varchar(320), username varchar(120));
 create table if not exists imsDB.products(product_id int primary key NOT NULL auto_increment, name varchar(200) NOT NULL, category varchar(20) DEFAULT 'Miscellaneous' NOT NULL, price double(10,2) DEFAULT 0, inventory int(11) DEFAULT 0);

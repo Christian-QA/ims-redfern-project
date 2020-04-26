@@ -1,4 +1,4 @@
-package com.qa.ims.persistence.profiles;
+package com.qa.ims.persistence.domain;
 
 public class CustomerProfile {
 
@@ -47,36 +47,41 @@ public class CustomerProfile {
 		this.surname = surname;
 	}
 
-	public final int getAge() {
-		return age;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((forename == null) ? 0 : forename.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
+		return result;
 	}
 
-	public final void setAge(int age) {
-		this.age = age;
-	}
-
-	public final String getEmail() {
-		return email;
-	}
-
-	public final void setEmail(String email) {
-		this.email = email;
-	}
-
-	public final String getAddress() {
-		return address;
-	}
-
-	public final void setAddress(String address) {
-		this.address = address;
-	}
-
-	public final String getUsername() {
-		return username;
-	}
-
-	public final void setUsername(String username) {
-		this.username = username;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CustomerProfile other = (CustomerProfile) obj;
+		if (forename == null) {
+			if (other.forename != null)
+				return false;
+		} else if (!forename.equals(other.forename))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (surname == null) {
+			if (other.surname != null)
+				return false;
+		} else if (!surname.equals(other.surname))
+			return false;
+		return true;
 	}
 
 	public String toString() {
@@ -86,7 +91,7 @@ public class CustomerProfile {
 			ageAsListed = Integer.toString(age); /// To be tested
 		}
 
-		return "id: " + id + " | first name: " + forename + " | surname: " + surname + " | age: " + ageAsListed
+		return "id: " + id + " | first name: " + forename + " | surname: " + surname
 				+ "\n ------------------------------------------------------";
 	}
 }

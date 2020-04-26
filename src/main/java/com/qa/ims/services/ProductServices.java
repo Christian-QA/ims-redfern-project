@@ -3,29 +3,29 @@ package com.qa.ims.services;
 import java.util.List;
 
 import com.qa.ims.persistence.dataaccessobjects.DataAccessObject;
-import com.qa.ims.persistence.profiles.ProductProfile;
+import com.qa.ims.persistence.domain.ProductProfile;
 
 public class ProductServices implements CrudServices<ProductProfile> {
 
-	private DataAccessObject<ProductProfile> ProductDataAccessObject;
+	private DataAccessObject<ProductProfile> productDataAccessObject;
 
 	public ProductServices(DataAccessObject<ProductProfile> product) {
-		this.ProductDataAccessObject = product;
+		this.productDataAccessObject = product;
 	}
 
 	public List<ProductProfile> readAll() {
-		return ProductDataAccessObject.readAll();
+		return productDataAccessObject.readAll();
 	}
 
 	public ProductProfile create(ProductProfile product) {
-		return ProductDataAccessObject.create(product);
+		return productDataAccessObject.create(product);
 	}
 
 	public ProductProfile update(ProductProfile product) {
-		return ProductDataAccessObject.update(product);
+		return productDataAccessObject.update(product);
 	}
 
 	public void delete(Long id) {
-		ProductDataAccessObject.delete(id);
+		productDataAccessObject.delete(id);
 	}
 }

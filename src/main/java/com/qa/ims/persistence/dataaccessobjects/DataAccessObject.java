@@ -11,4 +11,5 @@ public interface DataAccessObject<T> {
 	T update(T t);
 
 	void delete(long id);
+
 }

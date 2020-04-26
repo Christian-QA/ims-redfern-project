@@ -5,14 +5,13 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.qa.ims.persistence.profiles.ProductProfile;
+import com.qa.ims.persistence.domain.ProductProfile;
 import com.qa.ims.services.CrudServices;
-import com.qa.ims.services.ProductServices;
 import com.qa.ims.utils.Utils;
 
 public class ProductController implements CrudController<ProductProfile> {
 
-	public static final Logger LOGGER = Logger.getLogger(CustomerController.class);
+	public static final Logger LOGGER = Logger.getLogger(ProductController.class);
 
 	private CrudServices<ProductProfile> productService;
 
@@ -52,7 +51,7 @@ public class ProductController implements CrudController<ProductProfile> {
 		BigDecimal price = new BigDecimal(getInput());
 		LOGGER.info("Please enter quantity of product: ");
 		Long inventory = Long.valueOf(getInput());
-		ProductProfile product = ProductServices.create(new ProductProfile(name, category, price, inventory));
+		ProductProfile product = productService.create(new ProductProfile(name, category, price, inventory));
 		LOGGER.info("Product created.");
 		return product;
 	}
@@ -65,15 +64,17 @@ public class ProductController implements CrudController<ProductProfile> {
 	 */
 	@Override
 	public ProductProfile update() {
+		LOGGER.info("Please enter the id of the customer you would like to update: ");
+		Long id = Long.valueOf(getInput());
 		LOGGER.info("Please enter a name: ");
 		String name = getInput();
 		LOGGER.info("Please enter the product's category: ");
 		String category = getInput();
 		LOGGER.info("Please enter price per unit: ");
-		BigDecimal price = BigDecimal.valueOf(getInput());
+		BigDecimal price = new BigDecimal(getInput());
 		LOGGER.info("Please enter quantity of product: ");
 		Long inventory = Long.valueOf(getInput());
-		ProductProfile product = ProductServices.create(new ProductProfile(name, category, price, inventory));
+		ProductProfile product = productService.update(new ProductProfile(id, name, category, price, inventory));
 		LOGGER.info("Product Updated.");
 		return product;
 	}
