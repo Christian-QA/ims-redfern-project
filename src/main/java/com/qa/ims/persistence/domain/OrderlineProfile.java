@@ -73,6 +73,33 @@ public class OrderlineProfile {
 		return result;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OrderlineProfile other = (OrderlineProfile) obj;
+		if (oid == null) {
+			if (other.oid != null)
+				return false;
+		} else if (!oid.equals(other.oid))
+			return false;
+		if (pid == null) {
+			if (other.pid != null)
+				return false;
+		} else if (!pid.equals(other.pid))
+			return false;
+		if (quantityOrdered == null) {
+			if (other.quantityOrdered != null)
+				return false;
+		} else if (!quantityOrdered.equals(other.quantityOrdered))
+			return false;
+		return true;
+	}
+
 	public String toString() {
 		BigDecimal finalPrice = price.multiply(new BigDecimal(quantityOrdered));
 

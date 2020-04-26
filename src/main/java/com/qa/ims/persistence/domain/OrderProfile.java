@@ -53,6 +53,33 @@ public class OrderProfile {
 		return result;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OrderProfile other = (OrderProfile) obj;
+		if (oid == null) {
+			if (other.oid != null)
+				return false;
+		} else if (!oid.equals(other.oid))
+			return false;
+		if (cid == null) {
+			if (other.cid != null)
+				return false;
+		} else if (!cid.equals(other.cid))
+			return false;
+		if (dateOrdered == null) {
+			if (other.dateOrdered != null)
+				return false;
+		} else if (!dateOrdered.equals(other.dateOrdered))
+			return false;
+		return true;
+	}
+
 	public String toString() {
 		return "order id: " + oid + " | customer id: " + cid + " | Date Ordered: " + dateOrdered
 				+ "\n ------------------------------------------------------";

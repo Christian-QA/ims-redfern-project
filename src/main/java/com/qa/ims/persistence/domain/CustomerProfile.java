@@ -89,6 +89,33 @@ public class CustomerProfile {
 		return result;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CustomerProfile other = (CustomerProfile) obj;
+		if (forename == null) {
+			if (other.forename != null)
+				return false;
+		} else if (!forename.equals(other.forename))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (surname == null) {
+			if (other.surname != null)
+				return false;
+		} else if (!surname.equals(other.surname))
+			return false;
+		return true;
+	}
+
 	public String toString() {
 		if (age == 0) {
 			ageAsListed = "N/A";

@@ -37,6 +37,7 @@ public class OrderlineController implements CrudController<OrderlineProfile> {
 			totalCost = totalCost.add(orderline.getPrice().multiply(new BigDecimal(orderline.getQuantityOrdered())));
 		}
 		LOGGER.info("Total: £" + totalCost);
+		LOGGER.info("-------------------------------------------");
 		return orderlines;
 	}
 

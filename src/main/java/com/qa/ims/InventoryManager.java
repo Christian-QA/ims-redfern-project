@@ -33,7 +33,7 @@ public class InventoryManager {
 
 	boolean managerLoop = true;
 
-	public String initSystem() {
+	public String initiateSystem() {
 
 		String username = "";
 		String password = "";
@@ -117,17 +117,14 @@ public class InventoryManager {
 				doAction(productController, action);
 				break;
 			case ORDERS:
-				if (!orderline) {
+				if (orderline) {
+					OrderlineController orderlineController = new OrderlineController(
+							new OrderlineServices(new OrderlineDataAccessObject(username, password)));
+					doAction(orderlineController, action);
+				} else {
 					OrderController orderController = new OrderController(
 							new OrderServices(new OrderDataAccessObject(username, password)));
 					doAction(orderController, action);
-				} else {
-					boolean orderlineRepeat = true;
-					while (orderlineRepeat) {
-						OrderlineController orderlineController = new OrderlineController(
-								new OrderlineServices(new OrderlineDataAccessObject(username, password)));
-						doAction(orderlineController, action);
-					}
 				}
 				break;
 			case HELP:
