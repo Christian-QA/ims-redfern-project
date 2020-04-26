@@ -5191,3 +5191,117 @@ Hello, doot, how can I help you today?
 2020-04-26 181018 INFO  CustomerController36 - id: null | first name: Fon | surname: J
  ------------------------------------------------------
 2020-04-26 181018 INFO  CustomerController82 - Please enter the id of the customer you would like to delete: 
+2020-04-26 181019 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 181021 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 181022 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181022 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181023 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181023 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181024 INFO  CustomerController49 - Please enter forename(s): 
+2020-04-26 181028 INFO  CustomerController51 - Please enter surname: 
+2020-04-26 181031 INFO  CustomerController54 - Customer created. Would you like to add another
+2020-04-26 181031 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181031 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181033 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181033 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181035 ERROR Action93 - Invalid selection please try again
+2020-04-26 181041 ERROR Action93 - Invalid selection please try again
+2020-04-26 181042 INFO  CustomerController36 - id: 1 | first name: root | surname: root
+ ------------------------------------------------------
+2020-04-26 181042 INFO  CustomerController36 - id: 2 | first name: Big | surname: Dave
+ ------------------------------------------------------
+2020-04-26 181042 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181042 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181111 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 181112 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 181113 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181113 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181113 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181113 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181115 INFO  CustomerController49 - Please enter forename(s): 
+2020-04-26 181117 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 181119 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 181120 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181120 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181120 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181120 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181122 INFO  CustomerController36 - id: 1 | first name: root | surname: root
+ ------------------------------------------------------
+2020-04-26 181122 INFO  CustomerController36 - id: 2 | first name: Big | surname: Dave
+ ------------------------------------------------------
+2020-04-26 181122 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181122 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181128 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181128 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181129 INFO  CustomerController36 - id: 1 | first name: root | surname: root
+ ------------------------------------------------------
+2020-04-26 181129 INFO  CustomerController36 - id: 2 | first name: Big | surname: Dave
+ ------------------------------------------------------
+2020-04-26 181129 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181129 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181416 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 181417 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 181418 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181418 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181420 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181420 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181421 INFO  CustomerController66 - Please enter the id of the customer you would like to update: 
+2020-04-26 181422 INFO  CustomerController68 - Please enter a first name: 
+2020-04-26 181428 INFO  CustomerController70 - Please enter a surname: 
+2020-04-26 181432 INFO  CustomerController73 - Customer Updated.
+2020-04-26 181432 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181432 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 181435 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 181435 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 181436 INFO  CustomerController36 - id: 1 | first name: root | surname: root
+ ------------------------------------------------------
+2020-04-26 181436 INFO  CustomerController36 - id: 2 | first name: David | surname: Biggington
+ ------------------------------------------------------
+2020-04-26 181436 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 181436 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 182400 INFO  InventoryManager42 - Please insert username: 
+2020-04-26 182402 INFO  InventoryManager46 - Please insert password: 
+2020-04-26 182403 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 182403 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 182404 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 182404 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 182408 INFO  CustomerController66 - Please enter the id of the customer you would like to update: 
+2020-04-26 182410 INFO  CustomerController68 - Please enter a first name: 
+2020-04-26 182414 INFO  CustomerController70 - Please enter a surname: 
+2020-04-26 182417 INFO  CustomerController73 - Customer Updated.
+2020-04-26 182417 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 182417 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
+2020-04-26 182420 INFO  InventoryManager102 - You have selected 'CUSTOMERS'. How would you like to proceed?
+2020-04-26 182420 INFO  InventoryManager103 - [1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [return]
+2020-04-26 182421 INFO  CustomerController36 - id: 1 | first name: John | surname: Brown
+ ------------------------------------------------------
+2020-04-26 182421 INFO  CustomerController36 - id: 2 | first name: David | surname: Biggington
+ ------------------------------------------------------
+2020-04-26 182421 INFO  InventoryManager53 - 
+
+Hello, root, how can I help you today?
+2020-04-26 182421 INFO  InventoryManager54 - [1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]
