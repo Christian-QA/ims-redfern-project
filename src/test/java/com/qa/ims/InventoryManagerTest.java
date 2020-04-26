@@ -77,20 +77,6 @@ public class InventoryManagerTest {
 		assertEquals("Ending Program", inventoryManager.initSystem());
 	}
 
-	@Ignore
-	@Test
-	public void invalidDomainTest() {
-		Mockito.doReturn("root", "root", "sertgbsdrt", "customers", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initSystem());
-	}
-
-	@Ignore
-	@Test
-	public void invalidActionTest() {
-		Mockito.doReturn("root", "root", "customers", "9", "read", "stop").when(inventoryManager).getInput();
-		assertEquals("Ending Program", inventoryManager.initSystem());
-	}
-
 	@Rule
 	public final ExpectedException exception = ExpectedException.none();
 

@@ -127,7 +127,7 @@ public class CustomerProfileTest {
 
 	@Test
 	public void toStringTest() {
-		String toString = "id: 1 | first name: Chris | surname: Perrins | age: N/A\n ------------------------------------------------------";
+		String toString = "id: 1 | first name: Chris | surname: Perrins\n ------------------------------------------------------";
 		assertEquals(toString, customer.toString());
 	}
 

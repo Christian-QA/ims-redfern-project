@@ -47,38 +47,6 @@ public class CustomerProfile {
 		this.surname = surname;
 	}
 
-	public final int getAge() {
-		return age;
-	}
-
-	public final void setAge(int age) {
-		this.age = age;
-	}
-
-	public final String getEmail() {
-		return email;
-	}
-
-	public final void setEmail(String email) {
-		this.email = email;
-	}
-
-	public final String getAddress() {
-		return address;
-	}
-
-	public final void setAddress(String address) {
-		this.address = address;
-	}
-
-	public final String getUsername() {
-		return username;
-	}
-
-	public final void setUsername(String username) {
-		this.username = username;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -96,7 +64,7 @@ public class CustomerProfile {
 			ageAsListed = Integer.toString(age); /// To be tested
 		}
 
-		return "id: " + id + " | first name: " + forename + " | surname: " + surname + " | age: " + ageAsListed
+		return "id: " + id + " | first name: " + forename + " | surname: " + surname
 				+ "\n ------------------------------------------------------";
 	}
 }

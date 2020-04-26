@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -46,13 +45,12 @@ public class CustomerControllerTest {
 		assertEquals(customers, customerController.readAll());
 	}
 
-	@Ignore
 	@Test
 	public void createTest() {
 		String forename = "Chris";
 		String surname = "Perrins";
 		Mockito.doReturn(forename, surname).when(customerController).getInput();
-		CustomerProfile customer = new CustomerProfile(forename, surname);
+		CustomerProfile customer = new CustomerProfile(1L, forename, surname);
 		CustomerProfile savedCustomer = new CustomerProfile(1L, "Chris", "Perrins");
 		Mockito.when(customerServices.create(customer)).thenReturn(savedCustomer);
 		assertEquals(savedCustomer, customerController.create());
@@ -61,12 +59,11 @@ public class CustomerControllerTest {
 	/**
 	 * 
 	 */
-	@Ignore
 	@Test
 	public void updateTest() {
 		String customer_id = "1";
-		String forename = "Bon";
-		String surname = "Tee";
+		String forename = "Chris";
+		String surname = "Perrins";
 		Mockito.doReturn(customer_id, forename, surname).when(customerController).getInput();
 		CustomerProfile customer = new CustomerProfile(1L, forename, surname);
 		Mockito.when(customerServices.update(customer)).thenReturn(customer);

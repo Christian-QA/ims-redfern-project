@@ -74,7 +74,7 @@ public enum Action {
 				case "help":
 					dmlcommand = Action.HELP;
 					LOGGER.info(CREATE.getActionDescription());
-					LOGGER.info(CREATE.getActionDescription());
+					LOGGER.info(READ.getActionDescription());
 					LOGGER.info(UPDATE.getActionDescription());
 					LOGGER.info(DELETE.getActionDescription());
 					LOGGER.info(HELP.getActionDescription());

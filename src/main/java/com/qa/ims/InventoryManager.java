@@ -47,7 +47,7 @@ public class InventoryManager {
 			LOGGER.info("\n\nHello, " + username + ", how can I help you today?");
 			LOGGER.info(
 					"[1]: Review [customers]      [2]: Review [products]      [3]: Review [orders]      [4]: [help]      [5]: [stop]");
-			String domainString = getInput();
+			String domainString = getInput().toLowerCase();
 			Domain domain = Domain.getDomain(domainString);
 
 			if (domain.name().equalsIgnoreCase("stop")) {
@@ -65,7 +65,7 @@ public class InventoryManager {
 				boolean orderlineSelecting = true;
 				while (orderlineSelecting) {
 					try {
-						switch (getInput()) {
+						switch (getInput().toLowerCase()) {
 						case "1":
 						case "orders":
 							orderline = false;
@@ -96,7 +96,7 @@ public class InventoryManager {
 			}
 			LOGGER.info(
 					"[1]: [create]      [2]: [read]      [3]: [update]      [4]: [delete]      [5]: [help]      [6]: [back]");
-			String actionString = getInput();
+			String actionString = getInput().toLowerCase();
 			Action action = Action.getAction(actionString);
 
 			switch (domain) {
