@@ -1,4 +1,4 @@
-Test Coverage: Junit - 67.2%, SonarQube 53.3%
+Test Coverage: Junit - 70.5%, SonarQube 53.3%
 # Redfern Inventory Management System - QA Individual Project 
 
 The Redfern Inventory Management System is a [Java](https://www.java.com/en/)-based application which utilises [JDBC](https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html) to create, read, update and destroy entries within an [MySQL](https://www.mysql.com/) database hosted on [GCP](https://console.cloud.google.com/). The project's source code is being developed on [Eclipse IDE](https://www.eclipse.org/) and is built using [Maven](https://maven.apache.org/). [Jenkins](https://www.jenkins.io/) is used as a CI Pipeline to send to an instance on GCP, which hosts [SonarQube](https://www.sonarqube.org/), and to send to [Nexus Artifact Repository](https://www.sonatype.com/product-nexus-repository).
