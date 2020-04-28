@@ -198,7 +198,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 _For help in [Choosing a license](https://choosealicense.com/)_
 
-## acknowledgements
+## Acknowledgements
 
 - Chris Perrins - Provided a working early version of the project capable of CRUD functionality with the customers table - [christophperrins](https://github.com/christophperrins)
 - Nicholas Johnson - Software Trainer - [nickrstewarttds](https://github.com/nickrstewarttds)
