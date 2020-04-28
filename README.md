@@ -198,10 +198,10 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 _For help in [Choosing a license](https://choosealicense.com/)_
 
-## Acknowledgments
+## acknowledgements
 
 - Chris Perrins - Provided a working early version of the project capable of CRUD functionality with the customers table - [christophperrins](https://github.com/christophperrins)
 - Nicholas Johnson - Software Trainer - [nickrstewarttds](https://github.com/nickrstewarttds)
 - Jordan Harrison - Software Trainer - [JHarry444](https://github.com/JHarry444)
-- Caroline Strasenburg - Advice with Java and Github - [CarolineS-QA](https://github.com/CarolineS-QA)
+- Caroline Strasenburgh - Advice with Java and Github - [CarolineS-QA](https://github.com/CarolineS-QA)
 - Korbinian Ring - Assistance with Java planning - [KMRRingQA](https://github.com/KMRRingQA)
