@@ -18,7 +18,7 @@ To use this program, you will need:
 - [Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) or later (needed to run the jar file located in the target folder)
 - A [mySQL](https://www.mysql.com/) database, preferably one hosted on [GCP](https://console.cloud.google.com/) as this application was built with GCP in mind.
 
-At the moment, a demo mySQL database exists and is linked to this application. If you wish to change the database, you can configure the JDBC Connection Url and the local schema directory within the DBConfiguration class within the project (either through eclipse in the same package as the Runner or directly by navigating to the '\src\main\java\com\qa\ims' in your file explorer and opening 'DBConfiguration' using a text editor of your choice.
+There is currently no MySQL database linked to this project and will need to be set up by the user. If you wish to change the database, you can configure the JDBC Connection Url and the local schema directory within the DBConfiguration class within the project (either through eclipse in the same package as the Runner or directly by navigating to the '\src\main\java\com\qa\ims' in your file explorer and opening 'DBConfiguration' using a text editor of your choice.
 
 To develop using this project, you will need:
 
