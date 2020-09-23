@@ -167,7 +167,7 @@ Regardless of whether you clone this repository or a repository you forked, you 
 - cd target/
 - java -jar ChristianRedfern-SoftwareMarch16-jar-with-dependencies.jar
 
-Note: if you changed the Artifact Id within your pom.xml, you will need to enter the new id followed by .jar instead. If you are unsure
+Note: if you changed the Artifact Id within your pom.xml, you will need to enter the new id followed by .jar instead.
 
 ## Built With
 
